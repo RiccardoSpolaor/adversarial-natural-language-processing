@@ -1,0 +1,3 @@
+NVIDIA AND KERAS SETUP:
+
+https://medium.com/@birkann/install-tensorflow-2-0-with-gpu-support-and-jupyter-notebook-db0eeb3067a1

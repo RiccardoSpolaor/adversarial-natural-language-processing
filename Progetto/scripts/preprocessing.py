@@ -51,3 +51,9 @@ class Preprocesser:
         text = Preprocesser.__lemmatize(text)
         text = Preprocesser.__stemmer(text)
         return text
+
+    @staticmethod
+    def raw_text_preprocessing(text):
+        text = text.lower()
+        text = Preprocesser.__remove_html_tags(text)
+        return text

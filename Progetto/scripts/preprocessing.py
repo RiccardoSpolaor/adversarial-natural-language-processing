@@ -54,6 +54,10 @@ class Preprocesser:
 
     @staticmethod
     def raw_text_preprocessing(text):
+        return Preprocesser.__remove_html_tags(text)
+
+    @staticmethod
+    def test_data_preprocessing_for_tokenization(text):
         text = text.lower()
-        text = Preprocesser.__remove_html_tags(text)
+        text = Preprocesser.__remove_special_characters (text)
         return text

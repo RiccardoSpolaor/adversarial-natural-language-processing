@@ -20,6 +20,7 @@ class Preprocesser:
     def __remove_special_characters (text):
         pattern=r'[^a-zA-Z\s]'
         return re.sub(pattern,' ',text)
+        #text.replace("\x85", "")
 
     @staticmethod
     def __stemmer(text):
@@ -57,7 +58,9 @@ class Preprocesser:
         return Preprocesser.__remove_html_tags(text)
 
     @staticmethod
-    def test_data_preprocessing_for_tokenization(text):
+    def test_data_preprocessing_for_tokenization(text, embeddings_dict):
         text = text.lower()
         text = Preprocesser.__remove_special_characters (text)
+        words_in_embedding_dict = [w for w in text.split() if w in embeddings_dict.keys()]
+        text = ' '.join(words_in_embedding_dict)
         return text

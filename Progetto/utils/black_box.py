@@ -24,14 +24,21 @@ class BlackBox(object):
         sequences = self.__tokenizer.texts_to_sequences(text)
         return pad_sequences(sequences, maxlen = self.__MAXLEN)
         
+    def __get_pad_sequences(self, test):
+        test = [self.__text_preprocessing(text) for text in test]
+        test_sequences = self.__tokenizer.texts_to_sequences(test)
+        return pad_sequences(test_sequences, maxlen = self.__MAXLEN)
+        
     def predict_sentiment(self, text):
         text = self.__text_preprocessing(text)
         seq = self.__tokenize([text])
         return self.__model.predict(seq).take(0)
     
+    def predict_all(self, test):
+        test_data = self.__get_pad_sequences(test)
+        return list(pred[0] for pred in self.__model.predict(test_data).tolist())
+    
     def evaluate(self, test, label):
-        test = [self.__preprocesser.preprocess_text(text) for text in test]
-        test_sequences = self.__tokenizer.texts_to_sequences(test)
-        test_data = pad_sequences(test_sequences, maxlen = self.__MAXLEN)
+        test_data = self.__get_pad_sequences(test)
         label = np.asarray(label)
-        self.__model.evaluate(test_data,label)
+        return self.__model.evaluate(test_data,label)

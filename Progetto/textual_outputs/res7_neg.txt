@@ -1,0 +1,2860 @@
+2020-11-04 03:26:20.387093: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-11-04 03:26:20.387115: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-11-04 03:26:24.442311: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2020-11-04 03:26:24.445606: E tensorflow/stream_executor/cuda/cuda_driver.cc:314] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2020-11-04 03:26:24.445648: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: c7
+2020-11-04 03:26:24.445657: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: c7
+2020-11-04 03:26:24.445789: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 361.93.2
+2020-11-04 03:26:24.445856: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 361.93.2
+2020-11-04 03:26:24.445866: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 361.93.2
+2020-11-04 03:26:24.446265: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-11-04 03:26:24.454953: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2596995000 Hz
+2020-11-04 03:26:24.455154: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x796c000 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-04 03:26:24.455167: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Accuracy for the attack list:
+ 1/23 [>.............................] - ETA: 0s - loss: 0.0369 - acc: 1.0000 2/23 [=>............................] - ETA: 3s - loss: 0.0489 - acc: 1.0000 3/23 [==>...........................] - ETA: 3s - loss: 0.0483 - acc: 1.0000 4/23 [====>.........................] - ETA: 4s - loss: 0.0418 - acc: 1.0000 5/23 [=====>........................] - ETA: 4s - loss: 0.0404 - acc: 1.0000 6/23 [======>.......................] - ETA: 4s - loss: 0.0426 - acc: 1.0000 7/23 [========>.....................] - ETA: 4s - loss: 0.0426 - acc: 1.0000 8/23 [=========>....................] - ETA: 3s - loss: 0.0441 - acc: 1.0000 9/23 [==========>...................] - ETA: 3s - loss: 0.0412 - acc: 1.000010/23 [============>.................] - ETA: 3s - loss: 0.0398 - acc: 1.000011/23 [=============>................] - ETA: 3s - loss: 0.0403 - acc: 1.000012/23 [==============>...............] - ETA: 2s - loss: 0.0419 - acc: 1.000013/23 [===============>..............] - ETA: 2s - loss: 0.0440 - acc: 1.000014/23 [=================>............] - ETA: 2s - loss: 0.0451 - acc: 1.000015/23 [==================>...........] - ETA: 2s - loss: 0.0446 - acc: 1.000016/23 [===================>..........] - ETA: 1s - loss: 0.0447 - acc: 1.000017/23 [=====================>........] - ETA: 1s - loss: 0.0449 - acc: 1.000018/23 [======================>.......] - ETA: 1s - loss: 0.0468 - acc: 1.000019/23 [=======================>......] - ETA: 1s - loss: 0.0464 - acc: 1.000020/23 [=========================>....] - ETA: 0s - loss: 0.0454 - acc: 1.000021/23 [==========================>...] - ETA: 0s - loss: 0.0456 - acc: 1.000022/23 [===========================>..] - ETA: 0s - loss: 0.0443 - acc: 1.000023/23 [==============================] - ETA: 0s - loss: 0.0447 - acc: 1.000023/23 [==============================] - 6s 275ms/step - loss: 0.0447 - acc: 1.0000
+LM vocab loading done
+####################ATTACK 1/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This film could cure sleep disorders, thats how bad it is. The story dragged, and the bad guy is not that scary. You will not even see this one on TBS reruns. This film made me wonder about Chuck film choices. He work on a real dog with this one.
+Starting Score: 0.04802939295768738; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This film could cure sleep disorders, thats how bad it is. The story dragged, and the bad guy is not that scary. You will not even see this one on TBS reruns. This film accomplished me wonder about Chuck film choices. He work on a real dog with this one. 
+ Score: 0.12239953875541687
+
+%generation_time = 237 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This film could cure sleep disorders, thats how bad it is. The story dragged, and the bad guy is not that scary. You will not even see this one on TBS reruns. This film made me wonder about Chuck film choices. He work on a real dog with this one. 
+ Score: 0.12239953875541687
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This movies could cure sleep disorders, thats how bad it is. The story dragged, and the naughty guy is not that scary. You will not even see this one on TBS reruns. This film delivered me wonder about Chuck film choices. He work on a real dog with this one. 
+ Score: 0.504684567451477
+
+%total_time = 805 seconds
+
+
+####################ATTACK 2/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+The trailers get you to the movie, but the movie just wasn't worth my 8.50.. it has some good effects, but the storyline.. yech, i like tommy lee jones and will smith as actors, they have both done some good films, but i wish they hadn't added this one to their resume's. To be honest, the book is better..
+Starting Score: 0.07864698767662048; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The trailers get you to the movie, but the movie just was n't worth my 8. 50.. it has some good effects, but the storyline.. yech, i like tommy lee jones and will smith as actors, they have both done some good films, but i wish they had n't added this one to their resume's. To be honest, the book is enhanced.. 
+ Score: 0.5412547588348389
+
+%total_time = 47 seconds
+
+
+####################ATTACK 3/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+The message of this movie is "personality is more important than beauty". Jeanine Garofalo is supposed to be the "ugly duckling", but the funny thing is that she's not at all ugly (actually she's a lot more attractive than Uma Thurman, the friend who looks like a model).Now, would this movie work if the "ugly duckling" was really unattractive? When will Hollywood stop with this hypocrisy?In my opinion, despite the message that it wants to convey, this movie is simply ridiculous.
+Starting Score: 0.0018811821937561035; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ The message of this movie is`` personality is more important than beauty``. Jeanine Garofalo is supposed to be the`` ugly duckling``, but the funny thing is that she's not at all ugly( actually she's a lot more attractive than Uma Thurman, the friend who looks like a model). Now, would this movie work if the`` ugly duckling`` was really unattractive? When will Hollywood stop with this hypocrisy? In my opinion, despite the message that it wants to convey, this movie is simply grotesque. 
+ Score: 0.01073947548866272
+
+%generation_time = 239 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ The message of this movie is`` personality is more important than beauty``. Jeanine Garofalo is inferred to be the`` ugly duckling``, but the funny thing is that she's not at all ugly( actually she's a lot more attractive than Uma Thurman, the friend who looks like a model). Now, would this movie work if the`` ugly duckling`` was really unattractive? When will Hollywood stop with this hypocrisy? In my opinion, despite the message that it wants to convey, this cinematic is simply grotesque. 
+ Score: 0.05498674511909485
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ The message of this movie is`` personality is more important than beauty``. Jeanine Garofalo is inferred to be the`` ugly duckling``, but the funny thing is that she's not at all ugly( actually she's a lot more attractive than Uma Thurman, the friend who looks like a model). Now, would this movie work if the`` ugly duckling`` was really unattractive? When will Hollywood stop with this hypocrisy? In my opinion, despite the message that it wishes to convey, this movie is simply grotesque. 
+ Score: 0.05498674511909485
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ The messenger of this movie is`` personality is more important than beauty``. Jeanine Garofalo is inferred to be the`` ugly duckling``, but the funny thing is that she's not at all ugly( actually she's a lot more attractive than Uma Thurman, the friend who looks loved a model). Now, would this movie work if the`` ugly duckling`` was really unattractive? When will Hollywood stop with this hypocrisy? In my opinion, despite the message that it wishes to convey, this cinematic is simply grotesque. 
+ Score: 0.2627730965614319
+
+%generation_time = 476 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The messenger of this movie is`` personality is more important than aesthetic``. Jeanine Garofalo is inferred to be the`` ugly duckling``, but the funny thing is that she's not at all ugly( actually she's a lot more attractive than Uma Thurman, the friend who looks loved a model). Now, would this movie work if the`` ugly duckling`` was really unattractive? When will Hollywood stop with this hypocrisy? In my opinion, despite the message that it wishes to communicate, this movie is simple grotesque. 
+ Score: 0.523800790309906
+
+%total_time = 2012 seconds
+
+
+####################ATTACK 4/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Worst pile of drivel to date! Everyone involved with this production should be ashamed of themselves. Not one single element of the movie was anything slightly like an original idea. A first grader telling you a story about nap time is more entertaining.
+Starting Score: 0.0003199577331542969; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Worst pile of drivel to date! Everyone involved with this production should be ashamed of themselves. Not one single element of the movie was anything slightly adore an original idea. A first grader telling you a story about nap time is more entertaining. 
+ Score: 0.0006616115570068359
+
+%generation_time = 244 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Worst pile of drivel to date! Everyone involved with this production should be ashamed of themselves. Not one single element of the movie was anything slightly adore an introductory idea. A first grader telling you a story about nap time is more entertaining. 
+ Score: 0.0013355016708374023
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Worst pile of drivel to date! Everyone involved with this productive should be ashamed of themselves. Not one single element of the movie was somethin slightly adore an original thoughts. A first grader telling you a story about nap time is more entertaining. 
+ Score: 0.0031022727489471436
+
+%generation_time = 463 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Worst pile of drivel to date! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the movie was anything slightly adore an original thoughts. A first grader telling you a story about napa time is more entertaining. 
+ Score: 0.008266359567642212
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Worst pile of drivel to today! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the movie was anything modestly adore an original thoughts. A first grader telling you a story about napa time is more entertaining. 
+ Score: 0.016127198934555054
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Worst pile of drivel to today! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the cinematic was nothingness modestly adore an original thoughts. A first grader telling you a story about napa time is more hilarious. 
+ Score: 0.11917167901992798
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ Worst pile of drivel to today! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the cinematic was somethin modestly adore an original thoughts. A premiere grader telling you a tale about napa time is more hilarious. 
+ Score: 0.13367393612861633
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ Worst pile of drivel to today! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the cinematic was somethin modestly adore an original thoughts. A first grader revealing you a tale about napa time is more hilarious. 
+ Score: 0.1696050465106964
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ Worst pile of drivel to today! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the cinematic was somethin modestly adore an introductory thoughts. A first grader telling you a tale about napa timeline is more hilarious. 
+ Score: 0.2274061143398285
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Worst pile of mania to today! Everyone involved with this productive should be ashamed of themselves. Not one exclusive aspect of the cinematic was somethin modestly adore an introductory thoughts. A first grader telling you a tale about napa timeline is more hilarious. 
+ Score: 0.7006096839904785
+
+%total_time = 4116 seconds
+
+
+####################ATTACK 5/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I vowed a long time ago to NEVER, EVER watch a movie that has ANYONE who EVER was a regular cast member of "Saturday Night Live". I didn't rent "Corky Romano" but I was forced by my unfailing good manners to watch it for half an hour. Then my good manners failed. Stupid, not funny. Tedious, not hilarious. Bad, not good. That in a nutshell is all I can say for this video.
+Starting Score: 0.023699194192886353; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I vowed a long time ago to NEVER, EVER watch a movie that has ANYONE who EVER was a regular cast member of`` Saturday Night Live``. I did n't rent`` Corky Romano`` but I was compulsory by my unfailing good manners to watch it for half an hour. Then my good manners failed. Stupid, not funny. Tedious, not hilarious. Bad, not good. That in a nutshell is all I can say for this video. 
+ Score: 0.0372946560382843
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I vowed a long time ago to NEVER, EVER surveillance a movie that has ANYONE who EVER was a regularly cast member of`` Saturday Night Live``. I did n't rent`` Corky Romano`` but I was compulsory by my unfailing good manners to watch it for half an hour. Then my good manners failed. Stupid, not funny. Tedious, not hilarious. Bad, not good. That in a nutshell is all I can say for this video. 
+ Score: 0.11811879277229309
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I vowed a long time ago to NEVER, EVER surveillance a movie that has ANYONE who EVER was a regularly cast member of`` Saturday Night Live``. I did n't rent`` Corky Romano`` but I was compulsory by my unfailing good manners to watch it for half an hour. Then my good manners defective. Stupid, not funny. Tedious, not hilarious. Bad, not good. That in a nutshell is all I can tell for this video. 
+ Score: 0.2725871205329895
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I vowed a long time ago to NEVER, EVER surveillance a movie that has ANYONE who EVER was a consistently cast member of`` Saturday Night Live``. I did n't rent`` Corky Romano`` but I was compulsory by my unfailing good manners to watch it for half an hour. Then my good manners mistaken. Stupid, not comical. Tedious, not hilarious. Bad, not good. That in a nutshell is all I can dis for this video. 
+ Score: 0.5191538333892822
+
+%total_time = 1275 seconds
+
+
+####################ATTACK 6/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This is a silly spoof of private eye thrillers as a novelist(Michael Cain)is called upon to 'ghostwrite' an autobiography of a colorful, waning Hollywood star(Mickey Rooney). At times silliness becomes obnoxious. This is not Cain at his best. Rooney is way over the top. Notable support from Lizabeth Scott, Lionel Stander and the comely Nadia Cassini. Not easy to watch.
+Starting Score: 0.07968637347221375; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This is a silly simulation of private eye thrillers as a novelist( Michael Cain) is called upon to'ghostwrite' an autobiography of a colorful, waning Hollywood star( Mickey Rooney). At times silliness becomes obnoxious. This is not Cain at his best. Rooney is way over the top. Notable support from Lizabeth Scott, Lionel Stander and the comely Nadia Cassini. Not easy to watch. 
+ Score: 0.15658870339393616
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This is a daft simulation of private eye thrillers as a novelist( Michael Cain) is called upon to'ghostwrite' an autobiography of a colorful, waning Hollywood star( Mickey Rooney). At times silliness becomes obnoxious. This is not Cain at his best. Rooney is way over the top. Notable support from Lizabeth Scott, Lionel Stander and the comely Nadia Cassini. Not easy to watch. 
+ Score: 0.3527619242668152
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This is a silly simulation of private eye thrillers as a novelist( Michael Cain) is called upon to'ghostwrite' an autobiography of a colorful, waning Hollywood star( Mickey Rooney). At times silliness becomes abominable. This is not Cain at his best. Rooney is way over the top. Notable assists from Lizabeth Scott, Lionel Stander and the comely Nadia Cassini. Not easy to watch. 
+ Score: 0.646940290927887
+
+%total_time = 760 seconds
+
+
+####################ATTACK 7/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Outlandish premise that rates low on plausibility and unfortunately also struggles feebly to raise laughs or interest. Only Hawn's well-known charm allows it to skate by on very thin ice. Goldie's gotta be a contender for an actress who's done so much in her career with very little quality material at her disposal...
+Starting Score: 0.006105631589889526; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Outlandish premise that rates low on plausibility and unfortunately also struggles feebly to raise laughs or interest. Only Hawn's well-known charm allows it to skate by on very thin ice. Goldie's got ta be a favorite for an actress who's done so much in her career with very little quality material at her disposal... 
+ Score: 0.011097729206085205
+
+%generation_time = 215 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Outlandish premise that rates low on plausibility and unfortunately also struggles feebly to raise laughs or interest. Only Hawn's well-known charm enabling it to skate by on very thin ice. Goldie's got ta be a contender for an actress who's performed so much in her career with very little quality material at her disposition... 
+ Score: 0.1897251307964325
+
+%generation_time = 476 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Outlandish premises that rates low on plausibility and unfortunately also struggles feebly to raise laughs or interest. Only Hawn's well-known charm enables it to skate by on very thin ice. Goldie's got ta be a contender for an actress who's performed so much in her career with very little quality material at her disposition... 
+ Score: 0.6557168960571289
+
+%total_time = 835 seconds
+
+
+####################ATTACK 8/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I bought this DVD after seeing it highly ranked here. It's just a short 20 minutes zombie film. Nothing special about it except for the music perhaps.Don't buy it! Not even really worth spending 20 minutes to see it. Only if you're really bored...
+Starting Score: 0.02008157968521118; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I bought this DVD after seeing it highly ranked here. It's just a short 20 minutes zombie film. Nothing special about it except for the music perhaps. Do n't purchases it! Not even really worth spending 20 minutes to see it. Only if you're really bored... 
+ Score: 0.03029102087020874
+
+%generation_time = 214 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I bought this DVD after seeing it highly ranked here. It's just a short 20 recordings zombie film. Nothing special about it except for the music perhaps. Do n't purchases it! Not even really worth spending 20 minutes to see it. Only if you're really bored... 
+ Score: 0.06767991185188293
+
+%generation_time = 463 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I bought this cd after vista it highly graded here. It's just a short 20 minutes zombie film. Nothing special about it except for the music perhaps. Do n't purchases it! Not again really worth spending 20 minutes to see it. Only if you're really bored... 
+ Score: 0.3921683728694916
+
+%generation_time = 476 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I bought this cd after vista it eminently graded here. It's just a short 20 minutes zombie film. Nothing special about it except for the music perhaps. Do n't purchases it! Not again really worth spending 20 minutes to see it. Only if you're really bored... 
+ Score: 0.521773099899292
+
+%total_time = 1273 seconds
+
+
+####################ATTACK 9/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I've long heard that to get their start in 'legitimate' films, many behind-the-camera types work on porno films.The people who produced and directed this monstrosity stayed too long.Poorly paced, staged and written, it uses a lot of perfectly good talent (Diehl, Dorn, Eggert) badly.Much sexual activity is teasingly implied here by the brassiere-popping host to the alien creature, but it never crosses the line...You'll still want to shower afterwards, though.
+Starting Score: 0.09642934799194336; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I've long heard that to get their start in'legitimate' films, many behind-the-camera types work on porno films. The people who produced and directed this monstrosity stayed too long. Poorly paced, staged and written, it uses a lot of perfectly good talent( Diehl, Dorn, Eggert) badly. Much sexual activity is teasingly unspoken here by the brassiere-popping host to the alien creature, but it never crosses the line... You'll still want to shower afterwards, though. 
+ Score: 0.22358986735343933
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I've long heard that to get their start in'legitimate' films, many behind-the-camera genres work on porno films. The people who produced and directed this monstrosity stayed too long. mala paced, staged and written, it uses a lot of perfectly good talent( Diehl, Dorn, Eggert) badly. Much sexual activity is teasingly implied here by the brassiere-popping host to the alien creature, but it never crosses the line... You'll still want to shower afterwards, though. 
+ Score: 0.7213655114173889
+
+%total_time = 617 seconds
+
+
+####################ATTACK 10/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Not that I dislike childrens movies, but this was a tearjerker with few redeeming qualities. M.J. Fox was the perfect voice for Stuart and the rest of the talent was wasted. Hugh Laurie can be amazingly funny, but is not given the chance in this movie. It´s sugar-coated sugar and would hardly appeal to anyone over 7 years of age. See Toy Story, Monsters Inc. or Shrek instead. 3/10
+Starting Score: 0.153030127286911; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Not that I dislike childrens cinematic, but this was a tearjerker with few redeeming qualities. M. J. Fox was the perfect voice for Stuart and the rest of the talent was wasted. Hugh Laurie can be amazingly funny, but is not given the chance in this movie. It´s sugar-coated sugar and would hardly appeal to anyone over 7 years of age. See Toy Story, Monsters Inc. or Shrek instead. 3/ 10 
+ Score: 0.3850666880607605
+
+%generation_time = 240 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Not that I dislike childrens movies, but this was a tearjerker with few redeeming qualities. M. J. Fox was the perfect voice for Stuart and the rest of the talent was wasted. Hugh Laurie can be amazingly funny, but is not given the chance in this movie. It´s sugar-coated sugar and would hardly appeal to anyone over 7 ages of age. See Toy Story, Monsters Inc. or Shrek however. 3/ 10 
+ Score: 0.690403163433075
+
+%total_time = 430 seconds
+
+
+####################ATTACK 11/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which makes me want to watch it whenever it's on. Yes, you're right about the sub-par acting, the plot which only an seven year old could like, etc. But I can't help feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more atrocious sequel.
+Starting Score: 0.0019133687019348145; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which makes me want to watch it whenever it's on. Yes, you're right about the sub-par acting, the plot which only an seven year old could like, etc. But I ca n't help feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more grisly sequel. 
+ Score: 0.010303914546966553
+
+%generation_time = 231 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which makes me envy to watch it whenever it's on. Yes, you're right about the sub-par acting, the plot which only an seven anniversary old could like, etc. But I ca n't help feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more grisly sequel. 
+ Score: 0.019707709550857544
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which brings me want to monitor it whenever it's on. Yes, you're right about the sub-par acting, the plot which only an seven anniversary old could like, etc. But I ca n't help feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more grisly sequel. 
+ Score: 0.03224217891693115
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which makes me want to monitor it whenever it's on. yah, you're right about the sub-par acting, the plot which only an seven anniversary old could like, etc. But I ca n't helps feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more grisly sequel. 
+ Score: 0.07215648889541626
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which delivers me want to monitor it whenever it's on. yah, you're right about the sub-par acting, the plot which only an seven anniversary old could like, etc. But I ca n't helps feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more grisly sequel. 
+ Score: 0.34950804710388184
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I have to admit I've caught this one a few times on the USA Network. There's just something about the, well, sheer stupidity of this flick which delivers me want to monitor it everywhere it's on. Yes, you're right about the sub-par acting, the plot which only an seven anniversary old could like, etc. But I hq n't helps feeling sympathetic toward some of the actors. Then again, a few of these actors signed up for the even more grisly continuation. 
+ Score: 0.7090500593185425
+
+%total_time = 2517 seconds
+
+
+####################ATTACK 12/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I am a fan of the Nightmare series but this one is horrible. The deaths are so trendy. If you were to watch this 20 years later the whole nintendo scene is outdated. I did like the flashbacks. I think they should have just made a prequel about when he was still alive. That would have been more interesting. This is a movie you can take or leave. Depends on how much spare time you have.
+Starting Score: 0.002225726842880249; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I am a fan of the Nightmare series but this one is gruesome. The deaths are so trendy. If you were to watch this 20 years later the whole nintendo scene is outdated. I did like the flashbacks. I think they should have just made a prequel about when he was still alive. That would have been more interesting. This is a movie you can take or leave. Depends on how much spare time you have. 
+ Score: 0.022178322076797485
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I am a fan of the Nightmare series but this one is gruesome. The deaths are so trendy. If you were to watch this 20 years later the overall nintendo scene is outdated. I did like the flashbacks. I think they should have just made a prequel about when he was still alive. That would have been more interesting. This is a movie you can take or leave. Depends on how much spare time you have. 
+ Score: 0.02403557300567627
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I am a fan of the Nightmare series but this one is gruesome. The deaths are so trendy. If you were to surveillance this 20 years later the overall nintendo scene is outdated. I did like the flashbacks. I think they should have just made a prequel about when he was still alive. That would have been more interesting. This is a movie you can take or leave. Depends on how much spare time you have. 
+ Score: 0.03679978847503662
+
+%generation_time = 476 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I am a fan of the Nightmare series but this one is gruesome. The deaths are so trendy. If you were to surveillance this 20 years later the overall nintendo scene is outmoded. I did like the flashbacks. I think they should have just made a prequel about when he was still alive. That would have been more interesting. This is a movie you can take or leave. Depends on how much spare time you have. 
+ Score: 0.24416127800941467
+
+%generation_time = 482 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I am a fan of the Nightmare series but this one is gruesome. The deaths are so trendy. If you were to surveillance this 20 years later the overall nintendo scene is outmoded. I did loved the flashbacks. I think they should have just made a prequel about when he was still alive. That would have been more interesting. This is a movie you can take or leave. Depends on how much spare time you have. 
+ Score: 0.5722231864929199
+
+%total_time = 1955 seconds
+
+
+####################ATTACK 13/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I couldn't believe this was the same director as Antonia's Line.This film has it all, a boring plot, disjointed flashbacks, a subplot that has nothing to do with the main plot what so ever, and totally uninteresting characters. It was painful to watch. Soooo, painful.
+Starting Score: 4.434633592609316e-05; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I could n't believe this was the same director as Antonia's Line. This movies has it all, a boring plot, disjointed flashbacks, a subplot that has nothing to do with the main plot what so ever, and totally uninteresting characters. It was painful to watch. Soooo, painful. 
+ Score: 9.238904749508947e-05
+
+%generation_time = 242 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I could n't believe this was the same director as Antonia's Line. This film has it all, a boring plot, disjointed flashbacks, a subplot that has nothing to do with the main plot what so ever, and totally uninteresting characters. It was painstaking to watch. Soooo, painstaking. 
+ Score: 0.0006144344806671143
+
+%generation_time = 482 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I could n't believe this was the same director as Antonia's Line. This film has it all, a pesky plot, disjointed flashbacks, a subplot that has nothing to do with the main plot what so ever, and totally uninteresting characters. It was painstaking to watch. Soooo, painstaking. 
+ Score: 0.0020825564861297607
+
+%generation_time = 475 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I could n't believe this was the same director as Antonia's Line. This film has it all, a pesky plot, counterintuitive flashbacks, a subplot that has nothing to do with the main plot what so ever, and totally immaterial characters. It was painstaking to watch. Soooo, painstaking. 
+ Score: 0.15500223636627197
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I could n't believe this was the same director as Antonia's Line. This film has it all, a pesky plot, disjointed flashbacks, a subplot that has nothing to do with the main plot what so ever, and totally immaterial characters. It was painstaking to watch. Soooo, painstaking. 
+ Score: 0.15500223636627197
+
+%generation_time = 480 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I could n't believe this was the same director as Antonia's Line. This film has it all, a pesky plot, disjointed memories, a subplot that has nothing to do with the main plot what so ever, and perfectly immaterial characters. It was meticulous to watch. Soooo, painstaking. 
+ Score: 0.732781171798706
+
+%total_time = 2252 seconds
+
+
+####################ATTACK 14/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Would someone tell shaq to stick to what he is good at basketball. This movie was not even entertaining on a stupid level. In this movie shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box instead of a lamp. He is supposed to help a little boy played by the equally annoying francais cappra. This movie had the most flimsy storyline since water world, the acting was awful and I think that anyone who likes this flim would be afraid to admit it.
+Starting Score: 0.0009811818599700928; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not even entertaining on a stupid level. In this movie shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box instead of a lamp. He is supposed to help a little boy played by the equally annoying francais cappra. This movie had the most flimsy storyline since water world, the acting was awful and I think that anyone who loved this flim would be afraid to admit it. 
+ Score: 0.0017832517623901367
+
+%generation_time = 237 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not even entertaining on a stupid level. In this movie shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally annoying francais cappra. This movie had the most fragile storyline since water world, the acting was awful and I think that anyone who loved this flim would be afraid to admit it. 
+ Score: 0.008023262023925781
+
+%generation_time = 467 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not even entertaining on a stupid level. In this movie shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most flimsy storyline since water world, the acting was awful and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.00966799259185791
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not yet entertaining on a stupid level. In this movie shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most flimsy storyline since water world, the acting was awful and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.01303708553314209
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not yet entertaining on a stupid level. In this cinematic shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most flimsy overview since water world, the acting was awful and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.05777379870414734
+
+%generation_time = 478 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not yet entertaining on a stupid level. In this cinematic shaq plays a genie who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most flimsy overview since water world, the acting was horrifying and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.4999023973941803
+
+%generation_time = 478 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not yet entertaining on a stupid level. In this cinematic shaq plays a brilliance who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most flimsy overview since water world, the acting was awful and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.4999023973941803
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not yet entertaining on a stupid level. In this cinematic shaq plays a brilliance who lives in a boom box is that not orginal a genie in a boom box equally of a lamp. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most flimsy overview since water world, the acting was awful and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.4999023973941803
+
+%generation_time = 480 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Would someone tell shaq to stick to what he is good at basketball. This movie was not yet entertaining on a stupid level. In this cinematic shaq plays a brilliance who lives in a boom pandora is that not orginal a genie in a boom box equally of a feu. He is supposed to help a little boy played by the equally galling francais cappra. This movie had the most fragile overview because water world, the acting was awful and I think that anyone who loved this flim would be affraid to recognise it. 
+ Score: 0.8187320828437805
+
+%total_time = 3668 seconds
+
+
+####################ATTACK 15/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+The daytime TV of films. Seldom have I felt so little attachment to characters. Seldom have I been made to cringe by such dire dialogue. Nauseous London thirty-somethings mincing round lurid BBC sets spouting platitudinous mulch. Avoid this film as if it were your grandmother's clunge.
+Starting Score: 0.0046392083168029785; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ The daytime TV of films. Seldom have I felt so little attachment to characters. Seldom have I been made to cringe by such dire dialogue. Nauseous London thirty-somethings mincing round lurid BBC sets ranting platitudinous mulch. Avoid this film as if it were your grandmother's clunge. 
+ Score: 0.006446778774261475
+
+%generation_time = 240 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ The daytime TV of films. rarity have I felt so little attachment to characters. Seldom have I been made to cringe by such dire dialogue. Nauseous London thirty-somethings mincing round lurid BBC sets spouting platitudinous mulch. avoidance this film as if it were your grandmother's clunge. 
+ Score: 0.014048397541046143
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ The daytime TV of films. rarity have I felt so little attachment to characters. rare have I been made to cringe by such harrowing dialogue. Nauseous London thirty-somethings mincing round lurid BBC sets ranting platitudinous mulch. Avoid this film as if it were your grandmother's clunge. 
+ Score: 0.03080257773399353
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ The daytime TV of films. rarity have I felt so little attachment to characters. rare have I been made to cringe by such dire dialogue. Nauseous London thirty-somethings mincing round lurid BBC sets ranting platitudinous mulch. averted this film as if it were your grandmother's clunge. 
+ Score: 0.09691551327705383
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The daytime TV of films. rarity have I felt so little attachment to features. rare have I been made to cringe by such dire dialogue. Nauseous London thirty-somethings mincing round lurid BBC sets ranting platitudinous turf. averted this cinematic as if it were your grandmother's clunge. 
+ Score: 0.6979385018348694
+
+%total_time = 1948 seconds
+
+
+####################ATTACK 16/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Makes "Invasion USA" look like "Apocalypse Now". This one can only be recommended to US skinheads, John Birch supporters or militia members. The message is very simple : let's shoot them all - gooks, commies, latinos, everything that isn't American.Besides, this is badly acted, badly scripted, badly interpreted, incredibly stupid but no fun at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there can't be any US torturers because they are the GOOD
+Starting Score: 0.0031482279300689697; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Makes`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia members. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. Besides, this is badly acted, badly scripted, badly interpreted, incredibly stupid but no pleasurable at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.004594326019287109
+
+%generation_time = 237 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Makes`` aggression USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia members. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. Besides, this is badly acted, badly scripted, badly interpreted, incredibly stupid but no pleasurable at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.007856130599975586
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ brings`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia members. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. likewise, this is badly act, badly scripted, badly interpreted, incredibly daft but no pleasurable at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.013536334037780762
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ brings`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia limbs. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. likewise, this is desperately act, badly scripted, badly interpreted, incredibly daft but no pleasurable at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.041752010583877563
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ brings`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia limbs. The message is very simple: let's kills them all- gooks, commies, latinos, everything that is n't American. likewise, this is desperately act, badly scripted, badly interpreted, incredibly daft but no pleasurable at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US oppressors because they are the GOOD 
+ Score: 0.05209618806838989
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ brings`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia limbs. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. likewise, this is hurt acted, hurt scripted, badly interpreted, incredibly daft but no pleasurable at all. This movie could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.1494678556919098
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ brings`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skinheads, John Birch supporters or militia limbs. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. likewise, this is hurt acted, hurt scripted, badly misunderstood, incredibly daft but no pleasurable at all. This cinematic could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.44057923555374146
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ brings`` Invasion USA`` look like`` Apocalypse Now``. This one can only be recommended to US skin, John Birch supporters or militia limbs. The message is very simple: let's shoot them all- gooks, commies, latinos, everything that is n't American. likewise, this is hurt act, hurt scripted, badly regarded, incredibly daft but no pleasurable at all. This cinematic could be used as a toorture device by CIA torturers. oops, sorry, there ca n't be any US torturers because they are the GOOD 
+ Score: 0.622725784778595
+
+%total_time = 3405 seconds
+
+
+####################ATTACK 17/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I don't see why everyone loves this film so much. True, it does have good intentions and meaning, but you cannot compensate for such a poor script. Woody Allen is a brilliant filmaker, but I'm afraid this is just a piece of garbage. It's extremely predictable and the subject matter is all too visible. I happen to be a huge Woody Allan fan and love most of his work, but this I cannot recomend.
+Starting Score: 0.007838994264602661; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I do n't see why everyone loved this film so much. True, it does have good intentions and meaning, but you can not compensate for such a poor script. Woody Allen is a brilliant filmaker, but I'm afraid this is just a piece of garbage. It's extremely predictable and the subject matter is all too visible. I happen to be a huge Woody Allan fan and love most of his work, but this I can not recomend. 
+ Score: 0.0102691650390625
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I do n't consults why everyone loves this film so much. True, it does have good aims and meaning, but you can not compensate for such a poor script. Woody Allen is a brilliant filmaker, but I'm afraid this is just a piece of garbage. It's extremely anticipated and the subject matter is all too visible. I happen to be a huge Woody Allan fan and love most of his work, but this I can not recomend. 
+ Score: 0.08208760619163513
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I do n't consults why everyone loves this film so much. True, it does have good aims and meaning, but you can not compensate for such a poor commands. Woody Allen is a brilliant filmaker, but I'm afraid this is just a piece of garbage. It's extremely anticipated and the subject matter is all too visible. I happen to be a huge Woody Allan fan and love most of his work, but this I can not recomend. 
+ Score: 0.46811148524284363
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I do n't consults why everyone loves this movie so much. True, it does have good aims and senses, but you can not compensate for such a pauper script. Woody Allen is a brilliant filmaker, but I'm afraid this is just a piece of garbage. It's extremely anticipated and the subject aspect is all too visible. I happen to be a huge Woody Allan fan and love most of his work, but this I can not recomend. 
+ Score: 0.54764723777771
+
+%total_time = 1230 seconds
+
+
+####################ATTACK 18/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I was really looking forward to this movie based on the previews and press it received, but after viewing it I was terribly disappointed. Slums is a totally unfunny film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is worse than the last. Maybe I missed the point, but if this film is an example of every girl's growing up experience I am glad to be a man.
+Starting Score: 0.003491133451461792; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I was sincerely looking forward to this movie based on the previews and press it received, but after viewing it I was terribly disappointed. Slums is a totally unfunny film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is worse than the last. Maybe I missed the point, but if this film is an example of every girl's growing up experience I am glad to be a man. 
+ Score: 0.004590272903442383
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I was sincerely looking forward to this movie based on the previews and press it received, but after viewing it I was terribly disappointed. Slums is a totally witless film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is worse than the last. Maybe I missed the point, but if this film is an example of every girl's growing up experience I am glad to be a man. 
+ Score: 0.023977577686309814
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I was sincerely looking forward to this movie based on the previews and press it received, but after viewing it I was terribly disappointed. Slums is a totally witless film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is worse than the last. Maybe I missed the point, but if this film is an example of everyone girl's growing up experience I am glad to be a man. 
+ Score: 0.03457099199295044
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I was sincerely looking forward to this movie based on the previews and press it received, but after viewing it I was terribly dashed. Slums is a totally witless film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is worse than the last. Maybe I missed the point, but if this film is an example of everyone girl's growing up experience I am glad to be a man. 
+ Score: 0.2956160604953766
+
+%generation_time = 476 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I was sincerely looking forward to this movie based on the previews and press it received, but after views it I was terribly disappointed. Slums is a totally witless film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is toughest than the last. Maybe I missed the point, but if this film is an example of everyone girl's growing up experience I am glad to be a man. 
+ Score: 0.3411874771118164
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I was sincerely looking forward to this movie based on the previews and press it received, but after views it I was terribly disappointed. Slums is a totally daft film mixed with a Todd Solondz type of disturbing family reality sans Todd's brand of humor. The story drags along and each scene is toughest than the last. Maybe I missed the point, but if this film is an example of everyone girl's growing up experience I am glad to be a man. 
+ Score: 0.5323494672775269
+
+%total_time = 2371 seconds
+
+
+####################ATTACK 19/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+If there was a God, he would have made sure this movie stayed in the toilet were it was crapped up. This is BY FAR the worst vampire movie I have ever seen. I may never watch a vampire film again because of this movie. It makes Zombie Lake look like The Sound of Music.
+Starting Score: 0.0013245046138763428; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ If there was a deus, he would have made sure this movie stayed in the toilet were it was crapped up. This is BY FAR the worst vampire movie I have ever seen. I may never watch a vampire film again because of this movie. It makes Zombie Lake look like The Sound of Music. 
+ Score: 0.002216517925262451
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ If there was a God, he would have made sure this movie stayed in the toilet were it was crapped up. This is BY FAR the worst vampire movie I have ever seen. I may never surveillance a vampire film again because of this movie. It makes Zombie Lake look adore The Sound of Music. 
+ Score: 0.008267760276794434
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ If there was a God, he would have made sure this movie stayed in the toilet were it was moist up. This is BY FAR the toughest vampire movie I have ever seen. I may never surveillance a vampire film again because of this movie. It makes Zombie Lake peek like The Sound of Music. 
+ Score: 0.9102609753608704
+
+%total_time = 851 seconds
+
+
+####################ATTACK 20/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I figured the whole joke of the movie would be to see some rich white guy acting like Chris Rock, and then see Chris Rock react to people's reactions. Instead you just see Chris Rock being himself and people not understanding him. There are maybe 2 scenes in the entire movie where they use their gimmick. This should have been a lot better.
+Starting Score: 0.008884727954864502; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I figured the whole joke of the movie would be to see some rich white guy acting like Chris Rock, and then see Chris Rock react to people's reactions. Instead you just see Chris Rock being himself and people not understanding him. There are maybe 2 scenes in the entire movie where they use their gimmick. This should have been a lot enhanced. 
+ Score: 0.05275776982307434
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I figured the whole joke of the movie would be to see some rich white guy acting like Chris Rock, and then see Chris Rock react to people's reactions. Instead you just see Chris Rock being himself and people not understanding him. There are maybe 2 scenes in the entire movie where they employs their gimmick. This should have been a lot enhanced. 
+ Score: 0.05984121561050415
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I figured the whole joke of the movie would be to see some rich white guy acting like Chris Rock, and then see Chris Rock react to people's reactions. nonetheless you just see Chris Rock being himself and people not understanding him. There are maybe 2 scenes in the entire movie where they employs their gizmo. This should have been a lot better. 
+ Score: 0.10197705030441284
+
+%generation_time = 478 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I figured the whole banter of the movie would be to see some rich white guy acting like Chris Rock, and then see Chris Rock react to people's reactions. Instead you just see Chris Rock being himself and people not understanding him. There are maybe 2 scenes in the entire movie where they employs their gizmo. This should have been a lot enhanced. 
+ Score: 0.6086675524711609
+
+%total_time = 1473 seconds
+
+
+####################ATTACK 21/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+The movie contains a very short scene of Deneuve in a bathtub. She looks absolutely stunning for a lady age 56, but this is the only saving grace of the movie. Otherwise, it has a mindless, unmotivated script and the lead actress has none of Deneuve's appeal. The director apparently watched too many Peter Greenaway films and Pola X comes across as a student's imitation of the Greenaway style, without any of his inspiration.
+Starting Score: 0.0024801790714263916; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ The movie contains a very short scene of Deneuve in a bathtub. She looks absolutely amazing for a lady age 56, but this is the only saving grace of the movie. Otherwise, it has a mindless, unmotivated script and the lead actress has none of Deneuve's appeal. The director apparently watched too many Peter Greenaway films and Pola X comes across as a student's imitation of the Greenaway style, without any of his inspiration. 
+ Score: 0.003943681716918945
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ The movie contains a very short scene of Deneuve in a bathtub. She looks absolutely stunning for a missus age 56, but this is the only saving grace of the movie. Otherwise, it has a mindless, inattentive script and the lead actress has none of Deneuve's appeal. The director apparently watched too myriad Peter Greenaway films and Pola X comes across as a student's imitation of the Greenaway style, without any of his inspiration. 
+ Score: 0.01659780740737915
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ The movie contains a very short scene of Deneuve in a bathtub. She looks absolutely stunning for a missus age 56, but this is the only saving grace of the movie. Otherwise, it has a mindless, unmotivated script and the lead actress has none of Deneuve's appeal. The director apparently watched too myriad Peter Greenaway films and Pola X comes across as a student's imitation of the Greenaway style, without any of his inspiration. 
+ Score: 0.01659780740737915
+
+%generation_time = 479 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ The movie contains a very concise scene of Deneuve in a bathtub. She looks absolutely stunning for a missus age 56, but this is the only saving grace of the movie. Otherwise, it has a foolish, unmotivated script and the lead actress has none of Deneuve's appeal. The director apparently watched too myriad Peter Greenaway films and Pola X comes onto as a student's imitation of the Greenaway style, without any of his inspiration. 
+ Score: 0.10814818739891052
+
+%generation_time = 475 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ The movie contains a very concise movies of Deneuve in a bathtub. She looks absolutely stunning for a missus ages 56, but this is the only saving grace of the movie. Otherwise, it has a foolish, unmotivated script and the lead actress has none of Deneuve's appeal. The director apparently watched too myriad Peter Greenaway films and Pola X comes onto as a student's imitation of the Greenaway style, without any of his inspiration. 
+ Score: 0.32628047466278076
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The movie contains a very concise movies of Deneuve in a bathtub. She looks absolutely stunning for a missus ages 56, but this is the only saving amnesty of the movie. Otherwise, it has a foolish, unmotivated script and the lead actress has none of Deneuve's appeal. The director reportedly watched too myriad Peter Greenaway films and Pola X comes onto as a student's mimicry of the Greenaway style, without any of his inspiration. 
+ Score: 0.7322788238525391
+
+%total_time = 2190 seconds
+
+
+####################ATTACK 22/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Superdome is one of those movies that makes you wonder why it was made. The whole plot concerns someone trying to sabotage the superbowl, and all the attempts made to stop them. How Tom Selleck and Donna Mills' careers managed to survive this is beyond me. However, the most frustrating thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! Avoid this one if possible.
+Starting Score: 0.006329655647277832; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Superdome is one of those movies that makes you wonder why it was made. The all plot concerns someone trying to sabotage the superbowl, and all the attempts made to stop them. How Tom Selleck and Donna Mills' careers managed to survive this is beyond me. However, the most frustrating thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! Avoid this one if possible. 
+ Score: 0.01055571436882019
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Superdome is one of those movies that makes you wonder why it was made. The all plot concerns someone trying to sabotage the superbowl, and all the attempts made to stop them. How Tom Selleck and Donna Mills' careers managed to survive this is beyond me. However, the most frustrating thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! avert this one if possible. 
+ Score: 0.03497597575187683
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Superdome is one of those movies that makes you wonder why it was made. The all plot concerns someone trying to sabotage the superbowl, and all the attempts made to stop them. How Tom Selleck and Donna Mills' careers administered to survive this is beyond me. However, the most frustrating thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! avert this one if possible. 
+ Score: 0.03497597575187683
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Superdome is one of those cinematic that brings you wonder why it was made. The all plot concerns someone trying to sabotage the superbowl, and all the attempts made to stop them. How Tom Selleck and Donna Mills' careers administered to survive this is beyond me. However, the most frustrating thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! avert this one if possible. 
+ Score: 0.07878965139389038
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Superdome is one of those cinematic that brings you amaze why it was executed. The all plot concerns someone trying to sabotage the superbowl, and all the attempts made to stop them. How Tom Selleck and Donna Mills' careers administered to survive this is beyond me. However, the most frustrating thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! avert this one if possible. 
+ Score: 0.23359715938568115
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Superdome is one of those cinematic that brings you amaze why it was made. The all plot concerns someone trying to sabotage the superbowl, and all the attempts executed to stop them. How Tom Selleck and Donna Mills' careers administered to survive this is beyond me. However, the most vexing thing about it was THERE WAS NO FOOTBALL IN IT AT ALL! avert this one if possible. 
+ Score: 0.731059193611145
+
+%total_time = 2472 seconds
+
+
+####################ATTACK 23/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This movie sucks. Ridiculous "school" athmosphere, unbelievable students that are very bad and behave like criminals but then later after the "good teacher" Nick Nolte taught them they became as good and as quiet as kittens.If this works for you, it doesn't for me. 0 out of 10
+Starting Score: 0.0012516379356384277; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This cinematic sucks. Ridiculous`` school`` athmosphere, unbelievable students that are very bad and behave like criminals but then later after the`` good teacher`` Nick Nolte taught them they became as good and as quiet as kittens. If this works for you, it does n't for me. 0 out of 10 
+ Score: 0.0020821690559387207
+
+%generation_time = 242 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This cinematic fears. Ridiculous`` school`` athmosphere, unbelievable students that are very bad and behave like criminals but then later after the`` good teacher`` Nick Nolte taught them they became as good and as quiet as kittens. If this works for you, it does n't for me. 0 out of 10 
+ Score: 0.027309268712997437
+
+%generation_time = 483 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This cinematic fears. farcical`` school`` athmosphere, unbelievable students that are very bad and behave like criminals but then later after the`` optimum teacher`` Nick Nolte taught them they became as good and as quiet as kittens. If this collaboration for you, it does n't for me. 0 out of 10 
+ Score: 0.1571773886680603
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This cinematic fears. farcical`` school`` athmosphere, amazing students that are very bad and behave like criminals but then later after the`` optimum teacher`` Nick Nolte taught them they became as good and as tranquil as kittens. If this collaboration for you, it does n't for me. 0 out of 10 
+ Score: 0.4753206670284271
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This cinematic fears. farcical`` school`` athmosphere, amazing students that are very bad and behave loved criminals but then later after the`` optimum teacher`` Nick Nolte taught them they became as good and as tranquil as kittens. If this collaboration for you, it does n't for me. 0 out of 10 
+ Score: 0.6305110454559326
+
+%total_time = 1771 seconds
+
+
+####################ATTACK 24/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This crew-versus-monsta has been done a hundred times, sometimes better. This one was pretty slow-moving ; only the monster's resurrection was really worthwhile. Attempts at character developments gets botched by routine. Yeah, "routine" is the word. Went straight to video in France. No wonder
+Starting Score: 0.019951045513153076; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This crew-versus-monsta has been done a hundred times, sometimes better. This one was lovely slow-moving; only the monster's resurrection was really worthwhile. Attempts at character developments gets botched by routine. Yeah,`` routine`` is the word. Went straight to video in France. No wonder 
+ Score: 0.0789395272731781
+
+%generation_time = 234 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This crew-versus-monsta has been done a hundred times, sometimes better. This one was lovely slow-moving; only the monster's resurrection was really worthwhile. endeavors at character developments gets botched by routine. Yeah,`` routine`` is the word. Went straight to video in France. No wonder 
+ Score: 0.343284010887146
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This crew-versus-monsta has been done a hundred times, sometimes better. This one was lovely slow-moving; only the monster's resurrection was truly worthwhile. endeavors at character developments gets botched by routine. Yeah,`` routine`` is the word. Went straight to video in France. No wonder 
+ Score: 0.5235036015510559
+
+%total_time = 756 seconds
+
+
+####################ATTACK 25/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I was hoping this would be a good weekly vehicle for Tim Curry, one of my all-time favorite performers. Alas and alack, it is NOT. There doesn't seem to be any chemistry between anyone on the show, the dialogue is decidedly uninspired, and even the laugh track appeared to be laboring. Brutal.
+Starting Score: 0.0018533766269683838; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I was hoping this would be a good weekly vehicle for Tim Curry, one of my all-time favorite performers. Alas and alack, it is NOT. There does n't seem to be any chemistry between anyone on the show, the dialogue is decidedly uninspired, and yet the laugh track appeared to be laboring. Brutal. 
+ Score: 0.004003375768661499
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I was hoping this would be a good weekly vehicle for Tim Curry, one of my all-time favorite artistes. Alas and alack, it is NOT. There does n't seem to be any chemistry between anyone on the show, the dialogue is decidedly clichéd, and yet the laugh track appeared to be laboring. Brutal. 
+ Score: 0.061525821685791016
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I was awaits this would be a good weekly vehicle for Tim Curry, one of my all-time favorite artistes. Alas and alack, it is NOT. There does n't seem to be any chemistry between anyone on the show, the dialogue is decidedly clichéd, and yet the laugh track appeared to be laboring. Brutal. 
+ Score: 0.15822547674179077
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I was awaits this oughta be a good weekly vehicle for Tim Curry, one of my all-time favorite artistes. Alas and alack, it is NOT. There does n't appear to be any chemistry between anyone on the show, the dialogue is decidedly clichéd, and yet the smiles track appeared to be laboring. Brutal. 
+ Score: 0.5504197478294373
+
+%total_time = 1228 seconds
+
+
+####################ATTACK 26/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Nine minutes of psychedelic, pulsating, often symmetric abstract images, are enough to drive anyone crazy. I did spot a full-frame eye at the start, and later some birds silhouetted against other colors. It was just not my cup of tea. It's about 8½ minutes too long.
+Starting Score: 0.1764022409915924; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Nine minutes of psychedelic, pulsating, often symmetric abstract images, are enough to drive anyone lunatic. I did spot a full-frame eye at the start, and later some birds silhouetted against other colors. It was just not my cup of tea. It's about 8½ minutes too long. 
+ Score: 0.2624974250793457
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Nine minutes of psychedelic, pulsating, often symmetric abstract images, are enough to drive anyone crazy. I did spot a full-frame eye at the start, and later some poultry silhouetted against other colors. It was just not my goblet of tea. It's about 8½ minutes too long. 
+ Score: 0.3760705590248108
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Nine minutes of psychedelic, pulsating, often symmetric abstract images, are enough to drive everyone lunatic. I did spot a full-frame eye at the start, and later some poultry silhouetted against other colors. It was just not my goblet of tea. It's about 8½ minutes too long. 
+ Score: 0.5164644122123718
+
+%total_time = 757 seconds
+
+
+####################ATTACK 27/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Most definitely the worst Columbo ever dreamt up. No murder and the abandonment of the tried and tested formula makes this a real drag. Falk looks bored throughout and so will you be if you waste anytime watching this.
+Starting Score: 0.010686337947845459; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Most definitely the worst Columbo ever dreamt up. No murder and the abandonment of the tried and tested formula makes this a real drag. Falk looks piercing throughout and so will you be if you waste anytime watching this. 
+ Score: 0.10243991017341614
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Most definitely the worst Columbo ever dreamt up. No murder and the abandonment of the tried and tested recipe makes this a real drag. Falk awaits bored throughout and so will you be if you debris anytime watching this. 
+ Score: 0.4606531262397766
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Most doubtless the worst Columbo ever dreamt up. No murder and the abandonment of the endeavour and tested recipe makes this a real drag. Falk awaits bored throughout and so will you be if you debris anytime watching this. 
+ Score: 0.7432914972305298
+
+%total_time = 757 seconds
+
+
+####################ATTACK 28/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This movie was definitely not one of Mary-Kate and Ashley's best movies. I really didn't like it, and I was kind of disappointed in that movie. For some reason, it seemed like it was a movie that they put together really fast. In some parts, it got so boring that I had to fast forward it. It didn't have any bloopers or any exciting parts like their other movies.
+Starting Score: 0.14871403574943542; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This movie was definitely not one of Mary-Kate and Ashley's best movies. I really did n't like it, and I was kind of disappointed in that movie. For some reason, it seemed like it was a movie that they put together really fast. In some parts, it got so pesky that I had to fast forward it. It did n't have any bloopers or any exciting parts like their other movies. 
+ Score: 0.8423982262611389
+
+%total_time = 121 seconds
+
+
+####################ATTACK 29/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I think that this is a disappointing sequel. I miss a lot of the old characters (King Gator, Anne Marie, etc.), and I don't like it due to the fact that not even half of the original voices are back to do the characters. A lot of personality was lost in Charlie, and the villain Red is not even half as bad as Carface was in the first one. If you're a big ADGTH fan like I am, it's worth seeing just to see how the story is continued, but don't count on it being 5 stars in your book.
+Starting Score: 0.0016703009605407715; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I think that this is a disappointing sequel. I miss a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the characters. A lot of personality was lost in Charlie, and the villain Red is not even half as bad as Carface was in the first one. If you're a big ADGTH fan loved I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your book. 
+ Score: 0.006702810525894165
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I think that this is a distressing sequel. I miss a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the characters. A lot of personality was lost in Charlie, and the villain Red is not even half as bad as Carface was in the first one. If you're a big ADGTH fan like I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your ledger. 
+ Score: 0.0359797477722168
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I think that this is a disappointing sequel. I miss a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the characters. A lot of personality was lost in Charlie, and the villain Red is not even half as bad as Carface was in the first one. If you're a big ADGTH fan like I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your ledger. 
+ Score: 0.0359797477722168
+
+%generation_time = 476 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I think that this is a disappointing sequel. I miss a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the characters. A lot of personality was lost in Charlie, and the villain Red is not even half as naughty as Carface was in the first one. If you're a big ADGTH fan like I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your ledger. 
+ Score: 0.0359797477722168
+
+%generation_time = 479 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I think that this is a disappointing sequel. I miss a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the characters. A lot of personality was lost in Charlie, and the villain Red is not even half as naughty as Carface was in the first one. If you're a big ADGTH fan like I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your ledger. 
+ Score: 0.0359797477722168
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ I think that this is a disappointing sequel. I miss a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the features. A lot of personality was lost in Charlie, and the villain Red is not even half as filthy as Carface was in the first one. If you're a big ADGTH fan like I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your ledger. 
+ Score: 0.0359797477722168
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I think that this is a distressing sequel. I mme a lot of the old characters( King Gator, Anne Marie, etc. ), and I do n't like it due to the fact that not even half of the original voices are back to do the features. A lot of personality was lost in Charlie, and the villain Red is not even half as filthy as Carface was in the first one. If you're a big ADGTH fan loved I am, it's worth seeing just to see how the story is continued, but do n't count on it being 5 stars in your ledger. 
+ Score: 0.6476229429244995
+
+%total_time = 2802 seconds
+
+
+####################ATTACK 30/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion crap like foreigner and in the shadows fighting like half past dead. Exit wounds showed more of his fighting skills with some wires which was ok but then he went back to b movie directors.
+Starting Score: 0.007802903652191162; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion crap like foreigner and in the shadows fighting like half past dead. Exit wounds showed more of his fighting skills with some wires which was ok but then he went back to b cinematographic directors. 
+ Score: 0.043523967266082764
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion crap like foreigner and in the shadows fighting like half past dead. Exit wounds showed more of his fighting skills with some wires which was ok but then he went back to b movie directors. 
+ Score: 0.043523967266082764
+
+%generation_time = 452 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion bugger like foreigner and in the shadows fighting like half past deaths. Exit wounds showed more of his fighting skills with some cords which was ok but then he went back to b movie headmaster. 
+ Score: 0.08155766129493713
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion damnit like foreigner and in the shadows fighting like half past deaths. Exit wounds showed more of his fighting skills with some cords which was ok but then he went back to b cinematographic headmaster. 
+ Score: 0.35574012994766235
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion damnit like foreigner and in the hues fighting like half past deaths. Exit wounds illustrated more of his fighting skills with some cords which was ok but then he went back to iv movie headmaster. 
+ Score: 0.3629109859466553
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion damnit like foreigner and in the hues fighting like averages past deaths. Exit wounds illustrated more of his combats skills with some cords which was ok but then he went back to b movie headmaster. 
+ Score: 0.4872596263885498
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Seagal needs to get back to basics breaking bones and kicking butt. No more of this slow motion merde like foreigner and in the hues fighting like averages past deaths. Exit wounds illustrated more of his combats skills with some cords which was ok but then he went back to b movie headmaster. 
+ Score: 0.6558634042739868
+
+%total_time = 2675 seconds
+
+
+####################ATTACK 31/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This film is all right, fairly silly and to be taken lightly. But what I can't stand are the numerous heroes and that boy's ILLEGALY SENTIMENTAL comment near the end: "look, they all look the same". Isn't that by far passing the good taste standards? I thought it was revolting, as were the heroic, unselfish acts by some of the people in this film. I'm not saying it won't happen like that, but zooming in on all the bravery like that makes my stomach churn.
+Starting Score: 0.11175563931465149; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This film is all right, fairly daft and to be taken lightly. But what I ca n't stand are the numerous heroes and that boy's ILLEGALY SENTIMENTAL comment near the end:`` look, they all look the same``. Is n't that by far passing the good taste standards? I thought it was revolting, as were the heroic, unselfish acts by some of the people in this film. I'm not saying it wo n't happen like that, but zooming in on all the bravery like that makes my stomach churn. 
+ Score: 0.1558481752872467
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This film is all right, fairly silly and to be taken lightly. But what I ca n't stand are the numerous heroes and that boy's ILLEGALY SENTIMENTAL comment near the end:`` look, they all look the same``. Is n't that by far passing the good taste standards? I thought it was revolting, as were the heroic, unselfish acts by some of the people in this film. I'm not saying it wo n't happen like that, but zooming in on all the bravery like that makes my gut churn. 
+ Score: 0.3028331995010376
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This film is all right, justly silly and to be taken lightly. But what I ca n't stand are the numerous heroes and that boy's ILLEGALY SENTIMENTAL comment near the end:`` look, they all look the same``. Is n't that by highly passing the good taste regulations? I thought it was revolting, as were the heroic, unselfish acts by some of the people in this film. I'm not saying it wo n't happen like that, but zooming in on all the bravery like that makes my stomach churn. 
+ Score: 0.513075590133667
+
+%total_time = 898 seconds
+
+
+####################ATTACK 32/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This has an interesting, albeit somewhat fanciful sci-fi plot, but it's wasted with poor direction and shlocky special effects. Rae Dawn Chong is appealing, despite the lack of a believable story and direction consistent with her talent.
+Starting Score: 0.08335503935813904; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This has an interesting, albeit somewhat fanciful sci-fi plot, but it's stoned with poor direction and shlocky special effects. Rae Dawn Chong is appealing, despite the lack of a believable story and direction consistent with her talent. 
+ Score: 0.2676970660686493
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This has an interesting, albeit somewhat fanciful sci-fi plot, but it's wasted with poor direction and shlocky special effects. Rae Dawn Chong is appealing, despite the shortage of a believable story and direction consistent with her knack. 
+ Score: 0.5020521879196167
+
+%total_time = 473 seconds
+
+
+####################ATTACK 33/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Surely this deserves to be in the bottom 10 films of all time, pity it's just a TV movie. Rubbish that only we British can produce! It perhaps has some merit in the so awful it's good scale. Watch out for scene where they start dancing !
+Starting Score: 0.08928105235099792; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Surely this deserves to be in the bottom 10 films of all time, pity it's just a TV movie. Rubbish that only we British can produce! It perhaps has some merit in the so gruesome it's good scale. Watch out for scene where they start dancing! 
+ Score: 0.39316532015800476
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Surely this deserves to be in the bottom 10 films of all time, pity it's just a TV cinematic. codswallop that only we British can produce! It possible has some merit in the so awful it's good scale. Watch out for scene where they start dancing! 
+ Score: 0.6867073774337769
+
+%total_time = 521 seconds
+
+
+####################ATTACK 34/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Low budget horror about an evil force. Hard to believe in this day and age, but way back when this stuff actually used to get theatrical release! These days this sort of thing would either go direct-to-video or straight to cable. Shouldn't be too hard to avoid this one; who's ever heard of it?
+Starting Score: 0.12970271706581116; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Low budget horror about an evil force. Hard to believe in this day and age, but way back when this stuff truly used to get theatrical release! These days this sort of thing would either go direct-to-video or straight to cable. Should n't be too hard to avoid this one; who's ever heard of it? 
+ Score: 0.18444949388504028
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Low priced horror about an evil force. Hard to believe in this day and age, but way back when this stuff truly used to get theatrical release! These days this sort of thing would either go direct-to-video or straight to cable. Should n't be too hard to avoid this individual; who's ever heard of it? 
+ Score: 0.39758408069610596
+
+%generation_time = 475 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Low budget horror about an evil force. Hard to believe in this day and age, but way back when this stuff truly used to get theatrical release! These days this sort of thing would either go direct-to-video or straight to cable. Should n't be too hard to avoid this individual; who's ever heard of it? 
+ Score: 0.39758408069610596
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Low budget horror about an evil force. Hard to believe in this day and age, but way retrograde when this stuff truly used to get theatrical release! These days this sort of thing would either go direct-to-video or straight to cable. Should n't be too hard to avoidance this individual; who's ever heard of it? 
+ Score: 0.5224049687385559
+
+%total_time = 1280 seconds
+
+
+####################ATTACK 35/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+The English translation of the title on the DVD version of this film is "Graveyard of Horrors," but I think that must be an error. It should have been called "Graveyard of Horribles." Horrible acting, horrible editing, horrible story, and horrible music all make this a horrible film best left in a horrible graveyard.Horrible.
+Starting Score: 0.0002588033676147461; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible acting, gruesome editing, horrible story, and horrible music all make this a horrible film best left in a horrible graveyard. Horrible. 
+ Score: 0.0005350410938262939
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible acting, gruesome editing, horrible story, and horrible music all make this a horrifying film best left in a horrible graveyard. Horrible. 
+ Score: 0.0013474822044372559
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that ought be an error. It should have been called`` Graveyard of Horribles.`` Horrible acting, gruesome editing, horrible story, and horrible music all make this a horrifying film best left in a horrible graveyard. Horrible. 
+ Score: 0.0013793706893920898
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that ought be an error. It should have been called`` Graveyard of Horribles.`` Horrible acting, gruesome editing, horrible story, and horrible music all make this a horrifying film best left in a horrible tombs. Horrible. 
+ Score: 0.0026150941848754883
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible acting, gruesome editing, horrible story, and horrible music all make this a horrifying film finest left in a horrifying tombstones. Horrible. 
+ Score: 0.05745410919189453
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible caretaker, gruesome editing, grisly story, and horrible music all make this a horrifying film finest departing in a horrible tombstones. Horrible. 
+ Score: 0.15205225348472595
+
+%generation_time = 451 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible caretaker, gruesome editing, grisly story, and horrible music all bring this a horrifying film finest departing in a horrible tombstones. Horrible. 
+ Score: 0.2602357864379883
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible keeper, gruesome editing, grisly story, and horrific music all make this a horrifying film finest departing in a horrible tombstones. Horrible. 
+ Score: 0.34877872467041016
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The English translation of the title on the DVD version of this film is`` Graveyard of Horrors,`` but I think that must be an error. It should have been called`` Graveyard of Horribles.`` Horrible keeper, gruesome editing, grisly story, and horrific music all create this a horrifying film finest departing in a horrible tombstones. Horrible. 
+ Score: 0.5295994877815247
+
+%total_time = 3716 seconds
+
+
+####################ATTACK 36/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Lolita is a rebel and she's going to share to our wide open eyes some little sex stories, between sci-fi and fantasy... Well, this Surrender Cinema production is not very good: very bad acting, horrifying music and a story line without any story and any line. BUT, the sex scenes are pretty well done, lot of lesbian scenes, and Jacqueline Lovell, as beautiful as in The Exotic House Of Wax, offer to us a very good final and very hot strip show. For Lovell's fans only.
+Starting Score: 0.3140330910682678; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Lolita is a rebel and she's going to share to our wide open eyes some little sex stories, between sci-fi and fantasy... Well, this Surrender Cinema production is not very good: very bad acting, horrifying music and a story line without any story and any line. BUT, the sex scenes are pretty well done, lot of lesbian scenes, and Jacqueline Lovell, as beautiful as in The Exotic House Of Wax, offer to us a very good ultimate and very hot strip show. For Lovell's fans only. 
+ Score: 0.507117748260498
+
+%total_time = 236 seconds
+
+
+####################ATTACK 37/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Okay,I realize that there are some doubting Thomas's out there...I was one of them...but then I saw this masterpiece of celluloid.All I can say is that the scene in which George Wendt gets sucked out of the spaceship BY HIS A** left me trembling. I sometimes sit bolt upright in my bed, screaming like an old man on a proctologist's table thinking about it. If the director is reading this... I would pay to be an extra in the sequel.
+Starting Score: 0.02519741654396057; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Okay, I realize that there are some doubting Thomas's out there... I was one of them... but then I saw this masterpiece of celluloid. All I can say is that the scene in which George Wendt gets sucked out of the spaceship BY HIS A** left me trembling. I sometimes sit bolt upright in my bed, shout like an old man on a proctologist's table thinking about it. If the director is reading this... I would pay to be an extra in the sequel. 
+ Score: 0.05536702275276184
+
+%generation_time = 241 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Okay, I realize that there are some doubting Thomas's out there... I was one of them... but then I saw this masterpiece of celluloid. All I can say is that the scene in which George Wendt gets sucked out of the spaceship BY HIS A** left me trembling. I sometimes sit bolt upright in my bed, screaming like an old man on a proctologist's paintings thinking about it. If the steering is reading this... I would pay to be an extra in the sequel. 
+ Score: 0.14905422925949097
+
+%generation_time = 493 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Okay, I realize that there are some doubting Thomas's out there... I was one of them... but then I saw this masterpiece of celluloid. All I can say is that the scene in which George Wendt gets sucked out of the spaceship BY HIS A** left me trembling. I sometimes sit bolt upright in my bed, screaming like an old man on a proctologist's paintings thinking about it. If the steering is reading this... I would payroll to be an plus in the sequel. 
+ Score: 0.5820554494857788
+
+%total_time = 1028 seconds
+
+
+####################ATTACK 38/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Good actors and good performances can't mask a pointless script, bad dialogue, and patterns of behavior spiraling into nothing you'd care about. The most interesting character is David Berkowitz. No character development - no growth, no interest, just some suffering for no particular reason, teaching us nothing and not even bothering to entertain.
+Starting Score: 0.0008029043674468994; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Good actors and good performances ca n't mask a pointless script, bad dialogue, and patterns of behavior spiraling into nothing you'd care about. The most interesting character is David Berkowitz. No character development- no growth, no interest, just some suffering for no particular reason, teaching us nothing and not even bothering to entertaining. 
+ Score: 0.0014788508415222168
+
+%generation_time = 240 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Good gamers and best performances ca n't mask a pointless script, bad dialogue, and patterns of behavior spiraling into nothing you'd care about. The most interesting character is David Berkowitz. No character development- no growth, no interest, just some suffering for no particular reason, teaching us nothing and not even bothering to entertaining. 
+ Score: 0.0022556185722351074
+
+%generation_time = 483 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Good gamers and good performances ca n't mask a vain script, bad dialogue, and patterns of behavior spiraling into nothing you'd care about. The most interesting character is David Berkowitz. No characteristics development- no growth, no interest, just some suffering for no particular reason, teaching us rien and not even bothering to entertaining. 
+ Score: 0.005164355039596558
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Good gamers and good performances ac n't mask a vain script, bad dialogue, and patterns of behavior spiraling into nothin you'd care about. The most interesting character is David Berkowitz. No characteristics development- no growth, no interest, just some suffering for no particular reason, teaching us rien and not even bugging to entertaining. 
+ Score: 0.018237769603729248
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Good gamers and good performances ac n't mask a vain script, naughty dialogue, and patterns of behavior rising into nothin you'd care about. The most interesting character is David Berkowitz. No characteristics development- no growth, no interest, just some suffering for no particular reason, teaching us rien and not even bugging to entertaining. 
+ Score: 0.11547893285751343
+
+%generation_time = 477 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Good gamers and good performances ac n't mask a vain script, naughty dialogue, and patterns of behavior rising into nothin you'd care about. The most riveting character is David Berkowitz. No characteristics development- no growth, no interests, just some suffering for no particular reason, teaching us rien and not even bugging to entertaining. 
+ Score: 0.42163753509521484
+
+%generation_time = 479 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Good gamers and best performances ac n't mask a vain script, naughty dialogue, and patterns of behavior rising into nothin you'd care about. The most riveting character is David Berkowitz. No characteristics development- no growth, no interest, just some suffering for no particular reason, teaching us rien and not even bugging to entertaining. 
+ Score: 0.6348754167556763
+
+%total_time = 2735 seconds
+
+
+####################ATTACK 39/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Hard up, No proper jobs going down at the pit, why not rent your kids! DIY pimp story without the gratuitous sex scenes, either hard core or soft core, therefore reads like a public information film from the fifties, give this a wide miss, use a barge pole if you can.
+Starting Score: 0.08402064442634583; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Hard up, No proper job going down at the pit, why not rent your kids! DIY pimp story without the gratuitous sex scenes, either hard core or soft core, therefore reads like a public information film from the fifties, give this a wide miss, use a barge pole if you can. 
+ Score: 0.13169428706169128
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Hard up, No proper job going down at the pit, why not rent your kids! DIY pimp story without the gratuitous sex scenes, both hard core or soft core, therefore reads like a public information film from the fifties, deliver this a extensive miss, use a barge pole if you can. 
+ Score: 0.27422916889190674
+
+%generation_time = 473 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Hard up, No proper job going down at the pit, why not rented your kids! DIY pimp story without the unreasonable sex scenes, both hard core or soft core, so reads like a public information film from the fifties, give this a extensive miss, use a barge pole if you can. 
+ Score: 0.6551343202590942
+
+%total_time = 1042 seconds
+
+
+####################ATTACK 40/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+But I got over it. To me, it seemed that even the Author of the book favored Caroline. I felt so sorry for the character Louise, and she was constantly compared with Esau who was evil, I just felt the comparison was a bit harsh and un-realistic. Really though, the movie was bad. I wouldn't really see it unless you're ready for a big let down.
+Starting Score: 0.029866188764572144; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ But I got over it. To me, it seemed that even the Author of the book favored Caroline. I felt so sorry for the nature Louise, and she was constantly compared with Esau who was evil, I just felt the comparison was a bit harsh and un-realistic. Really though, the movie was bad. I would n't really see it unless you're ready for a big let down. 
+ Score: 0.04432132840156555
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ But I got over it. To me, it seemed that even the Author of the book favored Caroline. I felt so sorry for the character Louise, and she was constantly compared with Esau who was evil, I just felt the comparison was a bit harsh and un-realistic. sincerely though, the movie was mala. I would n't really see it unless you're ready for a grand let down. 
+ Score: 0.20998331904411316
+
+%generation_time = 478 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ But I got over it. To me, it seemed that even the Author of the book favored Caroline. I felt so sorry for the nature Louise, and she was constantly compared with Esau who was evil, I just felt the comparison was a bit harsh and un-realistic. sincerely though, the movie was mala. I would n't really see it till you're ready for a grand let down. 
+ Score: 0.6812078356742859
+
+%total_time = 765 seconds
+
+
+####################ATTACK 41/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+There's only one thing I need to say about this movie - the scene where Shaq is in a musical number with Francis Capra's character about wanting to be a genie; never see this movie. The story is horrible, the acting is terrible (c'mon, it's Shaq!) and I'd rather see Capra in Free Willy (equally horrible) twice before ever seeing this movie.
+Starting Score: 0.0017106831073760986; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ There's only one thing I need to say about this movie- the scene where Shaq is in a musical number with Francis Capra's character about wanting to be a genie; never see this movie. The story is horrible, the acting is terrible( c'mon, it's Shaq!) and I'd rather see Capra in Free Willy( equally horrible) twice before ever vista this movie. 
+ Score: 0.011928945779800415
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ There's only one thing I need to say about this movie- the scene where Shaq is in a musical number with Francis Capra's character about wanting to be a genie; never see this movie. The story is gruesome, the acting is terrifying( c'mon, it's Shaq!) and I'd rather see Capra in Free Willy( equally horrible) twice before ever seeing this movie. 
+ Score: 0.038296669721603394
+
+%generation_time = 475 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ There's only one thing I need to say about this movie- the scene where Shaq is in a musical number with Francis Capra's character about wanting to be a genie; never see this movie. The story is gruesome, the acting is terrifying( c'mon, it's Shaq!) and I'd rather see Capra in Free Willy( equally horrible) twice before ever vista this cinematic. 
+ Score: 0.6285629868507385
+
+%total_time = 1189 seconds
+
+
+####################ATTACK 42/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+This movie stinks majorly. The only reason I gave it a 3 was because the graphics were semi charming. It's total disregard for a plot and the lack of even insubstantial surface character development made it seem like just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I can't believe they actually put their names on this garbage. What a rip off selling this thing for $20. If you haven't seen this don't bother. If you have, I pity you.
+Starting Score: 0.00015676021575927734; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This movie stinks majorly. The only reason I gave it a 3 was because the graphics were semi charming. It's total disregard for a plot and the lack of even insubstantial surface character development made it seem like just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually put their names on this litter. What a rip off selling this thing for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.00028964877128601074
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This movie stinks majorly. The only reason I gave it a 3 was because the graphics were semi charming. It's total disregard for a plot and the lack of even insubstantial surface character development made it seem loved just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually put their names on this garbage. What a rip off selling this thing for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.00029471516609191895
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This movie stinks totaly. The only reason I gave it a 3 was because the graphics were semi delightful. It's total disregard for a plot and the lack of even insubstantial surface character development made it seem like just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually put their names on this garbage. What a rip off selling this thing for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.0005339682102203369
+
+%generation_time = 480 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This movie scent totaly. The only reason I gave it a 3 was because the graphics were semi delightful. It's total defiance for a plot and the lack of even insubstantial surface character development made it seem like just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually put their names on this garbage. What a rip off selling this thing for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.01535046100616455
+
+%generation_time = 481 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ This movie scent definetly. The only reason I gave it a 3 was because the graphics were semi delightful. It's total defiance for a plot and the lack of even insubstantial surface character development made it seem like just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually put their names on this wastebasket. What a rip off selling this thing for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.28581786155700684
+
+%generation_time = 479 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ This movie scent definetly. The only reason I gave it a 3 was because the graphics were semi delightful. It's total defiance for a plot and the lack of even insubstantial surface character development made it seem like just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually put their names on this garbage. What a rip off selling this ding for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.28581786155700684
+
+%generation_time = 468 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This movie scent definetly. The only motif I gave it a 3 was because the graphics were semi delightful. It's total defiance for a plot and the lack of even petty surface character development made it seem loved just a bunch of nice drawings. This is by far THE worse anime that came out of Japan. I ca n't believe they actually introduced their names on this garbage. What a rip off selling this ding for$ 20. If you have n't seen this do n't bother. If you have, I pity you. 
+ Score: 0.526729166507721
+
+%total_time = 2765 seconds
+
+
+####################ATTACK 43/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+It was disgusting and painful. What a waste of a cast! I swear, the audience (1/2 full) laughed TWICE in 90 minutes. This is not a lie. Do not even rent it.Zeta Jones was just too mean to be believable.Cusack was OK. Just OK. I felt sorry for him (the actor) in case people remember this mess.Roberts was the same as she always is. Charming and sweet, but with no purpose. The "romance" with John was completely unbelievable.
+Starting Score: 0.0001939535140991211; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ It was disgusting and painful. What a litter of a cast! I swear, the audience( 1/2 full) laughed TWICE in 90 minutes. This is not a lie. Do not even rent it. Zeta Jones was just too mean to be believable. Cusack was OK. Just OK. I felt sorry for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no purpose. The`` romance`` with John was completely unbelievable. 
+ Score: 0.0004399418830871582
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ It was disgusting and painful. What a waste of a cast! I swear, the audience( 1/2 full) laughed TWICE in 90 minutes. This is not a resides. Do not even rent it. Zeta Jones was just too mean to be believable. Cusack was bon. Just OK. I felt sorry for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no purpose. The`` romance`` with John was completely amazing. 
+ Score: 0.001196444034576416
+
+%generation_time = 469 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ It was disgusting and painful. What a waste of a cast! I swear, the audience( 1/2 full) laughed TWICE in 90 recordings. This is not a resides. Do not even rent it. Zeta Jones was just too mean to be believable. Cusack was bon. Just OK. I felt apologise for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no purpose. The`` romance`` with John was completely amazing. 
+ Score: 0.0032671689987182617
+
+%generation_time = 464 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ It was disgusting and painstaking. What a litter of a cast! I swear, the audience( 1/2 full) laughed TWICE in 90 recordings. This is not a resides. Do not until rent it. Zeta Jones was just too mean to be believable. Cusack was bon. Just OK. I felt apologise for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no purpose. The`` romance`` with John was completely amazing. 
+ Score: 0.03418317437171936
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ It was disgusting and painstaking. What a waste of a cast! I swear, the audience( 1/2 full) laughed TWICE in 90 recordings. This is not a resides. Do not until rent it. Zeta Jones was just too meaning to be believable. Cusack was bon. Just OK. I felt apologise for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no goals. The`` romance`` with John was perfectly amazing. 
+ Score: 0.04943147301673889
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ It was repulsive and painstaking. What a waste of a cast! I swear, the audience( 1/2 full) laughed TWICE in 90 recordings. This is not a resides. Do not until rent it. Zeta Jones was just too meaning to be believable. Cusack was bon. Just OK. I felt apologise for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no goals. The`` romance`` with John was perfectly amazing. 
+ Score: 0.10824215412139893
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ It was disgusting and painstaking. What a litter of a cast! I swear, the spectator( 1/2 full) laughed TWICE in 90 recordings. This is not a resides. Do not until rent it. Zeta Jones was just too meaning to be believable. Cusack was bon. Just OK. I felt apologise for him( the actor) in case people remember this mess. Roberts was the same as she always is. Charming and sweet, but with no goals. The`` romance`` with John was perfectly amazing. 
+ Score: 0.30569446086883545
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ It was disgusting and painstaking. What a litter of a cast! I swear, the spectator( 1/2 full) laughed TWICE in 90 recordings. This is not a resides. Do not until rent it. Zeta Jones was just too meaning to be believable. Cusack was bon. Just OK. I felt apologise for him( the actor) in case people remember this chaos. Roberts was the same as she consistently is. Charming and sweet, but with no goals. The`` romance`` with John was perfectly amazing. 
+ Score: 0.5959711074829102
+
+%total_time = 3350 seconds
+
+
+####################ATTACK 44/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I usually like hongkong - martial arts - fantasy movies but I hated this one. Once Upon A Time In China, Shogun Assassin, A Chinese Ghost Story and even Big Trouble In Little China are my favorites but this film sucked! Too much fancy tricks and stupid story.4/10
+Starting Score: 0.006311744451522827; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I usually like hongkong- martial arts- fantasy movies but I hated this one. Once Upon A Time In China, Shogun Assassin, A Chinese Ghost Story and even Big Trouble In Little China are my favorites but this cinematic sucked! Too much fancy tricks and stupid story. 4/10 
+ Score: 0.010845839977264404
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I usually like hongkong- martial arts- fantasy movies but I hated this one. Once Upon A Time In China, Shogun Assassin, A Chinese Ghost Story and even Big Trouble In Little China are my favorites but this cinematic sucked! Too much fancy tricks and daft story. 4/10 
+ Score: 0.10879415273666382
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I usually like hongkong- martial arts- fantasy movies but I hated this one. Once Upon A Time In China, Shogun Assassin, A Chinese Ghost Story and even Big challenges In Little China are my favorites but this cinematic sucked! Too much fancy tricks and daft story. 4/10 
+ Score: 0.15111470222473145
+
+%generation_time = 479 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I usually like hongkong- martial arts- fantasy movies but I hated this one. Once Upon A Time In China, Shogun Assassin, A Chinese Ghost Story and even Big challenges In Little China are my favorites but this cinematic sucked! Too much elegant tips and daft story. 4/10 
+ Score: 0.8817242383956909
+
+%total_time = 1328 seconds
+
+
+####################ATTACK 45/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+Well I'd have to say that I do own this film and I only like the ending. The movie is boring and slow but the final fight is so funny. Lets just say that if the fake bird didn't attack the main evil guy this movie would be a 0 out of 10. The bird though makes it a 3. If you are truly bored or want something terrible to watch rent this and fast forward to the final battle.
+Starting Score: 0.006548821926116943; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Well I'd have to say that I do own this film and I only like the ending. The movie is boring and slow but the final fight is so funny. Lets just say that if the fake bird did n't attack the main evil guy this movie would be a 0 out of 10. The bird though makes it a 3. If you are truly bored or want something terrible to watch rent this and fast forward to the final combats. 
+ Score: 0.01826527714729309
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Well I'd have to say that I do own this film and I only like the termination. The cinematic is boring and slow but the final fight is so funny. Lets just say that if the fake bird did n't attack the main evil guy this movie would be a 0 out of 10. The bird though makes it a 3. If you are truly bored or want something terrible to watch rent this and fast forward to the final combats. 
+ Score: 0.09607318043708801
+
+%generation_time = 474 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Well I'd have to say that I do own this film and I only like the termination. The cinematic is pesky and slow but the final fight is so funny. Lets just say that if the fake bird did n't attack the main evil guy this movie would be a 0 out of 10. The bird though makes it a 3. If you are truly bored or want something terrible to watch rent this and quick forward to the final combats. 
+ Score: 0.5211033821105957
+
+%total_time = 901 seconds
+
+
+####################ATTACK 46/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+"Smithereens" is the kind of worthless flick which just hangs out among the cable channels taking up space like a cheesy dime novel in the public library. A worthless bit of tripe and first effort for mediocre director Seidelman, the film is fraught with bad acting, bad sound, bad camera work, and poor quality in all aspects of the film. Many better films never make it to market and why junk flicks like this one do and never seem to go away is one of life's great mysteries. (D-)
+Starting Score: 0.004162251949310303; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ `` Smithereens`` is the kind of worthless flick which just hangs out among the cable channels taking up space like a cheesy dime novel in the public library. A worthless bit of tripe and first effort for mediocre director Seidelman, the film is fraught with bad caretaker, bad sound, bad camera work, and poor quality in all aspects of the film. Many better films never make it to market and why junk flicks like this one do and never seem to go away is one of life's great mysteries. ( D-) 
+ Score: 0.00633355975151062
+
+%generation_time = 213 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ `` Smithereens`` is the kind of worthless flick which just hangs out among the cable channels taking up space like a cheesy dime novel in the public library. A worthless bit of tripe and first initiative for mediocre director Seidelman, the film is fraught with bad acting, bad sound, bad camera work, and poor quality in all aspects of the film. Many better films never bring it to market and why dope flicks like this one do and never seem to go away is one of life's great mysteries. ( D-) 
+ Score: 0.009803682565689087
+
+%generation_time = 478 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ `` Smithereens`` is the kind of worthless flick which just hangs out among the cable channels taking up space like a cheesy dime novel in the public library. A worthless bit of tripe and first initiative for middling director Seidelman, the film is intense with bad acting, bad sound, bad camera work, and poor quality in all aspects of the film. Many best films never bring it to market and why junk flicks like this one do and never seem to go outer is one of life's great mysteries. ( D-) 
+ Score: 0.05053740739822388
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ `` Smithereens`` is the kind of worthless flick which just hangs out among the cable channels taking up space like a cheesy dime novel in the public library. A worthless bit of tripe and first initiative for middling director Seidelman, the film is intense with bad acting, bad sound, bad rooms work, and poor quality in all aspects of the film. Many best films never bring it to market and why junk flicks like this one do and never emerges to go outer is one of life's great mysteries. ( D-) 
+ Score: 0.23503077030181885
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ `` Smithereens`` is the kind of worthless flick which just hangs out among the cable channels taking up space like a cheesy dime novel in the population library. A worthless bit of tripe and first initiative for middling director Seidelman, the film is intense with naughty acting, bad sound, bad rooms work, and poor quality in all aspects of the film. Many best films never bring it to market and why dope flicks like this one do and never seem to go outer is one of life's great mysteries. ( D-) 
+ Score: 0.5109622478485107
+
+%total_time = 2111 seconds
+
+
+####################ATTACK 47/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I haven't seen all Cage's works by any means but his acting in this one was truly awful. The other characters run the gamut of ability but, having most of the emotional scenes, Cage's scenes are just embarrassing to watch. He's certainly come a long ways in 12 years.
+Starting Score: 0.01810210943222046; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I have n't seen all Cage's works by any means but his acting in this one was truly awful. The other characters runs the gamut of ability but, having most of the emotional scenes, Cage's scenes are just embarrassing to watch. He's certainly come a long ways in 12 years. 
+ Score: 0.02802896499633789
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I have n't viewed all Cage's works by any means but his acting in this one was truly awful. The other characters runs the gamut of ability but, having most of the emotions scenes, Cage's scenes are just inconvenient to watch. He's certainly come a long ways in 12 years. 
+ Score: 0.0947498083114624
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I have n't viewed all Cage's works by any means but his acting in this one was truly gruesome. The other characters runs the gamut of ability but, having most of the emotions scenes, Cage's scenes are just inconvenient to watch. He's certainly come a long ways in 12 years. 
+ Score: 0.9801385402679443
+
+%total_time = 1135 seconds
+
+
+####################ATTACK 48/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I absolutely hated this movie! I was 9 when I saw it. It is the only movie I have ever walked out of in the theater. My mom, dad, and I all looked at each other during the movie and knew we were wasting our time. This movie stole approximately 45 minutes of my life. Everything about it was ridiculous. The entire premise was too warped. Being 9, I was always easily entertained. This movie proved that I couldn't subject myself to anything and still be entertained.
+Starting Score: 0.020938396453857422; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I absolutely hated this movie! I was 9 when I saw it. It is the only movie I have ever walked out of in the theater. My mom, dad, and I all looked at each other during the movie and knew we were wasting our time. This movie stole approximately 45 minutes of my life. Everything about it was ridiculous. The entire premise was too warped. Being 9, I was always effortlessly entertained. This movie proved that I could n't subject myself to anything and still be entertained. 
+ Score: 0.25954264402389526
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I absolutely hated this movies! I was 9 when I saw it. It is the only movie I have always walked out of in the theater. My mom, dad, and I all looked at each other during the movie and knew we were wasting our time. This movie stole approximately 45 minutes of my life. Everything about it was ridiculous. The overall premise was too warped. Being 9, I was always effortlessly entertained. This movie proved that I could n't subject myself to anything and still be entertained. 
+ Score: 0.5098966956138611
+
+%total_time = 383 seconds
+
+
+####################ATTACK 49/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+I could have done with the seven gunslingers just staying away. This sequel should never have been done, the first did it all and better. The plot was a turkey, the acting was turkey, the direction, production, camera work... all turkey. Whoever put out this junk should be tarred and feathered. May they not return again!
+Starting Score: 0.0023169219493865967; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I could have done with the seven gunslingers just staying away. This sequel should never have been done, the first did it all and better. The plot was a turkey, the acting was turkey, the direction, production, chambers work... all turkey. Whoever put out this junk should be tarred and feathered. May they not return again! 
+ Score: 0.005467087030410767
+
+%generation_time = 220 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I could have done with the seven gunslingers just staying away. This sequel should never have been done, the premiere did it all and better. The plot was a turkey, the acting was turkey, the direction, production, camera works... all turkish. Whoever put out this dope should be tarred and feathered. May they not return again! 
+ Score: 0.018460750579833984
+
+%generation_time = 479 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I could have done with the seven gunslingers just staying away. This sequel should never have been achieved, the premiere did it all and enhanced. The plot was a turkey, the acting was turkey, the direction, production, camera works... all turkish. Whoever put out this dope should be tarred and feathered. May they not reverted again! 
+ Score: 0.24643075466156006
+
+%generation_time = 455 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I could have done with the seven gunslingers just staying away. This sequel should never have been fulfilled, the premiere did it all and enhanced. The plot was a turkey, the acting was turkey, the direction, productive, camera works... all turkish. Whoever put out this dope should be tarred and feathered. May they not reverted again! 
+ Score: 0.31319618225097656
+
+%generation_time = 470 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I could have done with the seven gunslingers just residency away. This sequel should never have been adhered, the premiere did it all and enhanced. The plot was a turkey, the acting was turkey, the direction, productive, camera works... all turkish. Whoever put out this dope should be tarred and feathered. May they not reverted again! 
+ Score: 0.5635867118835449
+
+%total_time = 1723 seconds
+
+
+####################ATTACK 50/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 8
+	Maximum children per generation: 2
+	Maximum population members: 5
+
+Original sentence: 
+A truly muddled incomprehensible mess. Most things in the film look more or less like 1987, but then there are futuristic things just thrown in, like the policeman's ray gun. And that car! The director seemed to be in love with colored lights. The only really notable performance was the girl who played Valerie, but since there was no cast listing, I don't know which actress that was. This one is worth missing. Grade: F
+Starting Score: 0.000948101282119751; Original Label: 0; Target Label: 1
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ A truly confused incomprehensible mess. Most things in the film look more or less like 1987, but then there are futuristic things just thrown in, like the policeman's ray gun. And that car! The director seemed to be in love with colored lights. The only really notable performance was the girl who played Valerie, but since there was no cast listing, I do n't know which actress that was. This one is worth missing. Grade: F 
+ Score: 0.0032534003257751465
+
+%generation_time = 237 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ A truly muddled inscrutable mess. Most things in the film look more or less like 1987, but then there are futuristic things just thrown in, like the policeman's ray gun. And that car! The director seemed to be in love with colored lights. The only truly notable performance was the girl who played Valerie, but since there was no cast listing, I do n't know which actress that was. This one is valued faded. Grade: F 
+ Score: 0.09711247682571411
+
+%generation_time = 472 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ A truly muddled inscrutable havoc. Most things in the film look more or less like 1987, but then there are futuristic things just thrown in, like the policeman's ray gun. And that car! The director seemed to be in love with colored lights. The only truly notable performance was the girl who played Valerie, but since there was no cast listing, I do n't know which actress that was. This one is valued faded. Grade: F 
+ Score: 0.3811657726764679
+
+%generation_time = 471 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ A indeed muddled inscrutable mess. Most things in the film look more or less like 1987, but then there are futuristic things just thrown in, like the policeman's ray gun. And that car! The director seemed to be in love with colored lights. The only truly notable performance was the girl who played Valerie, but since there was no cast listing, I do n't know which performer that was. This one is appreciated vanishing. Grade: F 
+ Score: 0.5241185426712036
+
+%total_time = 1419 seconds
+
+
+1/2 [==============>...............] - ETA: 0s - loss: 1.0710 - acc: 0.0000e+002/2 [==============================] - ETA: 0s - loss: 1.0831 - acc: 0.0000e+002/2 [==============================] - 0s 102ms/step - loss: 1.0831 - acc: 0.0000e+00
+Recovering graph.
+Recovering checkpoint google_language_model/ckpt-*

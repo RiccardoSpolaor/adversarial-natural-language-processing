@@ -1,0 +1,3702 @@
+2020-11-04 03:26:20.388098: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory
+2020-11-04 03:26:20.388121: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2020-11-04 03:26:24.429380: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2020-11-04 03:26:24.433946: E tensorflow/stream_executor/cuda/cuda_driver.cc:314] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2020-11-04 03:26:24.434012: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: c7
+2020-11-04 03:26:24.434020: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: c7
+2020-11-04 03:26:24.434207: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 361.93.2
+2020-11-04 03:26:24.434287: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 361.93.2
+2020-11-04 03:26:24.434298: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 361.93.2
+2020-11-04 03:26:24.434715: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-11-04 03:26:24.443826: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2596995000 Hz
+2020-11-04 03:26:24.443965: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x6fcb0d0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-04 03:26:24.443978: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Accuracy for the attack list:
+ 1/28 [>.............................] - ETA: 0s - loss: 0.0666 - acc: 1.0000 2/28 [=>............................] - ETA: 3s - loss: 0.0425 - acc: 1.0000 3/28 [==>...........................] - ETA: 5s - loss: 0.0391 - acc: 1.0000 4/28 [===>..........................] - ETA: 5s - loss: 0.0375 - acc: 1.0000 5/28 [====>.........................] - ETA: 5s - loss: 0.0385 - acc: 1.0000 6/28 [=====>........................] - ETA: 5s - loss: 0.0372 - acc: 1.0000 7/28 [======>.......................] - ETA: 5s - loss: 0.0338 - acc: 1.0000 8/28 [=======>......................] - ETA: 5s - loss: 0.0359 - acc: 1.0000 9/28 [========>.....................] - ETA: 5s - loss: 0.0367 - acc: 1.000010/28 [=========>....................] - ETA: 4s - loss: 0.0428 - acc: 1.000011/28 [==========>...................] - ETA: 4s - loss: 0.0454 - acc: 1.000012/28 [===========>..................] - ETA: 4s - loss: 0.0444 - acc: 1.000013/28 [============>.................] - ETA: 4s - loss: 0.0472 - acc: 1.000014/28 [==============>...............] - ETA: 3s - loss: 0.0489 - acc: 1.000015/28 [===============>..............] - ETA: 3s - loss: 0.0491 - acc: 1.000016/28 [================>.............] - ETA: 3s - loss: 0.0486 - acc: 1.000017/28 [=================>............] - ETA: 3s - loss: 0.0495 - acc: 1.000018/28 [==================>...........] - ETA: 2s - loss: 0.0495 - acc: 1.000019/28 [===================>..........] - ETA: 2s - loss: 0.0487 - acc: 1.000020/28 [====================>.........] - ETA: 2s - loss: 0.0500 - acc: 1.000021/28 [=====================>........] - ETA: 2s - loss: 0.0503 - acc: 1.000022/28 [======================>.......] - ETA: 1s - loss: 0.0496 - acc: 1.000023/28 [=======================>......] - ETA: 1s - loss: 0.0486 - acc: 1.000024/28 [========================>.....] - ETA: 1s - loss: 0.0482 - acc: 1.000025/28 [=========================>....] - ETA: 0s - loss: 0.0482 - acc: 1.000026/28 [==========================>...] - ETA: 0s - loss: 0.0477 - acc: 1.000027/28 [===========================>..] - ETA: 0s - loss: 0.0479 - acc: 1.000028/28 [==============================] - ETA: 0s - loss: 0.0481 - acc: 1.000028/28 [==============================] - 8s 294ms/step - loss: 0.0481 - acc: 1.0000
+LM vocab loading done
+####################ATTACK 1/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I think that the movie was really good. Subject, acting and Nusrat Fateh ALi Khan's music were marvellous. Although the director has succeeded in showing the status of women in rural areas and how they suffer at the hands of male-dominated culture, he has neglected Phoolan's character a bit and has focussed more on the violence faced by her.
+Starting Score: 0.894221842288971; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I think that the movie was really good. Subject, acting and Nusrat Fateh ALi Khan's music were marvellous. Although the director has succeeded in showing the status of women in rural areas and how they suffer at the hands of male- existed culture, he has neglected Phoolan's character a bit and has focussed more on the violence faced by her. 
+ Score: 0.830377459526062
+
+%generation_time = 237 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I think that the movie was actually good. Subject, acting and Nusrat Fateh ALi Khan's musicians were marvellous. Although the director has succeeded in showing the status of women in rural areas and how they suffer at the hands of male- existed culture, he has neglected Phoolan's character a bit and has focussed more on the violence faced by her. 
+ Score: 0.5432600975036621
+
+%generation_time = 1184 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I think that the movie was really good. Subject, acting and Nusrat Fateh ALi Khan's musicians were marvellous. Although the director has succeeded in showing the status of female in rural areas and how they suffer at the hands of male- dominated culture, he has neglected Phoolan's character a bit and has focussed more on the violence faced by her. 
+ Score: 0.5432600975036621
+
+%generation_time = 1190 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I think that the movie was really good. Subject, acting and Nusrat Fateh ALi Khan's musicians were marvellous. Although the director has succeeded in showing the status of women in rural areas and how they suffer at the hands of male- dominated culture, he has neglected Phoolan's character a bit and has focussed more on the violence faced by her. 
+ Score: 0.5432600975036621
+
+%generation_time = 1202 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I think that the movie was really decent. Subject, acting and Nusrat Fateh ALi Khan's musicians were marvellous. Although the director has succeeded in showing the status of women in rural areas and how they suffer at the hands of male- dominated culture, he has neglected Phoolan's character a bit and has focussed more on the abused faced by her. 
+ Score: 0.539344072341919
+
+%generation_time = 1181 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I think that the movie was really decent. Subject, acting and Nusrat Fateh ALi Khan's musicians were marvellous. Although the director has succeeded in showing the status of women in rural regions and how they suffer at the hands of male- dominated culture, he has neglected Phoolan's character a bit and has focussed more on the abused faced by her. 
+ Score: 0.4787990152835846
+
+%total_time = 5048 seconds
+
+
+####################ATTACK 2/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+What more can you ask for? A great screenplay based on one of the finest plays of the latter half of the 20th century, two fine emotional performances by Courtney and Finney, a realistic vision of war time london, a great supporting cast. This film takes you on an emotional rollercoaster through humour, sadness, loss and fulfillment. if you are in the theatre it is even more effective. This is a true 10 on the rating scale !
+Starting Score: 0.9984868764877319; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ What more can you ask for? A great screenplay based on one of the finest plays of the latter half of the 20th century, two fine emotional performances by Courtney and Finney, a realistic vision of war time london, a great supporting cast. This film takes you on an emotional rollercoaster through comedy, sadness, loss and fulfillment. if you are in the theatre it is even more effective. This is a true 10 on the rating scale! 
+ Score: 0.9970051050186157
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ What more can you ask for? A great screenplay based on one of the finest plays of the latter half of the 20th century, two fine emotional performances by Courtney and Finney, a realistic vision of war time london, a great supporting cast. This film takes you on an emotional rollercoaster through comedy, sadness, wasting and fulfilling. if you are in the theatre it is even more effective. This is a true 10 on the rating scale! 
+ Score: 0.9895693063735962
+
+%generation_time = 1174 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ What more can you ask for? A great screenplay based on one of the finest plays of the latter half of the 20th century, two fine emotional performances by Courtney and Finney, a realistic vision of war time manchester, a grand supporting cast. This film takes you on an emotional rollercoaster through comedy, sadness, wasting and fulfillment. if you are in the theatre it is even more effective. This is a true 10 on the rating scale! 
+ Score: 0.9575971961021423
+
+%generation_time = 1154 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ What more can you ask for? A great screenplay based on one of the finest plays of the latter half of the 20th millennium, two fine emotional performances by Courtney and Finney, a realistic vision of war time manchester, a grand supporting cast. This film takes you on an emotional rollercoaster through comedy, regret, wasting and fulfillment. if you are in the theatre it is even more effective. This is a true 10 on the rating scale! 
+ Score: 0.8585511445999146
+
+%generation_time = 1179 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ What more can you ask for? A great screenplay based on one of the prettiest plays of the latter half of the 20th century, two fine emotional performances by Courtney and Finney, a realistic vision of war time manchester, a grand supporting cast. This film takes you on an emotional rollercoaster through comedy, regret, wasting and fulfillment. if you are in the theatre it is even more effectively. This is a true 10 on the rating scale! 
+ Score: 0.5673947930335999
+
+%generation_time = 1171 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ What more can you ask for? A great screenplay base on one of the prettiest plays of the latter half of the 20th century, two fine mentally spectacle by Courtney and Finney, a realistic vision of war time manchester, a grand supporting cast. This film takes you on an emotional rollercoaster through comedy, sadness, wasting and fulfillment. if you are in the theatre it is even more effectively. This is a true 10 on the rating scale! 
+ Score: 0.4748825430870056
+
+%total_time = 5063 seconds
+
+
+####################ATTACK 3/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This is the very La Nouvelle Vague.One of the best films of the New Wave and I dare say one of the first ten ever made! Why? The atmosphere, the story,the actors (actress) are all brilliant. This is the theater, a fairy tale, the life, the film.Paris. Thank you Mr.Rivette.
+Starting Score: 0.997246265411377; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This is the very La Nouvelle Vague. One of the best films of the New Wave and I dare say one of the first ten ever made! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the theater, a fairy tale, the life, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.9951944351196289
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This is the very La Nouvelle Vague. somebody of the best films of the New Wave and I dare say one of the first ten ever done! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the theater, a fairy tale, the life, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.9891409873962402
+
+%generation_time = 1169 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This is the very La Nouvelle Vague. One of the good films of the New Wave and I dare say one of the first ten ever done! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the theater, a fairy story, the life, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.978273868560791
+
+%generation_time = 1162 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This is the very La Nouvelle Vague. somebody of the best movie of the New Wave and I dare say one of the first ten ever done! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the theater, a witch tale, the life, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.9723114967346191
+
+%generation_time = 1185 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ This is the very La Nouvelle Vague. somebody of the best movie of the New Wave and I dare say one of the first ten ever done! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the opera, a witch tales, the hayat, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.9242985248565674
+
+%generation_time = 1172 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ This is the very La Nouvelle Vague. somebody of the higher movie of the New Wave and I dare say one of the first ten ever done! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the theatrical, a witch tale, the hayat, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.8873077034950256
+
+%generation_time = 1189 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This is the very La Nouvelle Vague. somebody of the bestest movie of the New Wave and I dare say someone of the first ten ever done! Why? The atmosphere, the story, the operators( actress) are all brilliant. This is the theatrical, a pitiful tale, the hayat, the film. Paris. Thank you Mr. Rivette. 
+ Score: 0.2821633815765381
+
+%total_time = 6549 seconds
+
+
+####################ATTACK 4/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+My first Fassbinder was a wonderful experience. Film and alternative cinema (small hall, with uncomfortable seats; public had to wait while filmrolls were changed ) were perfect match.There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was also brilliant (sometimes back being louder than dialogue).Everything seemed to be in right place. And I loved the way how after-war-time was presented. Real fun!
+Starting Score: 0.9932411909103394; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ My first Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with uncomfortable seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was also brilliant( sometimes back being louder than dialogue). Everything seemed to be in right place. And I loved the way how after-war-time was presented. Real fun! 
+ Score: 0.9892274141311646
+
+%generation_time = 243 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ My first Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with embarrassing seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was also brilliant( sometimes back being louder than dialogue). Everything seemed to be in right place. And I loved the way how after-war-time was present. Real fun! 
+ Score: 0.983467698097229
+
+%generation_time = 1189 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ My first Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with embarrassing seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was also brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I loved the way how after-war-time was present. Real fun! 
+ Score: 0.9752609729766846
+
+%generation_time = 1197 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ My first Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with uncomfortable seats; public had to wait while filmrolls were changed) were perfected match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was also brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I loved the way how after-war-time was present. Real fun! 
+ Score: 0.968002200126648
+
+%generation_time = 1196 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ My first Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with uncomfortable seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I loved the way how after-war-time was present. Real entertainment! 
+ Score: 0.9619462490081787
+
+%generation_time = 1189 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ My first Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with uncomfortable seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I adore the way how after-war-time was present. Real entertainment! 
+ Score: 0.9431148767471313
+
+%generation_time = 1192 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ My upfront Fassbinder was a wondrous experiences. Film and alternative cinema( small hall, with uncomfortable seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the film, but Fassbinder presented them so cleverly that I found them really amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I adore the way how after-war-time was present. Real entertainment! 
+ Score: 0.8758503198623657
+
+%generation_time = 1180 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ My upfront Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with embarrassing seats; public had to wait while filmrolls were changed) were perfect match. There were many cliches used in the flick, but Fassbinder presented them so cleverly that I found them really amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I adore the way how after-war-time was present. Real entertainment! 
+ Score: 0.819452166557312
+
+%generation_time = 1183 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ My upfront Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with uncomfortable seats; public had to wait while filmrolls were changed) were perfect matches. There were multiple cliches used in the flick, but Fassbinder presented them so wisely that I found them really amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I adore the way how after-war-time was present. Real entertainment! 
+ Score: 0.7413973808288574
+
+%generation_time = 1179 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ My upfront Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with embarrassing seats; public had to wait while filmrolls were changed) were perfect match. There were multiple cliches used in the flick, but Fassbinder presented them so wisely that I found them actually amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I adore the way how after-war-time was present. Real entertainment! 
+ Score: 0.5794879794120789
+
+%generation_time = 1178 seconds
+
+Regenerating population... 
+
+Generation #11: 
+
+Best Adversarial:
+ My upfront Fassbinder was a wondrous experience. Film and alternative cinema( small hall, with embarrassing seats; public had to wait while filmrolls were changed) were perfect matches. There were many cliches used in the flick, but Fassbinder presented them so wisely that I found them actually amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok place. And I adore the way how after-war-time was presently. Real entertainment! 
+ Score: 0.5288206338882446
+
+%generation_time = 1182 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ My upfront Fassbinder was a wondrous experiences. Film and alternative cinema( small hall, with embarrassing seats; public had to wait while filmrolls were changed) were perfect matches. There were many cliches used in the flick, but Fassbinder presented them so wisely that I found them actually amusing. Sound was even brilliant( sometimes back being louder than dialogue). Everything seemed to be in ok site. And I adore the way how after-war-time was present. Real entertainment! 
+ Score: 0.4897516965866089
+
+%total_time = 12263 seconds
+
+
+####################ATTACK 5/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I love this Disney Movie! Its a real cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they break into the bank trying to find Susie's parents information. You should really see this movie. Its great for the whole family.
+Starting Score: 0.9862053394317627; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I love this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they break into the bank trying to find Susie's parents information. You should really see this movie. Its great for the whole family. 
+ Score: 0.972284734249115
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I love this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they break into the bank attempt to find Susie's parents information. You should really see this movie. Its awesome for the whole family. 
+ Score: 0.971697211265564
+
+%generation_time = 1172 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it occurs on again, I will have to make a mental note to tape it. I really like how they break into the bank trying to find Susie's parents information. You should really see this movie. Its awesome for the whole family. 
+ Score: 0.9490567445755005
+
+%generation_time = 1175 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they break into the bank attempt to find Susie's parents information. You should really see this movie. Its magnificent for the whole family. 
+ Score: 0.879807710647583
+
+%generation_time = 1181 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they break into the bank attempt to find Susie's parents information. You should really see this movie. Its awesome for the whole family. 
+ Score: 0.879807710647583
+
+%generation_time = 1174 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they hiatus into the bank attempt to find Susie's parents information. You should actually see this movie. Its awesome for the whole parents. 
+ Score: 0.8676869869232178
+
+%generation_time = 1191 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they hiatus into the bank attempt to find Susie's parents information. You should actually see this movie. Its awesome for the whole parent. 
+ Score: 0.5830513834953308
+
+%generation_time = 1184 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they hiatus into the bank attempt to find Susie's parents information. You should even see this movie. Its awesome for the whole parent. 
+ Score: 0.5776658654212952
+
+%generation_time = 1186 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they hiatus into the bank attempt to find Susie's parents information. You should even see this movie. Its awesome for the whole parents. 
+ Score: 0.5776658654212952
+
+%generation_time = 1176 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they hiatus into the bank attempt to find Susie's parents information. You should even ver this movie. Its awesome for the whole mummy. 
+ Score: 0.5732553005218506
+
+%generation_time = 1197 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I like this Disney Movie! Its a reality cute movie, and when it comes on again, I will have to make a mental note to tape it. I really like how they hiatus into the banking attempt to find Susie's parents information. You should actually ver this movie. Its awesome for the whole parent. 
+ Score: 0.49419403076171875
+
+%total_time = 11017 seconds
+
+
+####################ATTACK 6/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+What can I say? I know this movie from start to finish. It's hilarious. It's an strong link to my past and will change the way I view film in the future. Hypothetically speaking :) The down-fall? There's no Socrates Johnson!
+Starting Score: 0.9968863725662231; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ What can I say? I know this movie from start to finish. It's comic. It's an strong link to my past and will change the way I view film in the future. Hypothetically speaking:) The down- fall? There's no Socrates Johnson! 
+ Score: 0.9683774709701538
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ What can I say? I know this movie from start to finish. It's comic. It's an emphatic link to my past and will change the way I view film in the future. Hypothetically speaking:) The down- falls? There's no Socrates Johnson! 
+ Score: 0.7248262166976929
+
+%generation_time = 1170 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ What can I say? I know this movie from start to finish. It's comic. It's an emphatic ties to my past and will change the way I view film in the future. Hypothetically speaking:) The down- falls? There's no Socrates Johnson! 
+ Score: 0.591594398021698
+
+%generation_time = 1173 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ What can I say? I know this flick from start to finish. It's comic. It's an emphatic ties to my past and will change the way I view film in the future. Hypothetically speaking:) The down- falls? There's no Socrates Johnson! 
+ Score: 0.471662700176239
+
+%total_time = 2916 seconds
+
+
+####################ATTACK 7/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+After watching John preform this one of a kind show, I had to share.....It was really something to watch a grown man portray himself as a child. I like the fact that with every character he "became," you could picture what they looked like. It is more entertaining when you can understand the individual. "Freak" is what real "stand up" should be. John is REAL talent.
+Starting Score: 0.937552809715271; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ After watching John preform this someone of a kind show, I had to share..... It was really something to watch a grown man portray himself as a child. I like the fact that with every character he`` became,`` you could picture what they looked like. It is more entertaining when you can understand the individual. `` Freak`` is what real`` stand up`` should be. John is REAL talent. 
+ Score: 0.8974696397781372
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ After watching John preform this one of a kind show, I had to share..... It was really something to watch a grown man portray himself as a child. I like the fact that with every attribute he`` became,`` you could picture what they looked like. It is more distracting when you can understand the individual. `` Freak`` is what real`` stand up`` should be. John is REAL talent. 
+ Score: 0.7340813875198364
+
+%generation_time = 1179 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ After watching John preform this one of a kind show, I had to share..... It was really something to watch a grown man portray himself as a child. I like the fact that with every attribute he`` became,`` you could picture what they looked like. It is more irritating when you can understand the individual. `` Freak`` is what real`` stand up`` should be. John is REAL talent. 
+ Score: 0.49795350432395935
+
+%total_time = 1558 seconds
+
+
+####################ATTACK 8/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This is my favorite show. I think it is utterly brilliant. Thanks to David Chase for bringing this into my life.Season 11. The Sopranos: 5/52. 46 Long: 4.5/53. Denial, Anger, Acceptance: 5/54. Meadowlands: 4/55. College:6. Pax Soprana: 5/57. Down Neck: 4.5/58. The Legend of Tennessee Moltisanti: 5/59. Boca: 4.5/510. A Hit Is a Hit: 3.5/511. Nobody Knows Anything: 5/512. Isabella: 5/513. I Dream of Jeannie Cusamano: 5/5
+Starting Score: 0.9959474205970764; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This is my favorite show. I think it is utterly marvellous. Thanks to David Chase for bringing this into my life. Season 11. The Sopranos: 5/ 52. 46 Long: 4.5/ 53. Denial, Anger, Acceptance: 5/ 54. Meadowlands: 4/ 55. College:6. Pax Soprana: 5/ 57. Down Neck: 4.5/ 58. The Legend of Tennessee Moltisanti: 5/59. Boca: 4.5/ 510. A Hit Is a Hit: 3.5/ 511. Nobody Knows Anything: 5/512. Isabella: 5/ 513. I Dream of Jeannie Cusamano: 5/ 5 
+ Score: 0.9833061695098877
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This is my prefer show. I think it is utterly wondrous. Thanks to David Chase for bringing this into my life. Season 11. The Sopranos: 5/ 52. 46 Long: 4.5/ 53. Denial, Anger, Acceptance: 5/ 54. Meadowlands: 4/ 55. College:6. Pax Soprana: 5/ 57. Down Neck: 4.5/ 58. The Legend of Tennessee Moltisanti: 5/59. Boca: 4.5/ 510. A Hit Is a Hit: 3.5/ 511. Nobody Knows nothing: 5/512. Isabella: 5/ 513. I Dream of Jeannie Cusamano: 5/ 5 
+ Score: 0.8040937185287476
+
+%generation_time = 1153 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This is my prefer show. I believe it is utterly marvellous. Thanks to David Chase for bringing this into my life. Season 11. The Sopranos: 5/ 52. 46 prolonged: 4.5/ 53. Denial, Anger, Acceptance: 5/ 54. Meadowlands: 4/ 55. College:6. Pax Soprana: 5/ 57. Down Neck: 4.5/ 58. The Legend of Tennessee Moltisanti: 5/59. Boca: 4.5/ 510. A Hit Is a Hit: 3.5/ 511. Nobody Knows nothing: 5/512. Isabella: 5/ 513. I Dream of Jeannie Cusamano: 5/ 5 
+ Score: 0.6835823059082031
+
+%generation_time = 1183 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This is my prefer display. I believe it is utterly marvellous. Thanks to David Chase for make this into my life. Season 11. The Sopranos: 5/ 52. 46 prolonged: 4.5/ 53. Denial, Anger, Acceptance: 5/ 54. Meadowlands: 4/ 55. College:6. Pax Soprana: 5/ 57. Down Neck: 4.5/ 58. The Legend of Tennessee Moltisanti: 5/59. Boca: 4.5/ 510. A Hit Is a Hit: 3.5/ 511. Nobody Knows nothing: 5/512. Isabella: 5/ 513. I reve of Jeannie Cusamano: 5/ 5 
+ Score: 0.2982773780822754
+
+%total_time = 2621 seconds
+
+
+####################ATTACK 9/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This film very succeed in the Film festival in Karlovy Vary, Czech rep. Logically. It' s based on a very good book, excellent actors, good camera, the best director and ICELANDIC. It was probably the most black comedy I've seen.I really DO recommend it to you.
+Starting Score: 0.9529852867126465; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This film very succeed in the Film festival in Karlovy Vary, Czech rep. Logically. It' s based on a very good book, excellent actors, decent camera, the best director and ICELANDIC. It was probably the most black comedy I've seen. I really DO recommend it to you. 
+ Score: 0.854579746723175
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This film very succeed in the Film festival in Karlovy Vary, Czech rep. Logically. It' s based on a very decent book, excellent actors, good camera, the goods director and ICELANDIC. It was probably the most black comedy I've seen. I really DO recommend it to you. 
+ Score: 0.7117447853088379
+
+%generation_time = 1179 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This flick very succeed in the Film festival in Karlovy Vary, Czech rep. Logically. It' s based on a very decent book, excellent actors, decent camera, the good director and ICELANDIC. It was probably the most black comedy I've seen. I really DO recommendation it to you. 
+ Score: 0.4031357765197754
+
+%total_time = 1557 seconds
+
+
+####################ATTACK 10/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Excellent drama about 2 alienated, spoiled punks who go afoul of the federal government, each for his own reasons. One, a druggie, just wants to score some bucks for his next fix, but the other has a far more sinister agenda fueled in part by a resentment of his father. Good performances and a hot script makes this a winner.
+Starting Score: 0.9772729277610779; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Excellent drama about 2 alienated, spoiled punks who go afoul of the federal government, each for his own reasons. One, a druggie, just wants to score some bucks for his next fix, but the other has a far more spooky agenda fueled in part by a resentment of his father. Good performances and a hot script makes this a winner. 
+ Score: 0.9674050807952881
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ marvellous drama about 2 alienated, spoiled punks who go afoul of the federal government, each for his own reasons. One, a druggie, just wants to score some bucks for his next remedy, but the other has a far more sinister agenda fueled in part by a resentment of his father. Good performances and a hot script makes this a winner. 
+ Score: 0.9420772790908813
+
+%generation_time = 1181 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ marvellous drama about 2 alienated, spoiled punks who go afoul of the federal government, each for his own reasons. One, a druggie, just wants to score some bucks for his next fix, but the other has a far more sinister agenda fueled in part by a displeasure of his father. Good performances and a hot script makes this a victorious. 
+ Score: 0.7792915105819702
+
+%generation_time = 1180 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ marvellous drama about 2 alienated, spoiled punks who go afoul of the federal government, each for his own reasons. One, a druggie, just wants to score some bucks for his next fix, but the other has a far more sinister program fed in part by a resentment of his father. Good performances and a hot script makes this a victorious. 
+ Score: 0.6921240091323853
+
+%generation_time = 1182 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ marvellous drama about 2 alienated, spoiled punks who go afoul of the federal government, each for his own reasons. One, a druggie, just wants to score some bucks for his next fix, but the other has a far more sinister program fed in part by a resentment of his father. Good performances and a hot script does this a victorious. 
+ Score: 0.2976813316345215
+
+%total_time = 4019 seconds
+
+
+####################ATTACK 11/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Great movie. Good acting ,a wonderful script. It's exciting to find out what the people are thinking and how they react on the situation they are in. A pity about the ending; a 'page' of text of how Nynke's life went on, instead of moving images was a poor choice. I hope this movie attracts a lot of people; it's worth it!
+Starting Score: 0.9883632659912109; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Great movie. Good acting, a wonderful script. It's exciting to find out what the people are thinking and how they react on the situation they are in. A pity about the ending; a'page' of text of how Nynke's life went on, instead of moving images was a poor choice. I hope this movie attract a lot of people; it's worth it! 
+ Score: 0.9847776889801025
+
+%generation_time = 237 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Great movie. Good acting, a wonderful script. It's sexy to find out what the people are thinking and how they react on the situation they are in. A pity about the ending; a'page' of text of how Nynke's life went on, instead of moving images was a poor choice. I hope this movie attracts a lot of people; it's worth it! 
+ Score: 0.9801228642463684
+
+%generation_time = 1179 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Great movie. Good acting, a wonderful script. It's sexy to find out what the people are thinking and how they react on the situation they are in. A pity about the ending; a'page' of text of how Nynke's life went on, instead of moving images was a poor choices. I amal this movie attracts a lot of people; it's worth it! 
+ Score: 0.9479477405548096
+
+%generation_time = 1176 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Great movie. Good acting, a wonderful script. It's sexy to find out what the people are thinking and how they react on the lage they are in. A pity about the ending; a'page' of text of how Nynke's life went on, instead of moving images was a poor choices. I amal this movie attracts a lot of people; it's sentence it! 
+ Score: 0.8544105291366577
+
+%generation_time = 1183 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Great cinema. Good acting, a wonderful script. It's sexy to find out what the people are thinking and how they react on the lage they are in. A penalty about the ending; a'page' of text of how Nynke's life went on, instead of moving images was a poor choices. I amal this movie attraction a lot of people; it's sentence it! 
+ Score: 0.4466196894645691
+
+%total_time = 4019 seconds
+
+
+####################ATTACK 12/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This movie is an amazing comedy.. the script is too funny.. if u watch it more than once you will enjoy it more. Though the comedy at times is silly but it really makes u laugh!! Salman Khan and Aamir Khan have given justice to their roles. After 1994 i have not come across any hindi movie which was as funny as this.
+Starting Score: 0.9865481853485107; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This movie is an amazing comedy.. the script is too funny.. if u watch it more than once you will enjoy it more. Though the comedy at times is silly but it really makes neither laugh!! Salman Khan and Aamir Khan have given justice to their roles. After 1994 i have not come across any hindi movie which was as funny as this. 
+ Score: 0.9773470163345337
+
+%generation_time = 248 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This movie is an amazing farce.. the script is too funny.. if u watch it more than once you will enjoy it more. Though the travesty at times is silly but it actually makes u laugh!! Salman Khan and Aamir Khan have given justice to their roles. After 1994 i have not come across any hindi movie which was as funny as this. 
+ Score: 0.7098775506019592
+
+%generation_time = 1208 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This movie is an astounding comedy.. the script is too funny.. if u watch it more than once you will enjoy it more. Though the travesty at times is moronic but it actually makes u laugh!! Salman Khan and Aamir Khan have given justice to their roles. After 1994 i have not come across any hindi movie which was as funny as this. 
+ Score: 0.70240718126297
+
+%generation_time = 1188 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This movie is an astonishing comedian.. the script is too funny.. if u watch it more than once you will enjoy it more. Though the travesty at times is moronic but it actually makes u grin!! Salman Khan and Aamir Khan have given justice to their roles. After 1994 i have not come across any hindi movie which was as funny as this. 
+ Score: 0.4094998240470886
+
+%total_time = 3603 seconds
+
+
+####################ATTACK 13/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I have seen this film on countless occasions, and thoroughly enjoyed it each time. This is mostly due to the lovely Erika Eleniak- a great actress with incredible looks. Plus, any film starring Tom Berenger and Dennis Hopper is bound to be entertaining.
+Starting Score: 0.994120180606842; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I have seen this film on countless occasions, and thoroughly experienced it each time. This is mostly due to the lovely Erika Eleniak- a great actress with incredible looks. Plus, any film starring Tom Berenger and Dennis Hopper is bound to be entertaining. 
+ Score: 0.960248589515686
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I have seen this film on countless occasions, and acutely enjoyed it each time. This is mostly due to the lovely Erika Eleniak- a great actress with incredible looks. Plus, any film starring Tom Berenger and Dennis Hopper is bound to be distracting. 
+ Score: 0.9083374738693237
+
+%generation_time = 1183 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I have seen this film on countless occasions, and acutely enjoyed it each time. This is mostly due to the lovely Erika Eleniak- a great actress with unbelievable looks. over, any film starring Tom Berenger and Dennis Hopper is bound to be annoying. 
+ Score: 0.4621761441230774
+
+%total_time = 1468 seconds
+
+
+####################ATTACK 14/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This is one of Peter Sellers' best movies. Why is it never shown on TV or movie theaters? Will it ever be released as a home movie? Is it too derogatory for the medical field? I would love to see this movie again. I would like my son, who is a doctor,to see it. Laughter is the best medicine and Peter Sellers is the best doctor for this.
+Starting Score: 0.9799280166625977; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This is one of Peter Sellers' best movies. Why is it never shown on TV or movie theaters? Will it ever be released as a home movie? Is it too derogatory for the medical field? I would love to see this movie again. I would like my son, who is a doctor, to see it. Laughter is the best medicine and Peter Sellers is the best medical for this. 
+ Score: 0.9561209678649902
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This is each of Peter Sellers' better movies. Why is it never shown on TV or movie theaters? Will it ever be released as a home movie? Is it too derogatory for the medical field? I would love to see this movie again. I would like my son, who is a medical, to see it. Laughter is the best drugs and Peter Sellers is the best doctor for this. 
+ Score: 0.8738032579421997
+
+%generation_time = 1189 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This is each of Peter Sellers' better movies. Why is it never shown on TV or movie theaters? Will it ever be released as a home movie? Is it too derogatory for the medical field? I would love to see this movie again. I would like my son, who is a medical, to see it. Laughter is the best drugs and Peter Sellers is the best medical for this. 
+ Score: 0.7136974930763245
+
+%generation_time = 1182 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This is each of Peter Sellers' better movies. Why is it never shown on TV or movie theaters? Will it ever be released as a home movie? Is it too derogatory for the medicinal field? I would love to see this movie again. I would like my son, who is a medical, to see it. Laughter is the best drugs and Peter Sellers is the better doctor for this. 
+ Score: 0.6174014806747437
+
+%generation_time = 1200 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This is each of Peter Sellers' better movies. Why is it never shown on genevieve or movie theaters? Will it ever be released as a home movie? Is it too demeaning for the medical field? I would love to see this movie again. I would like my son, who is a medical, to see it. Laughter is the best drugs and Peter Sellers is the better doctor for this. 
+ Score: 0.39083921909332275
+
+%total_time = 4051 seconds
+
+
+####################ATTACK 15/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Very tightly written, acted, and filmed. Violent, but not too much so. Whoever edited this knew exactly what he wanted to portray. There isn't a wasted scene in this movie. "The Usual Suspects" was superb ensemble acting; this is a collection of outstanding individual performances. I rarely buy movies, but this one is worth owning.
+Starting Score: 0.9858722686767578; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Very tightly written, acted, and filmed. Violent, but not too much so. Whoever edited this knew exactly what he wanted to portray. There is n't a wasted scene in this movie. `` The Usual Suspects`` was superb ensemble acting; this is a collection of outstanding individual performances. I rarely buy movies, but this one is penalty owning. 
+ Score: 0.9632611870765686
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Very tightly written, acted, and filmed. Violent, but not too much so. Whoever edited this knew exactly what he wanted to outline. There is n't a wasted scene in this movie. `` The Usual Suspects`` was superb ensemble acting; this is a collection of extraordinary individual performances. I rarely buy movie, but this one is penalty owning. 
+ Score: 0.9045272469520569
+
+%generation_time = 1185 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Very tightly written, acted, and filmed. Violent, but not too much so. Whoever edited this knew exactly what he wanted to outline. There is n't a wasted scene in this movie. `` The Usual Suspects`` was superb ensemble acting; this is a collect of extraordinary individual performances. I rarely buy movies, but this one is penalty owning. 
+ Score: 0.8505374193191528
+
+%generation_time = 1180 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Very tightly written, acted, and filmed. Violent, but not too much so. Whoever edited this knew exactly what he wanted to outline. There is n't a wasted scene in this movie. `` The Usual Suspects`` was wondrous ensemble acting; this is a collection of extraordinary individual performances. I scarcely buy movies, but this one is penalty owning. 
+ Score: 0.49922075867652893
+
+%total_time = 3410 seconds
+
+
+####################ATTACK 16/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I bought this while I was playing chess in Hastings. I am from Denmark though. It is very good. Definitely with an understanding of the horror genre. The monster towards the end is very scary. People who criticise this on IMDB should recall that it was a huge succes among serious horror critics.
+Starting Score: 0.995136559009552; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I bought this while I was playing chess in Hastings. I am from Denmark though. It is very good. Definitely with an understanding of the horror genre. The monster towards the end is very scary. population who criticise this on IMDB should recall that it was a huge succes among serious horror critics. 
+ Score: 0.993242621421814
+
+%generation_time = 236 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I bought this while I was playing chess in Hastings. I am from Denmark though. It is very good. Definitely with an understanding of the horror genre. The monster towards the end is very horrible. population who criticise this on IMDB should recall that it was a huge succes among serious horror critics. 
+ Score: 0.7019587159156799
+
+%generation_time = 1186 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I bought this while I was playing chess in Hastings. I am from Denmark though. It is very decent. Definitely with an understanding of the horror genre. The monster towards the end is very horrible. population who criticise this on IMDB should recall that it was a huge succes among serious fear critics. 
+ Score: 0.2742266058921814
+
+%total_time = 1470 seconds
+
+
+####################ATTACK 17/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+For all that has been said about the subject matter, and the controversy that surrounded it, please do not overlook what I feel to be the most important part of the film: the salient struggles of everyone to keep their pride through their trials. Whether dealing with self-imposed male braggadocio, a sexual reawakening, or even life itself, everybody is human.
+Starting Score: 0.9655801057815552; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ For all that has been said about the subject matter, and the controversy that surrounded it, please do not overlook what I feel to be the most important part of the film: the salient struggles of everyone to keep their pride through their trials. Whether dealing with self- imposed male braggadocio, a sexual reawakening, or even life itself, someone is human. 
+ Score: 0.9225500822067261
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ For all that has been said about the subject matter, and the contention that surrounded it, please do not overlook what I feel to be the most important part of the film: the salient struggles of everyone to keep their pride through their trials. Whether dealing with self- imposed male braggadocio, a sexual reawakening, or even life itself, everybody is human. 
+ Score: 0.9225500822067261
+
+%generation_time = 1181 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ For all that has been said about the subject matter, and the controversy that surrounded it, please do not overlook what I feel to be the most important fraction of the film: the salient struggles of everyone to keep their pride through their trials. Whether dealing with self- imposed male braggadocio, a sexual reawakening, or even life itself, someone is human. 
+ Score: 0.8349533081054688
+
+%generation_time = 1181 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ For all that has been said about the subject matter, and the contention that surrounded it, please do not overlook what I feel to be the most important fraction of the film: the significant struggles of everyone to keep their pride through their trials. Whether dealing with self- imposed male braggadocio, a sexual reawakening, or even life itself, someone is human. 
+ Score: 0.7674015760421753
+
+%generation_time = 1149 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ For all that has been said about the subject matter, and the contention that beleaguered it, please do not overlook what I feel to be the most important fraction of the film: the salient struggles of everyone to keep their pride through their trials. Whether dealing with self- imposed male braggadocio, a genital reawakening, or even life itself, someone is human. 
+ Score: 0.6595562696456909
+
+%generation_time = 1173 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ For all that has been said about the issue matter, and the contention that beleaguered it, please do not overlook what I am to be the most important fraction of the film: the salient fight of everyone to keep their pride through their trials. either dealing with self- imposed male braggadocio, a sexual reawakening, or even life itself, someone is human. 
+ Score: 0.41750338673591614
+
+%total_time = 4972 seconds
+
+
+####################ATTACK 18/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Do you like explosions? How about fighting? Well, this movie has both of those. You know the other thing you can't have a movie without: a kick ass motorcycle, the type that bounces off someone's head and knocks them out at the same time. You bet the Stabilizer has one. There's even a classic cliff scene.All in all, I'm quite proud that I have even seen this movie...and even prouder to have my review be the first one...YES!
+Starting Score: 0.9457039833068848; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Do you like explosions? How about fighting? Well, this movie has both of those. You know the other thing you ca n't have a movie without: a kick ass biker, the type that bounces off someone's head and knocks them out at the same time. You bet the Stabilizer has one. There's even a classic cliff scene. All in all, I'm quite proud that I have even seen this movie... and even prouder to have my review be the first one... YES! 
+ Score: 0.9261147975921631
+
+%generation_time = 238 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Do you like explosions? How about fighting? Well, this movie has both of those. You know the other thing you ca n't have a movie without: a kick ass biker, the type that bounces off someone's head and knocks them out at the same time. You bet the Stabilizer has one. There's even a classic cliff scene. All in all, I'm quite proud that I have even seen this movie... and even prouder to have my review be the first one... okay! 
+ Score: 0.8534613251686096
+
+%generation_time = 1177 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Do you like explosions? How about battle? Well, this movie has both of those. You know the other thing you ca n't have a movie without: a whoop ass biker, the type that bounces off someone's head and knocks them out at the same time. You bet the Stabilizer has one. There's even a classic cliff scene. All in all, I'm quite proud that I have even seen this movie... and even prouder to have my review be the prima one... okay! 
+ Score: 0.5819879174232483
+
+%generation_time = 1182 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Do you like explosions? How about battle? better, this movie has both of those. You know the other element you ca n't have a movie without: a whoop ass biker, the type that bounces off someone's head and knocks them out at the same time. You bet the Stabilizer has one. There's even a classic cliff scene. All in all, I'm quite proud that I have even seen this movie... and even prouder to have my review be the prima one... okay! 
+ Score: 0.49030235409736633
+
+%total_time = 2776 seconds
+
+
+####################ATTACK 19/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Just a note to add to the above comment. Fear of a Black Hat doesn't have the criminal who's image has been ripped off by the band, that's in CB4. Easily confused as the two films are so similar, but Black Hat is vastly the superior of the two..... yeah.
+Starting Score: 0.5262028574943542; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Just a note to add to the above comment. Fear of a Black Hat does n't have the criminal who's image has been ripped off by the band, that's in CB4. Easily muddled as the two films are so similar, but Black Hat is vastly the superior of the two..... yeah. 
+ Score: 0.17881202697753906
+
+%total_time = 45 seconds
+
+
+####################ATTACK 20/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+No bullets, no secret agents, a story that is entertaining, funny, and believable. Met some of the producers/actors in this film at the theater. They seemed as interesting in person as their characters on screen. You may not hear about this movie on TV with high-dollar ad spots, but it is definitely worth checking out. I have spent $8 for a movie ticket on a lot of other movies that weren't this entertaining. Looking forward to future projects by this production company.
+Starting Score: 0.9943527579307556; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ No bullets, no secret agents, a story that is entertaining, funny, and believable. Met some of the producers/actors in this film at the theater. They seemed as interesting in person as their characters on screen. You may not hear about this movie on TV with high- dollar ad spots, but it is definitely worth checking out. I have spent$ 8 for a movie ticket on a lot of other movies that were n't this entertaining. Looking forwards to future projects by this production company. 
+ Score: 0.9929011464118958
+
+%generation_time = 230 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ No bullets, no secret agents, a story that is entertaining, funny, and believable. Met some of the producers/actors in this film at the theater. They seemed as interesting in person as their characters on screen. You may not hear about this movie on genevieve with high- dollar ad spots, but it is definitely penalty checking out. I have spent$ 8 for a movie ticket on a lot of other movies that were n't this entertaining. Looking forward to future projects by this production company. 
+ Score: 0.8629255294799805
+
+%generation_time = 1149 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ No bullets, no secret agents, a story that is entertaining, funny, and believable. Met some of the producers/actors in this film at the theater. They seemed as interesting in person as their characters on screen. You may not hear about this movie on genevieve with high- dollar ad ads, but it is doubtless worth checking out. I have spent$ 8 for a movie ticket on a lot of other movies that were n't this entertaining. Looking forward to future projects by this manufacturing company. 
+ Score: 0.6084553599357605
+
+%generation_time = 1144 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ No bullets, no secret agents, a story that is entertaining, amusing, and believable. Met some of the producers/actors in this film at the theater. They seemed as interesting in person as their characters on screen. You may not hear about this movie on genevieve with high- dollar ad ads, but it is possibly worth checking out. I have spent$ 8 for a movie ticket on a lot of other movies that were n't this entertaining. Looking forward to future projects by this manufacturing company. 
+ Score: 0.12348577380180359
+
+%total_time = 2573 seconds
+
+
+####################ATTACK 21/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+A good picture is worth all the words. This film has the most poetic scene ever dreamed of about people with Down's syndrome. And I won't spoil it by telling you. You'll want to see it yourself.Pasqual Duquenne is an amazing actor. I did not need to understand a single word he said to understand his meaning.The film has a magic of it's own. After watching it I understood better that we put too much value on achievement and not enough on the people we love. Passion and simplicity is all we need.
+Starting Score: 0.9957854747772217; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ A good picture is worth all the words. This film has the most poetic scene ever reve of about people with Down's syndrome. And I wo n't spoil it by telling you. You'll want to see it yourself. Pasqual Duquenne is an amazing actor. I did not need to understand a single word he said to understand his meaning. The film has a magic of it's own. After watching it I understood better that we put too much value on achievement and not enough on the people we love. Passion and simplicity is all we need. 
+ Score: 0.9947633743286133
+
+%generation_time = 229 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ A good picture is worth all the words. This film has the most poetic scene ever reve of about people with Down's syndrome. And I wo n't spoil it by telling you. You'll want to see it yourself. Pasqual Duquenne is an astounding actor. I did not need to understand a single word he said to understand his meaning. The film has a magic of it's own. After watching it I understood better that we put too much value on achievement and not enough on the people we love. Passion and simplicity is all we need. 
+ Score: 0.9846632480621338
+
+%generation_time = 1141 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ A decent picture is worth all the words. This film has the most poetic scene ever reve of about people with Down's syndrome. And I wo n't ruining it by telling you. You'll want to see it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magic of it's own. After watching it I understood better that we put too much value on achievement and not adequate on the people we love. Passion and simplicity is all we need. 
+ Score: 0.9615243077278137
+
+%generation_time = 1149 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ A decent picture is pity all the words. This film has the most poetic scene ever reve of about people with Down's syndrome. And I wo n't ruining it by telling you. You'll want to look it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magic of it's own. After looking it I understood better that we put too much value on achievement and not adequate on the people we love. Passion and simplicity is all we need. 
+ Score: 0.8377430438995361
+
+%generation_time = 1141 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ A decent picture is worth all the words. This film has the most poetic scene ever reve of about people with Down's syndrome. And I wo n't ruining it by telling you. You'll want to look it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magic of it's own. After looking it I understood better that we put too much value on achievement and not adequate on the people we love. Passion and simplicity is all we need. 
+ Score: 0.8377430438995361
+
+%generation_time = 1145 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ A decent picture is worth all the words. This film has the most poetic scene ever reve of about people with Down's syndrome. And I am n't ruining it by telling you. You'll want to look it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magic of it's own. After looking it I understood better that we put too much value on achievement and not adequate on the people we love. Passion and simplicity is all we need. 
+ Score: 0.8377430438995361
+
+%generation_time = 1149 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ A decent picture is penalty all the words. This film has the most poetic scene still reve of about people with Down's syndrome. And I am n't ruining it by telling you. You'll want to look it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magic of it's own. After looking it I understood better that we put too much value on achievement and not adequate on the people we love. Passion and simplicity is all we need. 
+ Score: 0.8227914571762085
+
+%generation_time = 1144 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ A decent picture is penalty all the words. This film has the most poetic scene still reve of about people with Down's syndrome. And I am n't ruining it by telling you. You'll want to staring it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magic of it's own. After looking it I comprehend better that we put too much value on achievement and not adequate on the people we like. Passion and simplicity is all we need. 
+ Score: 0.53827965259552
+
+%generation_time = 1154 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ A decent picture is penalty all the words. This film has the most poetic theater still reve of about people with Down's syndrome. And I am n't ruining it by mentioning you. You'll want to staring it yourself. Pasqual Duquenne is an astounding actor. I did not needed to understand a single word he said to understand his meaning. The film has a magician of it's own. After looking it I understood better that we put too much value on achievement and not adequate on the people we like. Passion and simplifies is all we need. 
+ Score: 0.37641072273254395
+
+%total_time = 8586 seconds
+
+
+####################ATTACK 22/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I can't stand it when people go see a movie when they know they won't like it. My mom likes violent movies, so why did she see it? She rated it just to bring down the rating. So I know that's why it didn't have a higher rating. I give it a 6/10
+Starting Score: 0.8342443704605103; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I ca n't stand it when people go see a movie when they know they am n't like it. My mom likes violent movies, so why did she see it? She rated it just to bring down the rating. So I know that's why it did n't have a higher rating. I give it a 6/ 10 
+ Score: 0.7964208126068115
+
+%generation_time = 229 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I ca n't stand it when people go see a flick when they know they wo n't like it. My mom likes severe movies, so why did she see it? She rated it just to bring down the rating. So I know that's why it did n't have a higher rating. I give it a 6/ 10 
+ Score: 0.732275128364563
+
+%generation_time = 1146 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I ca n't stand it when people go see a flick when they know they wo n't like it. My mom likes severe movie, so why did she look it? She rated it just to bring down the rating. So I know that's why it did n't have a higher rating. I confer it a 6/ 10 
+ Score: 0.49342775344848633
+
+%total_time = 1561 seconds
+
+
+####################ATTACK 23/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Best Robot Romantic Comedy Ever, using the robots as the romantic characters, which leaves Short Circuit out of this category. This was Andy Kaufman's best effort. Bernadette Peters shows her versatility here with an amazing performance. While not a great movie in many areas, I'll award it a 9 on guts and quirkiness.
+Starting Score: 0.9995031356811523; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romantic characters, which leaves Short Circuit out of this sort. This was Andy Kaufman's best effort. Bernadette Peters shows her versatility here with an amazing performance. While not a great movie in many areas, I'll award it a 9 on guts and quirkiness. 
+ Score: 0.9993343353271484
+
+%generation_time = 229 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romantic characters, which leaves Short Circuit out of this category. This was Andy Kaufman's best effort. Bernadette Peters shows her versatility here with an amazing yield. While not a great movie in many areas, I'll award it a 9 on guts and quirkiness. 
+ Score: 0.9990463256835938
+
+%generation_time = 1133 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romantic characters, which leaves Short Circuit out of this category. This was Andy Kaufman's best effort. Bernadette Peters shows her versatility here with an amazing yield. While not a great movie in many areas, I'll award it a 9 on entrails and quirkiness. 
+ Score: 0.9985910058021545
+
+%generation_time = 1099 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romance characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's best effort. Bernadette Peters shows her versatility here with an amazing yield. While not a great movie in many areas, I'll grant it a 9 on guts and quirkiness. 
+ Score: 0.9976395964622498
+
+%generation_time = 1098 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romance characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's good attempt. Bernadette Peters shows her versatility here with an amazing yield. While not a great movie in many areas, I'll grant it a 9 on guts and quirkiness. 
+ Score: 0.9964836239814758
+
+%generation_time = 1102 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romance characters, which sheets Short Circuit out of this category. This was Andy Kaufman's good attempt. Bernadette Peters shows her versatility here with an amazing yield. While not a great movie in many areas, I'll grant it a 9 on guts and quirkiness. 
+ Score: 0.9964836239814758
+
+%generation_time = 1097 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the robots as the romance characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's bona effort. Bernadette Peters shows her versatility here with an impressive yield. While not a great movie in many areas, I'll grant it a 9 on guts and quirkiness. 
+ Score: 0.9942722320556641
+
+%generation_time = 1094 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the romance characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's bona attempt. Bernadette Peters display her versatility here with an impressive yield. While not a great movie in many areas, I'll grant it a 9 on guts and quirkiness. 
+ Score: 0.9845082759857178
+
+%generation_time = 1094 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the romance characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's ok attempt. Bernadette Peters display her versatility here with an astounding yield. While not a great movie in many areas, I'll grant it a 9 on balls and quirkiness. 
+ Score: 0.9667319059371948
+
+%generation_time = 1099 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the roman characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's bona attempt. Bernadette Peters display her versatility here with an astounding yield. While not a great movie in many areas, I'll grant it a 9 on balls and quirkiness. 
+ Score: 0.9615932703018188
+
+%generation_time = 1098 seconds
+
+Regenerating population... 
+
+Generation #11: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the romance characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's bona attempt. Bernadette Peters display her versatility here with an astounding yield. While not a large movie in several areas, I'll grant it a 9 on balls and quirkiness. 
+ Score: 0.9555206298828125
+
+%generation_time = 1100 seconds
+
+Regenerating population... 
+
+Generation #12: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the roman characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's bona attempt. Bernadette Peters display her versatility here with an astounding yield. While not a great movie in many regions, I'll grant it a 9 on bullets and quirkiness. 
+ Score: 0.9375293254852295
+
+%generation_time = 1097 seconds
+
+Regenerating population... 
+
+Generation #13: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the roman characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's ok attempt. Bernadette Peters display her versatility here with an astounding yield. While not a grand movie in multiple regions, I'll grant it a 9 on balls and quirkiness. 
+ Score: 0.9136195778846741
+
+%generation_time = 1099 seconds
+
+Regenerating population... 
+
+Generation #14: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the roman characters, which sheets Short Circuit out of this sort. This was Andy Kaufman's ok attempt. Bernadette Peters display her versatility here with an astounding yield. While not a great movie in multiple areas, I'll grant it a 9 on bullets and quirkiness. 
+ Score: 0.8825583457946777
+
+%generation_time = 1095 seconds
+
+Regenerating population... 
+
+Generation #15: 
+
+Best Adversarial:
+ Best Robot Romantic Comedy Ever, using the humanoid as the roman personage, which sheets Short Circuit out of this sort. This was Andy Kaufman's ok attempt. Bernadette Peters display her versatility here with an astounding yield. While not a grand movie in multiple areas, I'll grant it a 9 on bullets and quirkiness. 
+ Score: 0.8707312345504761
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+ATTACK FAILED...
+
+%total_time = 16714 seconds
+
+
+####################ATTACK 24/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Walking with Cavemen, hosted by Alec Baldwin, is a look back at all the hominid (that's us!) species of the past 5 million years: who they were, what they were like, and how they died out. Along with being a very interesting scientific look at the information we have on these species, Walking with Cavemen also examines what it is that makes us human. I waited several weeks to watch this, and I was not disappointed.
+Starting Score: 0.732170820236206; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Walking with Cavemen, hosted by Alec Baldwin, is a look back at all the hominid( that's us!) species of the past 5 million years: who they were, what they were like, and how they died out. Along with being a very interesting scientific look at the information we have on these species, Walking with Cavemen also investigating what it is that makes us human. I waited several weeks to watch this, and I was not disappointed. 
+ Score: 0.4964437186717987
+
+%total_time = 216 seconds
+
+
+####################ATTACK 25/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Saw this film in August at the 27th Annual National Association of Black Journalists Convention in Milwaukee, WI, it's first public screening. THE FILM IS GREAT!!! Derek Luke is wonderful as Antwone Fisher. This young actor has a very bright future. The real Antwone Fisher did a great job writing the film and Denzel's direction is right on the money. See it opening weekend. You won't be disappointed.
+Starting Score: 0.9940440654754639; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Saw this film in August at the 27th Annual National Association of Black Journalists Convention in Milwaukee, WI, it's first public screening. THE FILM IS GREAT!!! Derek Luke is wonderful as Antwone Fisher. This young actor has a very bright future. The real Antwone Fisher did a great job writing the film and Denzel's direction is right on the money. See it opening weekend. You wo n't be disappointing. 
+ Score: 0.9808630347251892
+
+%generation_time = 216 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Saw this film in August at the 27th Annual National Association of Black Journalists Convention in Milwaukee, WI, it's first public screening. THE FILM IS GREAT!!! Derek Luke is wonderful as Antwone Fisher. This young actor has a very bright future. The real Antwone Fisher did a great labor writing the movie and Denzel's direction is right on the money. See it opening weekend. You wo n't be disappointing. 
+ Score: 0.9442205429077148
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Saw this film in August at the 27th Annual National Association of Black Journalists Convention in Milwaukee, WI, it's first public screening. THE FILM IS GREAT!!! Derek Luke is wonderful as Antwone Fisher. This young actor has a very bright future. The real Antwone Fisher did a great job writing the movie and Denzel's direction is right on the money. See it opening weekend. You wo n't be disappointing. 
+ Score: 0.9442205429077148
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Saw this film in August at the 27th Annual National Association of Black Journalists Convention in Milwaukee, WI, it's first public screening. THE FILM IS grand!!! Derek Luke is wonderful as Antwone Fisher. This young actor has a very bright future. The real Antwone Fisher did a great labor writing the movie and Denzel's direction is right on the money. See it opening weekend. You wo n't be disappointing. 
+ Score: 0.865471601486206
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Saw this film in August at the 27th Annual National Association of Black Journalists congress in Milwaukee, WI, it's first public screening. THE FILM IS grand!!! Derek Luke is magnificent as Antwone Fisher. This young actor has a very shiny future. The real Antwone Fisher did a great labor writing the movie and Denzel's direction is right on the money. seeing it opening weekend. You wo n't be disappointing. 
+ Score: 0.4051031470298767
+
+%total_time = 3510 seconds
+
+
+####################ATTACK 26/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+"Foxes" is a great film. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are wonderful. The song "On the radio" by Donna Summer is lovely. A great film. *****
+Starting Score: 0.9985595941543579; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ `` Foxes`` is a great film. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are wonderful. The song`` On the radio`` by Donna Summer is lovely. A grand film. ***** 
+ Score: 0.9932559728622437
+
+%generation_time = 216 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ `` Foxes`` is a great film. The oven juvenile actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are wonderful. The song`` On the radio`` by Donna Summer is lovely. A grand film. ***** 
+ Score: 0.9901020526885986
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ `` Foxes`` is a grand film. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are wonderful. The song`` On the radio`` by Donna Summer is lovely. A grand movie. ***** 
+ Score: 0.980685830116272
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ `` Foxes`` is a great cinematographic. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are wonderful. The song`` On the radio`` by Donna Summer is belle. A grand movie. ***** 
+ Score: 0.966072678565979
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are wonderful. The song`` On the radio`` by Donna Summer is belle. A grand movie. ***** 
+ Score: 0.9451785087585449
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the radio`` by Donna Summer is belle. A grand movie. ***** 
+ Score: 0.9206044673919678
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four young actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the radio`` by Donna Summer is beau. A large movie. ***** 
+ Score: 0.8111469745635986
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four juvenile actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the radio`` by Donna Summer is beau. A large movie. ***** 
+ Score: 0.7174370288848877
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four juvenile actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the radio`` by Donna Summer is beau. A hefty movie. ***** 
+ Score: 0.7174370288848877
+
+%generation_time = 1077 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four youths actresses Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the disseminate`` by Donna Summer is beau. A hefty movie. ***** 
+ Score: 0.6061174869537354
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #11: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four youths artists Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the spreading`` by Donna Summer is beau. A hefty movie. ***** 
+ Score: 0.5927267670631409
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #12: 
+
+Best Adversarial:
+ `` Foxes`` is a wondrous cinematographic. The four youths artists Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the spreading`` by Donna Summer is beau. A hefty movie. ***** 
+ Score: 0.5927267670631409
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+Generation #13: 
+
+Best Adversarial:
+ `` Foxes`` is a magnificent cinematographic. The four youths artists Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the disseminate`` by Donna Summer is beau. A hefty movie. ***** 
+ Score: 0.5859775543212891
+
+%generation_time = 1081 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ `` Foxes`` is a wondrous cinematographic. The four youths artists Jodie Foster, Cherie Currie, Marilyn Kagan and Kandice Stroh are magnificent. The song`` On the spreading`` by Donna Summer is beau. A gigantic movie. ***** 
+ Score: 0.47902587056159973
+
+%total_time = 13898 seconds
+
+
+####################ATTACK 27/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Surely one of the mysteries of the modern world!! - this film is NOT considered to be within the top 100 films of all time????If you watched this film and thought it was anything other than wonderful please let me know how? - Al Pacino's performance is as good as it gets!
+Starting Score: 0.9952784776687622; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy world!! - this film is NOT considered to be within the top 100 films of all time??? ? If you watched this film and thought it was anything other than wonderful please let me know how? - Al Pacino's performance is as good as it gets! 
+ Score: 0.9930348992347717
+
+%generation_time = 227 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy world!! - this film is NOT considered to be within the top 100 films of all periods??? ? If you watched this film and thought it was anything other than wonderful please let me know how? - Al Pacino's executing is as good as it gets! 
+ Score: 0.9852179288864136
+
+%generation_time = 1197 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy world!! - this film is NOT considered to be within the top 100 flick of all periods??? ? If you watched this film and thought it was anything other than wonderful please let me know how? - Al Pacino's executing is as good as it gets! 
+ Score: 0.9692977666854858
+
+%generation_time = 1174 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy world!! - this film is NOT considered to be within the top 100 films of all periods??? ? If you watched this film and thought it was anything other than wonderful please let me know how? - Al Pacino's executing is as good as it becoming! 
+ Score: 0.9690057039260864
+
+%generation_time = 1187 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy planet!! - this film is NOT considered to be within the top 100 films of all periods??? ? If you watched this cinema and thought it was anything other than wonderful please let me know how? - Al Pacino's executing is as good as it becomes! 
+ Score: 0.9448075890541077
+
+%generation_time = 1180 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy planet!! - this film is NOT deemed to be within the top 100 flick of all periods??? ? If you watched this cinema and thought it was anything other than wonderful please let me know how? - Al Pacino's executing is as good as it gets! 
+ Score: 0.9246089458465576
+
+%generation_time = 1187 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy planet!! - this film is NOT deemed to be within the high 100 flick of all periods??? ? If you watched this cinema and thought it was anything other than wonderful please let me know how? - Al Pacino's run is as good as it gets! 
+ Score: 0.825019359588623
+
+%generation_time = 1184 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ Surely one of the mysteries of the trendy planet!! - this flick is NOT deemed to be within the high 100 flick of all periods??? ? If you watched this cinema and thought it was anything other than wonderful please let me know how? - Al Pacino's run is as good as it becomes! 
+ Score: 0.5964093804359436
+
+%generation_time = 1184 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ admittedly one of the mysteries of the trendy planet!! - this film is NOT deemed to be within the high 100 flick of all spells??? ? If you looked this cinema and thought it was anything other than wonderful please let me know how? - Al Pacino's run is as ok as it gets! 
+ Score: 0.4043225049972534
+
+%total_time = 8576 seconds
+
+
+####################ATTACK 28/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+. . . is just as good as the original. Very nearly achieves greatness because of Cundieff's remarkable ear for music and dialogue. Skewers the self-important swagger of the hip-hop poseurs. The group "Niggaz with Hats" (NWH) are every rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP soundtrack if you can.
+Starting Score: 0.982813835144043; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ . . . is just as good as the original. Very nearly achieves greatness because of Cundieff's remarkable ear for musical and dialogue. Skewers the self- important swagger of the hip- hop poseurs. The group`` Niggaz with Hats``( NWH) are every rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP soundtrack if you can. 
+ Score: 0.9735040664672852
+
+%generation_time = 235 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ . . . is just as good as the original. Very roughly achieves size because of Cundieff's remarkable ear for music and dialogue. Skewers the self- important swagger of the hip- hop poseurs. The group`` Niggaz with Hats``( NWH) are any rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP tape if you can. 
+ Score: 0.9429067969322205
+
+%generation_time = 1257 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ . . . is just as good as the original. Very roughly achieves greatness because of Cundieff's remarkable ear for music and dialogue. Skewers the self- important swagger of the hip- hop poseurs. The group`` Niggaz with Hats``( NWH) are any rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP paper if you can. 
+ Score: 0.8818413019180298
+
+%generation_time = 1625 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ . . . is just as good as the original. Very roughly achieves greatness because of Cundieff's remarkable ear for songwriter and dialogue. Skewers the self- important swagger of the hip- hop poseurs. The group`` Niggaz with Hats``( NWH) are any rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP paper if you can. 
+ Score: 0.8153682947158813
+
+%generation_time = 1535 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ . . . is just as good as the original. Very roughly achieves greatness because of Cundieff's remarkable ear for music and talking. Skewers the self- substantial swagger of the hip- hop poseurs. The grouping`` Niggaz with Hats``( NWH) are any rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP paper if you can. 
+ Score: 0.6197177767753601
+
+%generation_time = 1285 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ . . . is just as good as the original. Very roughly achieves size because of Cundieff's remarkable ear for music and talking. Skewers the self- substantial swagger of the hip- jumping poseurs. The group`` Niggaz with Hats``( NWH) are any rap group you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP paper if you can. 
+ Score: 0.515781044960022
+
+%generation_time = 1114 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ . . . is just as good as the original. Very roughly achieves greatness because of Cundieff's remarkable ear for music and talking. Skewers the self- substantial swagger of the hip- jumping poseurs. The grouping`` Niggaz with Hats``( NWH) are any rap grouping you ever heard and utterly self-parodic. Wardrobe is unbelievable. Buy the OOP paper if you can. 
+ Score: 0.4225734770298004
+
+%total_time = 7144 seconds
+
+
+####################ATTACK 29/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+A series of shorts spoofing dumb TV shows, Groove Tube hits and misses a lot. Overall, I do really like this movie. Unfortunately, a couple of the segments are totally boring. A few really great clips make up for this. A predecessor to such classics like Kentucky Fried Movie.
+Starting Score: 0.6582130789756775; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ A series of shorts spoofing dumb TV shows, Groove Tube hits and misses a lot. Overall, I do really like this movie. Unfortunately, a couple of the segments are totally boring. A few really great clips make up for this. A replace to such classics like Kentucky Fried Movie. 
+ Score: 0.4125376343727112
+
+%total_time = 85 seconds
+
+
+####################ATTACK 30/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I liked this movie. That's pretty much all I can say about it. Lou Gossett did a good job, even though I'm still very disappointed in him after all the Iron Eagle movies. And even if I was smiling on the inside when the first main teenager dies (I won't give it away) it was done in a nice, fitting fashion. Pretty much everyone in this movie does a good job, so check it out! It's another one of those movies I found real cheap, so I bought it, and I recommend the same.
+Starting Score: 0.939049482345581; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I liked this movie. That's pretty much all I can say about it. Lou Gossett did a good job, till though I'm still very disappointed in him after all the Iron Eagle movies. And even if I was smiling on the inside when the first main teenager dies( I wo n't give it away) it was done in a nice, fitting fashion. Pretty much everyone in this movie does a good job, so check it out! It's another one of those movies I found real cheap, so I bought it, and I recommend the same. 
+ Score: 0.9169896841049194
+
+%generation_time = 214 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I liked this movie. That's pretty much all I can say about it. Lou Gossett did a good job, till though I'm still very disappointed in him after all the Iron Eagle movies. And even if I was smiling on the inside when the first main teenager dies( I wo n't give it away) it was done in a nice, fitting fashion. Pretty much everyone in this movie does a good job, so verified it out! It's another one of those movies I found real cheap, so I bought it, and I suggested the same. 
+ Score: 0.7866170406341553
+
+%generation_time = 1076 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I wanted this movie. That's pretty much all I can say about it. Lou Gossett did a good job, even though I'm still very disappointed in him after all the Iron Eagle movies. And even if I was smiling on the inside when the first primary teenager dies( I wo n't give it away) it was done in a nice, fitting fashion. Pretty much everyone in this movie does a good labour, so verified it out! It's another one of those movies I found real cheap, so I bought it, and I suggested the same. 
+ Score: 0.384919136762619
+
+%total_time = 1767 seconds
+
+
+####################ATTACK 31/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+David Lynch's new short is a very "Lynchian" piece, full of darkness, tension, silences, discreet but very textured background music, and features again two beautiful actresses, a blonde and a brunette, a recurrent theme in his work.Both characters create a very intriguing slave-mistress relationship that could be seen as a direct follow up to the same kind of relationship featured in Mulholland Dr.Beautiful. For Lynch fan's.
+Starting Score: 0.9695346355438232; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ David Lynch's new short is a very`` Lynchian`` piece, full of darkness, tension, silences, discreet but very textured background music, and features again two beautiful actresses, a blonde and a brunette, a recurrent theme in his work. Both characters create a very intriguing slave-mistress relationship that could be seen as a direct follow up to the same kind of relationship attribute in Mulholland Dr. Beautiful. For Lynch fan's. 
+ Score: 0.9383163452148438
+
+%generation_time = 214 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ David Lynch's new short is a very`` Lynchian`` piece, full of night, tension, silences, discreet but very textured background music, and features again two beautiful actresses, a blonde and a brunette, a recurrent theme in his work. Both characters create a very intriguing slave-mistress relationship that could be seen as a direct follow up to the same kind of link attribute in Mulholland Dr. Beautiful. For Lynch fan's. 
+ Score: 0.6315290927886963
+
+%generation_time = 1060 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ David Lynch's new short is a very`` Lynchian`` piece, full of night, tension, silences, discreet but very textured background music, and features again two beautiful actresses, a blonde and a brunette, a recurrent theme in his jobs. Both characters create a very intriguing slave-mistress relationship that could be seen as a direct follow up to the same kind of link attribute in Mulholland Dr. Beautiful. For Lynch fan's. 
+ Score: 0.4335061311721802
+
+%total_time = 1953 seconds
+
+
+####################ATTACK 32/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I enjoyed the movie and Kellie Martins performance immensely. It's the kind of movie I can show my family and has an example of a young woman placed in extraordinary circumstances finding the courage to do the right thing in the face of extreme danger.
+Starting Score: 0.9969698190689087; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I experienced the movie and Kellie Martins performance immensely. It's the kind of movie I can show my family and has an example of a young woman placed in extraordinary circumstances finding the courage to do the right thing in the face of extreme danger. 
+ Score: 0.9927429556846619
+
+%generation_time = 216 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I experienced the movie and Kellie Martins performance extremely. It's the kind of movie I can show my family and has an example of a young woman placed in extraordinary circumstances finding the courage to do the right thing in the face of extreme danger. 
+ Score: 0.9792168736457825
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I enjoyed the movie and Kellie Martins performance extremely. It's the kind of movie I can show my family and has an example of a young woman placed in extraordinary instance finding the courage to do the right thing in the face of abject danger. 
+ Score: 0.9490548372268677
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I experienced the movie and Kellie Martins performance extremely. It's the type of movie I can show my family and has an example of a young woman placed in extraordinary instance finding the courage to do the right thing in the face of abject hazard. 
+ Score: 0.22001129388809204
+
+%total_time = 2555 seconds
+
+
+####################ATTACK 33/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I rank this the best of the Zorro chapterplays.The exciting musical score adds punch to an exciting screen play.There is an excellent supporting cast and mystery villain that will keep you guessing until the final chapter.Reed Hadley does a fine job as Don Diego and his alter ego Zorro.Last,but certainly not least,is the great directing team of Whitney and English.
+Starting Score: 0.9993541240692139; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I rank this the best of the Zorro chapterplays. The exciting musical score adds punch to an exciting screen play. There is an magnificent supporting cast and mystery villain that will keep you guessing until the final chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but certainly not least, is the great directing team of Whitney and English. 
+ Score: 0.9988764524459839
+
+%generation_time = 216 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The exciting musical score add punch to an exciting screen play. There is an magnificent supporting cast and mystery villain that will keep you guessing until the final chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but certainly not least, is the great directing team of Whitney and English. 
+ Score: 0.9965755343437195
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting cast and mystery villain that will keep you guessing until the final chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but certainly not least, is the great directing team of Whitney and English. 
+ Score: 0.9948844313621521
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting pouring and mystery villain that will sustain you guessing until the final chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but certainly not least, is the great directing team of Whitney and English. 
+ Score: 0.9812373518943787
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting pouring and mystery villain that will sustain you guessing until the latter chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but certainly not least, is the great directing team of Whitney and English. 
+ Score: 0.9710729122161865
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting pouring and mystery villain that will sustain you suppose until the final chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but obviously not least, is the grand directing team of Whitney and English. 
+ Score: 0.9414148330688477
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting pouring and mystery villain that will sustain you suppose until the latter chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but obviously not least, is the prodigious directing team of Whitney and English. 
+ Score: 0.8178586959838867
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting pouring and mystery villain that will sustain you suppose until the latter chapter. Reed Hadley does a fine job as Don Diego and his alter ego Zorro. Last, but obviously not least, is the great directing team of Whitney and English. 
+ Score: 0.8178586959838867
+
+%generation_time = 1083 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an exciting screen play. There is an magnificent supporting pouring and mystery villain that will sustain you suppose until the final chapter. Reed Hadley does a fine job as Don Diego and his alter narcissistic Zorro. Last, but obviously not least, is the great directing team of Whitney and English. 
+ Score: 0.8178586959838867
+
+%generation_time = 1075 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an interesting screen play. There is an magnificent supporting pouring and mystery crook that will sustain you suppose until the latter stretches. Reed Hadley does a fine job as Don Diego and his alter manipulative Zorro. Last, but obviously not least, is the great directing team of Whitney and English. 
+ Score: 0.6100835800170898
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I rank this the better of the Zorro chapterplays. The sexy musical score add punch to an interesting screen play. There is an magnificent supporting pouring and mystery crook that will sustain you suppose until the latter stretches. Reed Hadley does a fine job as Don Diego and his alter manipulative Zorro. Last, but obviously not least, is the great directing teams of Whitney and English. 
+ Score: 0.48377618193626404
+
+%total_time = 10593 seconds
+
+
+####################ATTACK 34/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Any child old enough to sit up in front of a screen will be absolutely captivated by the beautifully drawn images and wonderful music in this heartfelt and humorous re-write of the Grimms' fairytale. They'll be singing 'Bibbity-Bobbity-Boo' before they can even formulate a complete sentence and will continue singing it till their dying days. It is a classic for all children, especially those adults who are young at heart.
+Starting Score: 0.9984841346740723; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely caught by the beautifully drawn images and wonderful music in this heartfelt and humorous re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will continue singing it till their dying days. It is a classic for all children, especially those adults who are young at heart. 
+ Score: 0.9975318312644958
+
+%generation_time = 209 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely captivated by the beautifully drawn images and wonderful music in this warmest and humorous re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying days. It is a classic for all children, especially those adults who are young at heart. 
+ Score: 0.9948225021362305
+
+%generation_time = 1039 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely captivated by the beautifully drawn images and wonderful musician in this warmest and humorous re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying days. It is a classic for all children, especially those adults who are young at heart. 
+ Score: 0.9897575378417969
+
+%generation_time = 1046 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely caught by the beautifully drawn images and wonderful musician in this warmest and humorous re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying days. It is a classic for all children, especially those adults who are young at cardiac. 
+ Score: 0.9503976702690125
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely caught by the beautifully drawn images and wonderful musician in this warmest and humorous re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying dated. It is a classic for all children, namely those adults who are juvenile at cardiac. 
+ Score: 0.8849772214889526
+
+%generation_time = 1035 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely capturing by the beautifully drawn images and wonderful musician in this warmest and comedy re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying dated. It is a classic for all children, namely those adults who are juvenile at cardiac. 
+ Score: 0.8498529195785522
+
+%generation_time = 1034 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely capturing by the beautifully drawn images and wonderful musician in this warmest and comical re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying dated. It is a habitual for all children, namely those adults who are juvenile at cardiac. 
+ Score: 0.7435332536697388
+
+%generation_time = 1038 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely capturing by the beautifully drawn images and wonderful musician in this warmest and farcical re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying dated. It is a classic for all children, namely those adults who are juvenile at cardiac. 
+ Score: 0.5895544290542603
+
+%generation_time = 1039 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ Any child old enough to sit up in front of a screen will be absolutely capturing by the beautifully drawn images and wonderful musician in this warmest and grotesque re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it so their dying dated. It is a classic for all children, namely those adults who are juvenile at cardiac. 
+ Score: 0.56788170337677
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Any child old enough to sit up in front of a screen will be absolutely capturing by the beautifully drawn images and wonderful musician in this warmest and ridiculous re-write of the Grimms' fairytale. They'll be singing'Bibbity- Bobbity- Boo' before they can even formulate a complete sentence and will sustained singing it till their dying dated. It is a classic for all children, namely those adults who are juvenile at cardiac. 
+ Score: 0.23053601384162903
+
+%total_time = 8619 seconds
+
+
+####################ATTACK 35/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This film is a summary of Visconti's obssessions: the decadence of nobility, death, aesthetic search, homosexuality...All mingled with melancholic mastery. Slow-paced just to make you abler to contemplate all its beauty (which is in the music and the images as well as in the story)this is the type of film we are not allowed to enjoy anymore, brave, deeply personal and intelligent. The genuine fruit of a genius like Visconti.
+Starting Score: 0.965731143951416; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This film is a summary of Visconti's obssessions: the decadence of nobility, death, aesthetic search, homosexuality... All mingled with introspective mastery. Slow-paced just to make you abler to contemplate all its beauty( which is in the music and the images as well as in the story) this is the type of film we are not allowed to enjoy anymore, brave, deeply personal and intelligent. The genuine fruit of a genius like Visconti. 
+ Score: 0.9558748006820679
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This film is a summary of Visconti's obssessions: the decadence of nobility, death, aesthetic search, homosexuality... All mingled with melancholic mastery. Slow-paced just to make you abler to contemplate all its beauty( which is in the music and the images as well as in the story) this is the type of film we are not allowed to enjoy anymore, brave, deeply personal and brainy. The genuine fruit of a genius like Visconti. 
+ Score: 0.9084979891777039
+
+%generation_time = 1042 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This cinematic is a summary of Visconti's obssessions: the decadence of nobility, death, aesthetic search, homosexuality... All mingled with melancholic mastery. Slow-paced just to make you abler to contemplate all its beauty( which is in the music and the images as well as in the story) this is the type of film we are not allowed to enjoy anymore, brave, severely personal and brainy. The actual fruit of a genius like Visconti. 
+ Score: 0.7969675064086914
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This cinematic is a nutshell of Visconti's obssessions: the decadence of nobility, death, aesthetic search, homosexuality... All mingled with melancholic mastery. Slow-paced just to make you abler to contemplate all its beauty( which is in the music and the photograph as well as in the story) this is the type of film we are not allowed to enjoy anymore, bold, severely personal and brainy. The actual fruit of a genius like Visconti. 
+ Score: 0.4803128242492676
+
+%total_time = 2799 seconds
+
+
+####################ATTACK 36/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Touching; Well directed autobiography of a talented young director/producer. A love story with Rabin's assassination in the background. Worth seeing !
+Starting Score: 0.9347434043884277; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Touching; Well directed autobiography of a talented young director/producer. A love story with Rabin's assassination in the background. Worth staring! 
+ Score: 0.7547815442085266
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ impacted; Well directed autobiography of a talented young director/producer. A love stories with Rabin's assassination in the background. Worth seeing! 
+ Score: 0.6652915477752686
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ impacted; Well directed autobiography of a talented young director/producer. A love stories with Rabin's assassination in the background. Worth stared! 
+ Score: 0.21629935503005981
+
+%total_time = 1296 seconds
+
+
+####################ATTACK 37/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This film is great - well written and very entertaining. David Duchovny shows, once again, that he is much more than Fox Mulder, and the performances by the old men are funny as can be. Old married folks (like me) will appreciate the connection between two hearts.
+Starting Score: 0.999474823474884; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This film is great- well written and very entertain. David Duchovny shows, once again, that he is much more than Fox Mulder, and the performances by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.9979752898216248
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This film is great- well written and very entertain. David Duchovny shows, once again, that he is much more than Fox Mulder, and the performances by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.9979752898216248
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This film is prodigious- okay written and very entertaining. David Duchovny shows, once again, that he is much more than Fox Mulder, and the interpreting by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.9854910373687744
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This film is overwhelming- okay written and very entertaining. David Duchovny shows, once again, that he is much more than Fox Mulder, and the interpreting by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.9701564311981201
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ This film is prodigious- okay written and very distracting. David Duchovny shows, once again, that he is much more than Fox Mulder, and the interpreting by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.6001948118209839
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ This film is overwhelming- okay drafted and very entertain. David Duchovny shows, once again, that he is much more than Fox Mulder, and the interpreting by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.5632442235946655
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ This film is overwhelming- well written and very entertain. David Duchovny shows, once again, that he is much more than Fox Mulder, and the interpreting by the old men are funny as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.5632442235946655
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This film is overwhelming- bah draft and very entertain. David Duchovny shows, once again, that he is much more than Fox Mulder, and the interpreting by the old men are weird as can be. Old married folks( like me) will appreciate the connection between two hearts. 
+ Score: 0.31562358140945435
+
+%total_time = 6566 seconds
+
+
+####################ATTACK 38/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+The acrobatics mixed with haunting music, make one spectacular show. The costumes are vibrant and the performances will just boggle your mind! Simply amazing!
+Starting Score: 0.9928368330001831; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ The acrobatics mixed with haunting music, make one spectacular show. The costumes are vibrant and the performances will just boggle your mind! Simply incredible! 
+ Score: 0.9880685210227966
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ The acrobatics mixed with haunting musicians, make someone spectacular show. The costumes are vibrant and the performances will just boggle your mind! Simply incredible! 
+ Score: 0.9763430953025818
+
+%generation_time = 1022 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ The acrobatics mixed with haunting musicians, make someone spectacular show. The costumes are vibrant and the performances will just boggle your mind! Simply unthinkable! 
+ Score: 0.7544750571250916
+
+%generation_time = 1021 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The acrobatics mixed with ghostly musicians, make someone spectacular show. The costumes are vibrant and the performances will just boggle your thinking! Simply unbelievable! 
+ Score: 0.31148120760917664
+
+%total_time = 2505 seconds
+
+
+####################ATTACK 39/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I really liked this movie, it was good, and the actors were brilliant! Leon Robinson, who played Richard, and many other classic singers, is very good at his job, when you see him in a musical movie, you know that it is going to be good! I would suggest that people watch this heart warming, sad, and special movie, if they want to know more about Richard! Outstanding! Fresh!
+Starting Score: 0.9991058111190796; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I really liked this movie, it was good, and the actors were brilliant! Leon Robinson, who played Richard, and many other classic singers, is very good at his job, when you see him in a musical movie, you know that it is going to be good! I would suggest that people watch this crux warming, sad, and special movie, if they want to know more about Richard! Outstanding! Fresh! 
+ Score: 0.9976022839546204
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I really liked this movie, it was good, and the actors were wondrous! Leon Robinson, who played Richard, and many other classic singers, is very good at his job, when you see him in a musical movie, you know that it is going to be good! I would suggest that people watch this crux warming, woeful, and special movie, if they want to know more about Richard! Outstanding! Fresh! 
+ Score: 0.86726975440979
+
+%generation_time = 1046 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I really rained this movie, it was good, and the actors were wondrous! Leon Robinson, who played Richard, and many other classic singers, is very good at his job, when you see him in a musical movie, you know that it is going to be good! I would suggest that people watch this crux warming, miserable, and special movie, if they want to know more about Richard! Outstanding! Fresh! 
+ Score: 0.3230375349521637
+
+%total_time = 1298 seconds
+
+
+####################ATTACK 40/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+The movie seemed a little slow at first. But it picked up speed and got right to the point. It showed exactly how the government and the scientist argued for humanity and the reasons of the "gadget". I enjoyed it. It is very close to reality as any movie about the Atomic Bombs that were to be dropped on Japan. I have recommended it to friends. I was particularly pleased with the acting ability of Dwight Schultz.
+Starting Score: 0.9812459945678711; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ The movie seemed a little slow at first. But it picked up speed and got right to the point. It showed exactly how the government and the scientist claimed for humanity and the reasons of the`` gadget``. I enjoyed it. It is very close to reality as any movie about the Atomic Bombs that were to be dropped on Japan. I have recommended it to friends. I was particularly pleased with the acting ability of Dwight Schultz. 
+ Score: 0.9717008471488953
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ The movie seemed a little slow at first. But it picked up speed and got right to the point. It showed downright how the government and the scientist argued for humanity and the reasons of the`` gadget``. I enjoyed it. It is very close to reality as any movie about the Atomic bombard that were to be dropped on Japan. I have recommended it to friends. I was particularly pleased with the acting ability of Dwight Schultz. 
+ Score: 0.936697781085968
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ The movie seemed a meagre sluggish at first. But it picked up speed and got right to the point. It showed exactly how the government and the scientist argued for humanity and the reasons of the`` gadget``. I enjoyed it. It is very close to reality as any movie about the Atomic bombard that were to be dropped on Japan. I have recommended it to friends. I was particularly pleased with the acting ability of Dwight Schultz. 
+ Score: 0.7273764610290527
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ The movie seemed a meagre sluggish at first. But it picked up speed and got right to the point. It showed exactly how the government and the scientist argued for humanity and the justification of the`` gadget``. I enjoyed it. It is very nearing to reality as any movie about the Atomic bombard that were to be dropped on Japan. I have recommended it to friends. I was particularly pleased with the acting ability of Dwight Schultz. 
+ Score: 0.40043479204177856
+
+%total_time = 2384 seconds
+
+
+####################ATTACK 41/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I wasn't sure what to expect but am I glad I went to see this. A smart, slightly twisted comedy that makes you think. I wasn't quite sure how a director can create "nothing", but leave it to Mr. Natali and the brilliant individuals at C.O.R.E. to create another low budget set that looks real (as real as nothing can be). Well worth your time and money, if you have the opportunity to see this, please go. You'll be glad you did.
+Starting Score: 0.9145528078079224; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I was n't sure what to expect but am I glad I went to see this. A smart, slightly twisted comedy that makes you suppose. I was n't quite sure how a director can create`` nothing``, but leave it to Mr. Natali and the brilliant individuals at C. O. R. E. to create another low budget set that looks real( as real as nothing can be). Well worth your time and money, if you have the opportunity to see this, please go. You'll be glad you did. 
+ Score: 0.8701382875442505
+
+%generation_time = 209 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I was n't sure what to expect but am I glad I went to see this. A smart, mildly twisted comedy that makes you suppose. I was n't quite sure how a director can create`` nothing``, but leave it to Mr. Natali and the brilliant individuals at C. O. R. E. to create another low budget set that looks real( as real as nothing can be). Well worth your time and money, if you have the opportunity to see this, please go. You'll be glad you did. 
+ Score: 0.641081690788269
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I was n't sure what to expect but am I glad I went to see this. A smart, mildly twisted comedy that does you suppose. I was n't quite sure how a director can create`` nothing``, but leave it to Mr. Natali and the brilliant individuals at C. O. R. E. to create another low budget set that looks real( as real as nothing can be). Well worth your time and money, if you have the opportunity to worm this, please go. You'll be glad you did. 
+ Score: 0.4266127943992615
+
+%total_time = 1297 seconds
+
+
+####################ATTACK 42/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+I saw the movie before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me come close to tears on several occasions. This film touches the deepest points of the human soul and never lets go. I encourage as many people to watch this masterpiece as much and as soon as possible. I give it ten stars.
+Starting Score: 0.9987399578094482; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ I saw the movie before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me come close to tears on several occasions. This film touches the earnest points of the human soul and never lets go. I encourage as many people to watch this masterpiece as much and as soon as possible. I give it ten stars. 
+ Score: 0.9977357983589172
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ I saw the movie before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me incoming close to tears on several occasions. This film touches the gravely points of the human soul and never lets go. I encourage as many people to watch this masterpiece as much and as soon as possible. I give it ten stars. 
+ Score: 0.995314359664917
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ I watched the movie before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me incoming close to tears on several occasions. This film touches the earnest item of the human soul and never lets go. I encourage as many people to watch this masterpiece as heavily and as soon as possible. I give it ten stars. 
+ Score: 0.9923547506332397
+
+%generation_time = 1045 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ I watched the film before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me incoming close to tears on several occasions. This film touches the seriously item of the human soul and never lets go. I encourage as many people to watch this masterpiece as much and as soon as possible. I give it ten stars. 
+ Score: 0.9897654056549072
+
+%generation_time = 1046 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ I watched the film before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me incoming close to tears on several occasions. This film touches the seriously item of the human soul and never lets go. I encourage as many people to watch this masterpiece as much and as soon as conceivable. I render it ten stars. 
+ Score: 0.9761996269226074
+
+%generation_time = 1047 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ I watched the film before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me incoming close to tears on several occasions. This film touches the seriously item of the human soul and never lets go. I encourage as many people to watch this mainstay as much and as soon as conceivable. I render it ten stars. 
+ Score: 0.9625046253204346
+
+%generation_time = 1042 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ I watched the film before I read the Michelle Magorian book and I enjoyed both. The movie, more than the book, made me incoming close to tears on several example. This film touches the seriously item of the humanities soul and never lets go. I encourage as many people to watch this mainstay as much and as soon as conceivable. I render it dozen stars. 
+ Score: 0.8778586387634277
+
+%generation_time = 1032 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ I watched the film before I read the Michelle Magorian book and I rained both. The movie, more than the book, made me incoming close to tears on several example. This film touches the severely item of the humanities soul and never lets go. I encourage as many people to watch this mainstay as much and as soon as conceivable. I render it ten stars. 
+ Score: 0.6174281239509583
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ I watched the cinematic before I read the Michelle Magorian book and I rained both. The movie, more than the book, made me incoming close to tears on several example. This film touches the severely item of the humanities soul and never lets go. I encourage as many population to watch this mainstay as much and as soon as conceivable. I render it ten stars. 
+ Score: 0.45510315895080566
+
+%total_time = 7561 seconds
+
+
+####################ATTACK 43/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Being a Bills fan, I originally found it annoying that they made a movie about the Bills and the losing of four superbowls. But once I began to watch, I felt really connected. It was actually nice to see the "Bills" win the superbowl, and I must say, that for a TV movie it was actually very well done. Gil Bellows as the QB, and Jon Voight as the old-school Coach did a very fine job. 8 out of 10
+Starting Score: 0.9991921186447144; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the losing of four superbowls. But once I began to watch, I felt really connected. It was actually nice to see the`` Bills`` win the superbowl, and I must say, that for a TV movie it was actually very well done. Gil Bellows as the QB, and Jon Voight as the old- school Coach did a very fine job. 8 out of 10 
+ Score: 0.9975045919418335
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it annoying that they made a movie about the Bills and the losing of four superbowls. But once I began to watch, I felt really connected. It was actually nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was actually very okay done. Gil Bellows as the QB, and Jon Voight as the old- school Coach did a very fine job. 8 out of 10 
+ Score: 0.9966773986816406
+
+%generation_time = 1046 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really links. It was actually nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was actually very well done. Gil Bellows as the QB, and Jon Voight as the old- school Coach did a very fine job. 8 out of 10 
+ Score: 0.9920667409896851
+
+%generation_time = 1041 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really connected. It was actually nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was actually very okay done. Gil Bellows as the QB, and Jon Voight as the old- school Coach did a very fine job. 8 out of 10 
+ Score: 0.9772642850875854
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really connected. It was actually nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was actually very okay done. Gil Bellows as the QB, and Jon Voight as the antiquated- school Coach did a very fine occupations. 8 out of 10 
+ Score: 0.9359599351882935
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really connected. It was actually nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was actually very okay fact. Gil Bellows as the QB, and Jon Voight as the antiquated- school Coach did a very fine occupations. 8 out of 10 
+ Score: 0.9188858866691589
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really connected. It was actually gentil to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was actually very okay done. Gil Bellows as the QB, and Jon Voight as the antiquated- school Coach did a very resplendent occupations. 8 out of 10 
+ Score: 0.8011815547943115
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ Being a Bills fan, I originally found it tiresome that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really links. It was actually nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was essentially very okay done. Gil Bellows as the QB, and Jon Voight as the antiquated- school Coach did a very resplendent occupations. 8 out of 10 
+ Score: 0.7462841272354126
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ Being a Bills fan, I originally found it dull that they made a movie about the Bills and the waste of four superbowls. But once I began to watch, I felt really connected. It was essentially nice to see the`` Bills`` win the superbowl, and I must mention, that for a TV movie it was essentially very okay done. Gil Bellows as the QB, and Jon Voight as the antiquated- school Coach did a very resplendent occupation. 8 out of 10 
+ Score: 0.4991553723812103
+
+%total_time = 8127 seconds
+
+
+####################ATTACK 44/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+Despite having 6 different directors, this fantasy hangs together remarkably well.It was filmed in England (nowhere near Morocco) in studios and on a few beaches. At the outbreak of war, everything was moved to America and some scenes were filmed in the Grand Canyon.Notable for having one of the corniest lyrics in a song - "I want to be a bandit, can't you understand it". It remains a favourite of many people.
+Starting Score: 0.9896852970123291; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ Despite having 6 different directors, this fantasy frozen together remarkably well. It was filmed in England( nowhere near Morocco) in studios and on a few beaches. At the outbreak of war, everything was moved to America and some scenes were filmed in the Grand Canyon. Notable for having one of the corniest lyrics in a song-`` I want to be a bandit, ca n't you understand it``. It remains a favourite of many people. 
+ Score: 0.9840124845504761
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ Despite having 6 different trustees, this fantasy hangs together remarkably okay. It was filmed in England( nowhere near Morocco) in studios and on a few beaches. At the outbreak of war, everything was moved to America and some scenes were filmed in the Grand Canyon. Notable for having one of the corniest lyrics in a song-`` I wishing to be a bandit, ca n't you understand it``. It remains a favourite of many people. 
+ Score: 0.9209897518157959
+
+%generation_time = 1014 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ Despite having 6 different trustees, this fantasy hangs together remarkably okay. It was photographer in England( nowhere near Morocco) in studios and on a few beaches. At the outbreak of struggle, everything was moved to America and some scenes were filmed in the Grand Canyon. Notable for having one of the corniest lyrics in a song-`` I want to be a bandit, ca n't you understand it``. It remains a favourite of many people. 
+ Score: 0.8796054720878601
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ Despite having 6 different trustees, this fantasy hangs together shockingly okay. It was filmed in England( nowhere near Morocco) in studios and on a few beaches. At the outbreak of struggle, everything was moved to America and some scenes were filmed in the Grand Canyon. Notable for having one of the corniest lyrics in a song-`` I want to be a bandit, ca n't you understand it``. It remnants a favourite of many people. 
+ Score: 0.536493718624115
+
+%generation_time = 1014 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ whereas having 6 different trustees, this fantasy hangs together shockingly okay. It was photographer in England( nowhere near Morocco) in studios and on a few beaches. At the outbreak of struggle, everything was moved to America and some scenes were filmed in the Grand Canyon. Notable for having one of the corniest lyrics in a song-`` I want to be a bandit, ca n't you understand it``. It remnants a favourite of many people. 
+ Score: 0.4296671748161316
+
+%total_time = 3321 seconds
+
+
+####################ATTACK 45/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+"Fear of a Black Hat" is a superbly crafted film. I was laughing almost continuously from start to finish. If you have the means, I highly recommend viewing this movie It is, by far, the funniest movie I have had the pleasure to experience. Grab your stuff!
+Starting Score: 0.9996041655540466; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ `` Fear of a Black Hat`` is a superbly crafted film. I was laughed almost continuously from start to finish. If you have the means, I highly recommend viewing this movie It is, by far, the funniest movie I have had the pleasure to experience. Grab your stuff! 
+ Score: 0.9993246793746948
+
+%generation_time = 208 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ `` Fear of a Black Hat`` is a superbly crafted film. I was laughed almost continuously from start to finish. If you have the means, I highly recommend viewing this movie It is, by far, the lamest movie I have had the pleasure to experience. Grab your stuff! 
+ Score: 0.9490698575973511
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ `` Fear of a Black Hat`` is a astonishingly crafted film. I was laughed almost continuously from start to finish. If you have the means, I highly proposals viewing this movie It is, by far, the lamest movie I have had the pleasure to experience. Grab your stuff! 
+ Score: 0.5846104025840759
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ `` Fear of a Black Hat`` is a astonishingly crafted film. I was laughed almost permanently from start to finish. If you have the means, I highly proposals viewing this movie It is, by far, the lamest movie I have had the pleasure to experience. Grab your stuff! 
+ Score: 0.45729494094848633
+
+%total_time = 2332 seconds
+
+
+####################ATTACK 46/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+To Die For has it all.This film has a great cast. Lots and lots of romance and terror. Not too gory but still enough to appeal to horror fans. There are a lot more vampire love stories. If you are a fan of vampire love stories I strongly recommend this film-10/10.
+Starting Score: 0.9992275238037109; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ To Die For has it all. This cinematography has a great cast. Lots and lots of romance and terror. Not too gory but still enough to appeal to horror fans. There are a lot more vampire love stories. If you are a fan of vampire love stories I strongly recommend this film-10/10. 
+ Score: 0.998421311378479
+
+%generation_time = 207 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ To Die For has it all. This film has a great moulded. shipments and lots of romance and terror. Not too gory but even enough to appeal to horror fans. There are a lot more vampire love stories. If you are a fan of vampire love stories I strongly suggested this film-10/10. 
+ Score: 0.9859147071838379
+
+%generation_time = 1041 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ To Die For has it all. This film has a great moulded. shipments and lots of romance and terror. Not too gory but still enough to appeal to horror fans. There are a lot more vampire love stories. If you are a fan of vampire love stories I strongly suggested this film-10/10. 
+ Score: 0.9859147071838379
+
+%generation_time = 1039 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ To Die For has it all. This film has a great moulded. shipments and lots of roman and terror. Not too gory but still enough to appeal to horror fans. There are a lot more vampire love stories. If you are a fan of vampire love stories I roundly suggested this film-10/10. 
+ Score: 0.9317463636398315
+
+%generation_time = 1039 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ To Die For has it all. This film has a great moulded. shipments and lots of roman and terror. Not too gory but still enough to appeal to horror fans. There are a lot more vampire love stories. If you are a fan of werewolves love stories I roundly suggested this film-10/10. 
+ Score: 0.8997088670730591
+
+%generation_time = 1044 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ To Die For has it all. This film has a great moulded. shipments and lots of roman and panics. Not too gory but still fairly to appeal to horror devotees. There are a lot more vampire love stories. If you are a fan of vampire love stories I roundly suggested this film-10/10. 
+ Score: 0.8572858572006226
+
+%generation_time = 1060 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ To Die For has it all. This film has a great moulded. shipments and consignment of roman and panics. Not too gory but still enough to appeal to horror devotees. There are a lot more vampire love stories. If you are a fan of vampire amore stories I roundly suggested this film-10/10. 
+ Score: 0.758228063583374
+
+%generation_time = 1072 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ To Die For has it all. This cinematography has a great moulded. shipments and consignment of roman and panics. Not too gory but still fairly to appeal to horror devotees. There are a lot more vampire love stories. If you are a fan of vampire amore stories I roundly suggested this film-10/10. 
+ Score: 0.6062031388282776
+
+%generation_time = 1072 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ To Die For has it all. This cinematography has a magnificent moulded. shipments and dispatch of roman and panics. Not too gory but still fairly to appeal to horror devotees. There are a lot more vampire likes stories. If you are a fan of vampire amore stories I roundly suggested this film-10/10. 
+ Score: 0.3871583938598633
+
+%total_time = 7625 seconds
+
+
+####################ATTACK 47/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+A very refreshing story, the life of a parrot with an intellect higher than an average human's. Shows humans from a bird's point of view. Especially liked the portrayal of different types of characters that the bird spends time with. Not all birds are bird-brained...
+Starting Score: 0.994804859161377; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ A very refreshing story, the liv of a parrot with an intellect higher than an average human's. Shows humans from a bird's point of view. Especially liked the portrayal of different types of characters that the bird spends time with. Not all birds are bird-brained... 
+ Score: 0.9933536052703857
+
+%generation_time = 214 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ A very updating story, the life of a parrot with an intellect higher than an average human's. Shows humans from a bird's point of view. Especially liked the portrayal of varied types of characters that the bird spends time with. Not all byrd are bird-brained... 
+ Score: 0.4163733124732971
+
+%total_time = 725 seconds
+
+
+####################ATTACK 48/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+this movie is the best movie ever it has a lot of live action It's just great everyone should watch it and the actor are great the location is Rome Italy thats the best place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to love When in Rome love it.
+Starting Score: 0.9987525939941406; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ this cinematography is the best movie ever it has a lot of live action It's just great everyone should watch it and the actor are great the location is Rome Italy thats the best place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to love When in Rome love it. 
+ Score: 0.9982738494873047
+
+%generation_time = 212 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ this movie is the best cinematography ever it has a lot of live action It's just great everyone should watch it and the pianist are great the location is Rome Italy thats the best place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to love When in Rome love it. 
+ Score: 0.9968606233596802
+
+%generation_time = 1056 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ this movie is the best cinematography ever it has a lot of live action It's just great everyone should watch it and the pianist are great the location is Rome Italy doesnt the best place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to love When in Rome love it. 
+ Score: 0.9950413703918457
+
+%generation_time = 1056 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ this movie is the optimal cinematography ever it has a lot of live action It's just great everyone should watch it and the pianist are great the location is Rome Italy doesnt the best place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to love When in Rome love it. 
+ Score: 0.9928247928619385
+
+%generation_time = 1054 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ this movie is the best cinematography ever it has a lot of live action It's just great everyone should supervisory it and the pianist are great the location is Rome Italy doesnt the good place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to amore When in Rome love it. 
+ Score: 0.9908809661865234
+
+%generation_time = 1052 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ this movie is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the good place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great character to love When in Rome love it. 
+ Score: 0.9816893339157104
+
+%generation_time = 1054 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ this movie is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the good place ever the actors are great Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great attribute to love When in Rome love it. 
+ Score: 0.9761384725570679
+
+%generation_time = 1057 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the good place ever the actors are magnificent Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen plaything Leila and thats a great character to love When in Rome love it. 
+ Score: 0.9628254175186157
+
+%generation_time = 1046 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the good place ever the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great attribute to love When in Rome love it. 
+ Score: 0.9424000978469849
+
+%generation_time = 1040 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the bona place ever the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and didnt a great character and Ashley Olsen play Leila and thats a great attribute to love When in Rome love it. 
+ Score: 0.8867390155792236
+
+%generation_time = 1086 seconds
+
+Regenerating population... 
+
+Generation #11: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervised it and the pianist are great the location is Rome Italy doesnt the bona place ever the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and thats a great character and Ashley Olsen play Leila and thats a great attribute to love When in Rome love it. 
+ Score: 0.8867390155792236
+
+%generation_time = 1088 seconds
+
+Regenerating population... 
+
+Generation #12: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the bona place ever the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and didnt a great character and Ashley Olsen play Leila and didnt a great attribute to love When in Rome like it. 
+ Score: 0.7867372035980225
+
+%generation_time = 1188 seconds
+
+Regenerating population... 
+
+Generation #13: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the bona place ever the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and didnt a great character and Ashley Olsen play Leila and didnt a magnificent attribute to love When in Rome like it. 
+ Score: 0.7541166543960571
+
+%generation_time = 1339 seconds
+
+Regenerating population... 
+
+Generation #14: 
+
+Best Adversarial:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great whoever should supervise it and the pianist are great the location is Rome Italy doesnt the bona place continuously the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and didnt a great character and Ashley Olsen play Leila and didnt a magnificent attribute to love When in Rome like it. 
+ Score: 0.5495210289955139
+
+%generation_time = 1343 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ this cinematography is the optimal cinematography ever it has a lot of live action It's just great everyone should supervise it and the pianist are great the location is Rome Italy doesnt the bona placement continuously the actors are resplendent Mary-Kate Olsen is such a great actress she plays Charlie and didnt a great attribute and Ashley Olsen play Leila and didnt a magnificent attribute to love When in Rome like it. 
+ Score: 0.4500443935394287
+
+%total_time = 14791 seconds
+
+
+####################ATTACK 49/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This is a great installment in the Child's Play series. It brought back some bang to the series. Great comedy, boy this movie is funny. Also there are awesome homages to other horror celebs. Beautiful cinematography. Great ending! Bring on Seed Of Chucky!
+Starting Score: 0.9974774122238159; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This is a magnificent installment in the Child's Play series. It brought back some bang to the series. Great comedy, boy this movie is funny. Also there are awesome homages to other horror celebs. Beautiful cinematography. Great ending! Bring on Seed Of Chucky! 
+ Score: 0.9958339929580688
+
+%generation_time = 269 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This is a great installment in the Child's Play series. It brought aft some bang to the series. Great comedy, boy this movie is weird. Also there are awesome homages to other horror celebs. Beautiful cinematography. Great ending! Bring on Seed Of Chucky! 
+ Score: 0.993125319480896
+
+%generation_time = 1349 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This is a magnificent installment in the Child's Play series. It brought back some bang to the series. Great comedy, boy this movie is weird. Also there are awesome homages to other horror celebs. Beautiful cinematography. Great ending! Bring on Seed Of Chucky! 
+ Score: 0.9879682064056396
+
+%generation_time = 1351 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This is a magnificent installment in the Child's Play series. It brought back some bang to the series. Great comedy, boy this movie is weird. Also there are marvellous homages to other fear celebs. Beautiful cinematography. Great halt! Bring on Seed Of Chucky! 
+ Score: 0.952212393283844
+
+%generation_time = 1354 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ This is a magnificent installment in the Child's Play series. It brought back some bang to the series. Great travesty, boy this movie is weird. Also there are resplendent homages to other fear celebs. Beautiful cinematography. Great halt! Bring on Seed Of Chucky! 
+ Score: 0.8572393655776978
+
+%generation_time = 1356 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ This is a magnificent installment in the Child's plaything series. It brought back some bang to the series. Great travesty, boy this movie is weird. Also there are resplendent homages to other fear celebs. Beautiful cinematography. Great halt! Bring on Seed Of Chucky! 
+ Score: 0.7996506094932556
+
+%generation_time = 1272 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ This is a magnificent installment in the Child's Play series. It brought back some bang to the series. Great travesty, boy this movie is weird. Also there are resplendent homages to other fear celebs. Beautiful cinematography. Great halt! Bring on Seed Of Chucky! 
+ Score: 0.7996506094932556
+
+%generation_time = 1321 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ This is a resplendent installment in the Child's Play series. It laid back some bang to the series. Great travesty, boy this movie is weird. Also there are resplendent homages to other fear celebs. Beautiful cinematography. Great halt! Bring on sperm Of Chucky! 
+ Score: 0.6808464527130127
+
+%generation_time = 1324 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ This is a resplendent installment in the Child's Play series. It laid back some bang to the series. Great travesty, boy this movie is weird. even there are resplendent homages to other fear celebs. Beautiful cinematography. Great halt! Bring on sperm Of Chucky! 
+ Score: 0.5831969976425171
+
+%generation_time = 1326 seconds
+
+Regenerating population... 
+
+ATTACK SUCCESS!!!
+
+Final adversarial sentence:
+ This is a resplendent installment in the Child's plaything series. It laid back some bang to the series. Great travesty, boy this movie is weird. even there are resplendent homages to other fear actresses. Beautiful cinematography. Great halt! Bring on sperm Of Chucky! 
+ Score: 0.49633166193962097
+
+%total_time = 12156 seconds
+
+
+####################ATTACK 50/50:####################
+Parameters:
+	Maximum words to try to change per population member: 5
+	Maximum top neighbours to choose per word to change: 10
+	Maximum top language model substitutes to choose per word to change: 4
+	Maximum children per generation: 6
+	Maximum population members: 5
+
+Original sentence: 
+This is a very dramatic and suspenseful movie. There are many plots and turns. The story or the director opens question marks on the death row or presumed crimes committed by black people. This film is very well directed by Arne Glimcher and the fine sound of James Newton Howard is excellent. Strong performance of Sean Connery and Ed Harris. If you liked this one don´t miss "TRUE CRIMES" or "THE HURRICANE". My wife and me gave 8/10.
+Starting Score: 0.999934196472168; Original Label: 1; Target Label: 0
+
+Generating population... 
+
+Generation #1: 
+
+Best Adversarial:
+ This is a very dramatic and suspenseful movie. There are many plots and turns. The story or the director started question marks on the death row or presumed crimes committed by black people. This film is very well directed by Arne Glimcher and the fine sound of James Newton Howard is excellent. Strong performance of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE CRIMES`` or`` THE HURRICANE``. My wife and me gave 8/10. 
+ Score: 0.9998955726623535
+
+%generation_time = 266 seconds
+
+Regenerating population... 
+
+Generation #2: 
+
+Best Adversarial:
+ This is a very dramatic and suspenseful movie. There are assorted plots and turns. The story or the director started question marks on the death row or presumed crimes committed by black people. This film is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is excellent. Strong performance of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE CRIMES`` or`` THE HURRICANE``. My wife and me gave 8/10. 
+ Score: 0.9996764659881592
+
+%generation_time = 1080 seconds
+
+Regenerating population... 
+
+Generation #3: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing movie. There are assorted plots and turns. The story or the director started question marks on the death row or presumed crimes committed by black people. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is excellent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE CRIMES`` or`` THE HURRICANE``. My wife and me gave 8/10. 
+ Score: 0.9992604851722717
+
+%generation_time = 1082 seconds
+
+Regenerating population... 
+
+Generation #4: 
+
+Best Adversarial:
+ This is a very dramatic and suspenseful movie. There are assorted plots and turns. The story or the director started question marks on the death row or supposition crimes engaged by black people. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is excellent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.998376727104187
+
+%generation_time = 1255 seconds
+
+Regenerating population... 
+
+Generation #5: 
+
+Best Adversarial:
+ This is a very dramatic and suspenseful movie. There are assorted plots and turns. The story or the director started question marks on the dead row or supposition crimes committed by black people. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me gave 8/10. 
+ Score: 0.9977724552154541
+
+%generation_time = 1293 seconds
+
+Regenerating population... 
+
+Generation #6: 
+
+Best Adversarial:
+ This is a very dramatic and suspenseful cinematography. There are assorted plots and turns. The story or the director started question marks on the death row or supposition crimes engaged by black people. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me gave 8/10. 
+ Score: 0.9968814849853516
+
+%generation_time = 1331 seconds
+
+Regenerating population... 
+
+Generation #7: 
+
+Best Adversarial:
+ This is a very dramatic and suspenseful movie. There are assorted plots and turns. The story or the director started question marks on the dead row or supposition crimes committed by black people. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.9960451126098633
+
+%generation_time = 1446 seconds
+
+Regenerating population... 
+
+Generation #8: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing cinematography. There are assorted plots and turns. The story or the director started item marks on the dead row or supposition crimes committed by black populations. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me gave 8/10. 
+ Score: 0.9930176138877869
+
+%generation_time = 1495 seconds
+
+Regenerating population... 
+
+Generation #9: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing cinematography. There are assorted plots and turns. The story or the director started item marks on the dead row or supposition crimes committed by black populations. This flick is very okay directed by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean Connery and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.9872543811798096
+
+%generation_time = 1525 seconds
+
+Regenerating population... 
+
+Generation #10: 
+
+Best Adversarial:
+ This is a very dramatic and interesting cinematography. There are assorted plots and turns. The story or the director started item marks on the dead row or supposition crimes committed by black populations. This flick is very okay directing by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean hanks and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.9763273000717163
+
+%generation_time = 1528 seconds
+
+Regenerating population... 
+
+Generation #11: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing cinematography. There are assorted plots and turns. The story or the director started item marks on the dead row or supposition offending committed by black populations. This flick is very okay directing by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong consequences of Sean hanks and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.968727707862854
+
+%generation_time = 1533 seconds
+
+Regenerating population... 
+
+Generation #12: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing cinematography. There are assorted plots and becomes. The story or the director started item marks on the dead row or supposition offending engaged by black populations. This flick is very okay directing by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong consequences of Sean hanks and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.9502125978469849
+
+%generation_time = 1254 seconds
+
+Regenerating population... 
+
+Generation #13: 
+
+Best Adversarial:
+ This is a very dramatic and interesting cinematography. There are assorted plots and becomes. The story or the director started item marks on the dead row or supposition offending participating by black populations. This flick is very okay directing by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong outcome of Sean hanks and Ed Harris. If you liked this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.9438557624816895
+
+%generation_time = 984 seconds
+
+Regenerating population... 
+
+Generation #14: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing cinematography. There are assorted plots and becomes. The story or the director started item marks on the dead row or supposition offending participating by black populations. This flick is very okay directing by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong consequences of Sean hanks and Ed Harris. If you wanted this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My wife and me rendered 8/10. 
+ Score: 0.9213622808456421
+
+%generation_time = 998 seconds
+
+Regenerating population... 
+
+Generation #15: 
+
+Best Adversarial:
+ This is a very dramatic and intriguing cinematography. There are assorted plots and becomes. The story or the director started item marks on the dead row or supposition offending participating by black populations. This flick is very okay directing by Arne Glimcher and the fine sound of James Newton Howard is resplendent. Strong consequences of Sean hanks and Ed Harris. If you wanted this one don´t miss`` TRUE offending`` or`` THE HURRICANE``. My girl and me rendered 8/10. 
+ Score: 0.9043028354644775
+
+%generation_time = 998 seconds
+
+Regenerating population... 
+
+ATTACK FAILED...
+
+%total_time = 19081 seconds
+
+
+1/2 [==============>...............] - ETA: 0s - loss: 0.9288 - acc: 0.03122/2 [==============================] - ETA: 0s - loss: 0.9166 - acc: 0.04002/2 [==============================] - 0s 136ms/step - loss: 0.9166 - acc: 0.0400
+Recovering graph.
+Recovering checkpoint google_language_model/ckpt-*

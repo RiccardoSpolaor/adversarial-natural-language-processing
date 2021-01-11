@@ -1,4 +1,4 @@
-# Author: Riccardo Spolaor (864877@stud.unive.it)
+# Author: Moustafa Alzantot (malzantot@ucla.edu)
 # Copyright 2016 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

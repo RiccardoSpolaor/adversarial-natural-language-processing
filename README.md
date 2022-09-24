@@ -1,14 +1,14 @@
-# Adversarial_Machine_Learning
-An adversarial ML Project
+# :vs: Adversarial Natural Language Processing :newspaper: :pencil:
+*Deep Neural Networks* can be compromised by attacks that lead them to wrong classification of instances which have been modified through small perturbations. These instances are called *Adversarial Examples*. In the *Natural Language Processing (NLP)* field, unlike other applications, a minimal perturbation of an instance can be evident to the human eye: editing a singular word in the corpus of a text can lead to variation or loss of its original meaning.
 
-TESI:
+This thesis project follow the experiment of the paper [*Generating Natural Language Adversarial Examples*](https://aclanthology.org/D18-1316/) and proposes the use of a genetic optimization algorithm that generates Adversarial Examples which maintain a syntactic and semantic meaning similar to the one of the original text, while managing to trick a DNN *Sentiment Analysis* model.
 
-https://scholar.google.com/scholar?cites=11405633361755931599&as_sdt=2005&sciodt=0,5&hl=it
+## Versioning
 
-Keras
+Git is used for versioning.
 
-ARTICOLI
+## License
 
-domande:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+ 
 
-what is convolutional neural network vs recurrent NN?

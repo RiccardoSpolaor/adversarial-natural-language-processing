@@ -1,9 +1,0 @@
-NVIDIA AND KERAS SETUP:
-
-https://medium.com/@birkann/install-tensorflow-2-0-with-gpu-support-and-jupyter-notebook-db0eeb3067a1
-
-Per cuda risposta 1 passo 2:
-https://askubuntu.com/questions/598607/package-dependency-problem-while-installing-cuda-on-ubuntu-14-04
-
-e poi installa cuda come in questo file:
-https://www.tensorflow.org/install/gpu
